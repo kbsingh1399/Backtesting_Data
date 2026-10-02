@@ -725,6 +725,242 @@ def prep_sleeve_n(pair_id: str):
     return df
 
 
+# ---------------------------------------------------------------------------
+# Sleeve O: SESSION / OPENING-RANGE BREAKOUT (Asian-range breakout traded at
+# London open), dedicated FX + metals universe. This is a distinct strategy
+# family never tested anywhere in this project: "Breakout & Session-Based"
+# (opening range breakout, Asian range breakout at London open, volatility
+# contraction -> expansion / NR-style squeeze filter). Mechanics: each
+# trading day's Asian-session high/low defines the range; if price breaks
+# that range within the first N minutes of the London session, and the
+# Asian range itself was in a *volatility-contraction* regime (narrow
+# relative to its own trailing 20-day history -- the NR4/NR7 "squeeze"
+# concept), take one breakout trade in the breakout direction. At most one
+# signal per instrument per day. Uses the dataset's pre-computed `session`
+# tags (normalized for case/label inconsistencies) on real 15m FX/metals
+# bars -- genuine intraday session structure, not a daily-bar proxy.
+# ---------------------------------------------------------------------------
+SLEEVE_O_UNIVERSE = ["EURUSD", "GBPUSD", "USDJPY", "AUDUSD", "USDCAD",
+                     "USDCHF", "NZDUSD", "EURGBP", "XAUUSD", "XAGUSD"]
+
+# DATA-QUALITY FINDING (discovered building this sleeve): Forex_Data's
+# "15m"/"1h"/"4h" intraday files are NOT genuinely intraday for 2015-2022 --
+# every symbol checked has exactly ~259-261 rows/year in that span (one bar
+# per trading day, i.e. silently downsampled-to-daily data mislabeled as
+# intraday), and only becomes true intraday-granularity data from 2023-01
+# onward (10,851+ rows/year). A session-structure strategy (Asian range /
+# London open) is meaningless on daily bars, so this sleeve's OOS window is
+# restricted to >=2023-01-01. That leaves only ~13 OOS quarters available --
+# BELOW the >=20 mandate. This sleeve is therefore run and reported as an
+# explicit DIAGNOSTIC/EXPLORATORY result, not a certified one; the shortfall
+# is a genuine dataset limitation, not a relaxed gate.
+SLEEVE_O_MIN_OOS_START = pd.Timestamp("2023-01-01", tz="UTC")
+
+SLEEVE_O_PARAM_GRID = [
+    dict(window_mins=60, range_rank_max=100),   # no squeeze filter, 1h window
+    dict(window_mins=60, range_rank_max=50),    # squeeze filter (below-median Asian range)
+    dict(window_mins=60, range_rank_max=30),    # tight squeeze filter
+    dict(window_mins=120, range_rank_max=100),  # wider 2h window, no filter
+    dict(window_mins=120, range_rank_max=50),
+    dict(window_mins=30, range_rank_max=50),    # tight window + squeeze filter
+]
+
+_SESSION_MAP = {"off": "off_hours", "new york": "new_york", "close": "off_hours"}
+
+
+def prep_sleeve_o(symbol: str):
+    df = load_forex(symbol, "15m")
+    df["sess"] = df["session"].astype(str).str.lower().replace(_SESSION_MAP)
+    df["date"] = df.index.date
+
+    asian_mask = df["sess"] == "asian"
+    asian = df[asian_mask].groupby("date").agg(a_hi=("high", "max"), a_lo=("low", "min"))
+    asian["a_range"] = asian["a_hi"] - asian["a_lo"]
+    asian["range_rank"] = asian["a_range"].rolling(20, min_periods=10).rank(pct=True) * 100
+
+    df = df.join(asian[["a_hi", "a_lo", "range_rank"]], on="date")
+
+    london_mask = df["sess"] == "london"
+    first_london = df.loc[london_mask].groupby("date").apply(lambda g: g.index.min())
+    df["london_open_time"] = df["date"].map(first_london)
+    mins_since = (df.index.tz_localize(None) - pd.DatetimeIndex(df["london_open_time"]).tz_localize(None))
+    df["mins_since_lo"] = mins_since.total_seconds() / 60.0
+    return df
+
+
+def sig_sleeve_o(df: pd.DataFrame, params: dict):
+    w = params["window_mins"]
+    rr_max = params["range_rank_max"]
+    in_window = (df["sess"] == "london") & (df["mins_since_lo"] >= 0) & (df["mins_since_lo"] <= w)
+    squeeze_ok = df["range_rank"] <= rr_max
+    long_raw = in_window & squeeze_ok & (df["close"] > df["a_hi"])
+    short_raw = in_window & squeeze_ok & (df["close"] < df["a_lo"])
+    raw = (long_raw | short_raw).fillna(False)
+    cum = raw.groupby(df["date"]).cumsum()
+    entries = raw & (cum == 1)   # first qualifying breakout of the day only
+    sides = pd.Series(np.where(long_raw & entries, 1, np.where(short_raw & entries, -1, 0)), index=df.index)
+    return entries, sides, df["atr14"]
+
+
+# ---------------------------------------------------------------------------
+# Sleeve P: HURST-REGIME-SWITCHED INDICES. Retrofit of Sleeve L (which failed
+# cleanly as a pure trend/breakout design) adding genuine mathematical
+# regime detection: a rolling generalized-Hurst-exponent estimator (variance-
+# scaling of price differences across multiple lags, Di Matteo-style) on
+# each index's daily closes. When the exponent signals a persistent/trending
+# regime (H >= hurst_trend_min) the sleeve runs the same Donchian breakout
+# used in Sleeve L; when it signals an anti-persistent/mean-reverting regime
+# (H <= hurst_mr_max) it switches to a Bollinger/z-score mean-reversion
+# fade instead; in between (random-walk-like, H near 0.5) it stands down --
+# directly testing "Trend persistence measures (Hurst, variance ratio)" and
+# "Regime Analysis / regime-conditional strategy allocation" against the
+# project's one clean asset-class kill (indices).
+# ---------------------------------------------------------------------------
+
+def rolling_hurst(series: pd.Series, window: int = 100, lag_max: int = 20) -> pd.Series:
+    log_p = np.log(series)
+    lags = np.arange(2, lag_max)
+    log_lags = np.log(lags)
+
+    def _h(x):
+        tau = np.array([np.std(x[lag:] - x[:-lag]) for lag in lags])
+        if np.any(tau <= 0) or np.any(np.isnan(tau)):
+            return np.nan
+        poly = np.polyfit(log_lags, np.log(np.sqrt(tau)), 1)
+        return float(poly[0] * 2.0)
+
+    return log_p.rolling(window).apply(_h, raw=True)
+
+
+SLEEVE_P_UNIVERSE = SLEEVE_L_UNIVERSE
+
+SLEEVE_P_PARAM_GRID = [
+    dict(don_n=55, hurst_trend_min=0.55, hurst_mr_max=0.45, bb_window=20, z_entry=2.0),
+    dict(don_n=40, hurst_trend_min=0.55, hurst_mr_max=0.45, bb_window=20, z_entry=2.0),
+    dict(don_n=55, hurst_trend_min=0.60, hurst_mr_max=0.40, bb_window=20, z_entry=2.0),
+    dict(don_n=55, hurst_trend_min=0.55, hurst_mr_max=0.45, bb_window=20, z_entry=2.5),
+    dict(don_n=55, hurst_trend_min=0.55, hurst_mr_max=0.45, bb_window=14, z_entry=2.0),
+    dict(don_n=80, hurst_trend_min=0.60, hurst_mr_max=0.40, bb_window=20, z_entry=2.5),
+]
+
+
+def prep_sleeve_p(symbol: str):
+    d1 = load_forex(symbol, "d1")
+    d1["hurst"] = rolling_hurst(d1["close"], window=100)
+    return d1
+
+
+def sig_sleeve_p(d1: pd.DataFrame, params: dict):
+    n = params["don_n"]
+    hh = d1["high"].rolling(n).max().shift(1)
+    ll = d1["low"].rolling(n).min().shift(1)
+    trend_regime = d1["hurst"] >= params["hurst_trend_min"]
+    mr_regime = d1["hurst"] <= params["hurst_mr_max"]
+
+    trend_long = trend_regime & (d1["close"] > hh)
+    trend_short = trend_regime & (d1["close"] < ll)
+
+    bbw = params["bb_window"]
+    bb_mean = d1["close"].rolling(bbw).mean()
+    bb_std = d1["close"].rolling(bbw).std()
+    z = (d1["close"] - bb_mean) / bb_std.replace(0, np.nan)
+    mr_long = mr_regime & (z < -params["z_entry"])
+    mr_short = mr_regime & (z > params["z_entry"])
+
+    long_cond = (trend_long | mr_long).fillna(False)
+    short_cond = (trend_short | mr_short).fillna(False)
+    entries = long_cond | short_cond
+    sides = pd.Series(np.where(long_cond, 1, np.where(short_cond, -1, 0)), index=d1.index)
+    return entries, sides, d1["atr14"]
+
+
+# ---------------------------------------------------------------------------
+# Sleeve Q: INTERMARKET-GATED INDICES TREND. Second retrofit of Sleeve L,
+# this time adding a genuine cross-asset macro filter instead of a pure
+# price-series regime detector: the Copper/Gold ratio, a textbook
+# growth-vs-safe-haven risk gauge (industrial metal demand = growth/risk-on;
+# gold bid = defensive/risk-off). Sleeve L's identical Donchian breakout
+# signal is gated so longs only fire when the ratio's 20d MA is above its
+# 100d MA (risk-on regime) and shorts only fire when it's below (risk-off)
+# -- directly testing "Cross-Asset & Intermarket Relationships" (copper/gold
+# ratio as growth proxy) and "Regime-conditional strategy allocation"
+# against the project's clean indices kill.
+# ---------------------------------------------------------------------------
+
+def _copper_gold_risk_regime():
+    cu = load_forex("COPPER", "d1")["close"]
+    au = load_forex("XAUUSD", "d1")["close"]
+    idx = cu.index.intersection(au.index)
+    ratio = cu.loc[idx] / au.loc[idx]
+    fast = ratio.rolling(20).mean()
+    slow = ratio.rolling(100).mean()
+    return (fast > slow).rename("risk_on")
+
+
+SLEEVE_Q_UNIVERSE = SLEEVE_L_UNIVERSE
+SLEEVE_Q_PARAM_GRID = SLEEVE_L_PARAM_GRID
+
+
+def prep_sleeve_q(symbol: str):
+    d1 = prep_sleeve_l(symbol)
+    risk_on = _copper_gold_risk_regime()
+    d1 = d1.join(risk_on, how="left")
+    d1["risk_on"] = d1["risk_on"].ffill()
+    return d1
+
+
+def sig_sleeve_q(d1: pd.DataFrame, params: dict):
+    n = params["don_n"]
+    hh = d1["high"].rolling(n).max().shift(1)
+    ll = d1["low"].rolling(n).min().shift(1)
+    atr_ok = d1["atr_rank"] >= params["atr_rank_min"]
+    long_cond = (d1["close"] > hh) & atr_ok & (d1["risk_on"] == True)
+    short_cond = (d1["close"] < ll) & atr_ok & (d1["risk_on"] == False)
+    entries = (long_cond | short_cond).fillna(False)
+    sides = pd.Series(np.where(long_cond, 1, np.where(short_cond, -1, 0)), index=d1.index)
+    return entries, sides, d1["atr14"]
+
+
+# ---------------------------------------------------------------------------
+# Sleeve R: VOLATILITY-REGIME-FILTERED L/S-RATIO CONTRARIAN. Retrofit of
+# Sleeve I (the project's single best validated result, Sharpe 1.28 / +61%
+# over 6yr @ realistic 4-5bps crypto friction) adding a realized-volatility-
+# percentile regime filter: stand the strategy down when trailing 30-day
+# realized vol is in its own top percentile band (the 2022-style
+# crash/crypto-winter regime empirically documented to break mean-reversion
+# strategies -- "Mean reversion strongly regime-dependent: +16% bull vs -41%
+# bear" per the Phase-5 research review). Directly tests "Volatility regime
+# switching" / "Regime Analysis" against the project's best strategy, aimed
+# at its known weak spot (the 2022 drawdown).
+# ---------------------------------------------------------------------------
+SLEEVE_R_UNIVERSE = SLEEVE_I_UNIVERSE
+SLEEVE_R_PARAM_GRID = [
+    dict(z_lookback_bars=672, entry_z=2.0, vol_rank_max=100),   # control: filter off
+    dict(z_lookback_bars=672, entry_z=2.0, vol_rank_max=70),
+    dict(z_lookback_bars=672, entry_z=2.0, vol_rank_max=50),
+    dict(z_lookback_bars=288, entry_z=2.0, vol_rank_max=70),
+    dict(z_lookback_bars=288, entry_z=2.5, vol_rank_max=50),
+    dict(z_lookback_bars=96, entry_z=2.0, vol_rank_max=70),
+]
+
+
+def prep_sleeve_r(symbol: str):
+    out = prep_sleeve_i(symbol)
+    rv_window = 30 * 96   # 30 days of 15m bars
+    rank_window = 365 * 96  # trailing 1yr walk-forward percentile (no lookahead)
+    rv = out["close"].pct_change().rolling(rv_window).std()
+    out["vol_rank"] = rv.rolling(rank_window, min_periods=rv_window).rank(pct=True) * 100
+    return out
+
+
+def sig_sleeve_r(df: pd.DataFrame, params: dict):
+    entries, sides, atr = sig_sleeve_i(df, params)
+    ok = (df["vol_rank"] <= params["vol_rank_max"]).fillna(True)
+    entries = entries & ok
+    sides = sides.where(entries, 0)
+    return entries, sides, atr
+
+
 SLEEVES = {
     "A": dict(universe=SLEEVE_A_UNIVERSE, grid=SLEEVE_A_PARAM_GRID, prep=prep_sleeve_a,
               sig=sig_sleeve_a, name="A_CRYPTO_PULLBACK"),
@@ -760,4 +996,13 @@ SLEEVES = {
     "N": dict(universe=SLEEVE_N_PAIRS, grid=SLEEVE_N_PARAM_GRID, prep=prep_sleeve_n,
               sig=sig_sleeve_n, name="N_ENERGY_WTI_BRENT_SPREAD",
               friction_bps_roundtrip=82.0, trade_fn=generate_statarb_trades),
+    "O": dict(universe=SLEEVE_O_UNIVERSE, grid=SLEEVE_O_PARAM_GRID, prep=prep_sleeve_o,
+              sig=sig_sleeve_o, name="O_FX_METALS_SESSION_ORB",
+              min_oos_start=SLEEVE_O_MIN_OOS_START),
+    "P": dict(universe=SLEEVE_P_UNIVERSE, grid=SLEEVE_P_PARAM_GRID, prep=prep_sleeve_p,
+              sig=sig_sleeve_p, name="P_INDICES_HURST_REGIME_SWITCH"),
+    "Q": dict(universe=SLEEVE_Q_UNIVERSE, grid=SLEEVE_Q_PARAM_GRID, prep=prep_sleeve_q,
+              sig=sig_sleeve_q, name="Q_INDICES_COPPERGOLD_INTERMARKET_GATE"),
+    "R": dict(universe=SLEEVE_R_UNIVERSE, grid=SLEEVE_R_PARAM_GRID, prep=prep_sleeve_r,
+              sig=sig_sleeve_r, name="R_CRYPTO_LSRATIO_VOLREGIME_FILTERED"),
 }

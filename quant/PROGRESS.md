@@ -263,3 +263,51 @@ separate asset-class sleeves:
   cointegration doesn't protect against at the trade level.
 
 Full writeup: `quant/ASSET_CLASS_REPORT.md`. Code: sleeves L/M/N in `strategies.py`.
+
+---
+
+## Addendum (phase 5): exhaustive concept-coverage sweep (Sleeves O-R)
+
+User challenge: "have you applied all concepts that exist in the world
+regarding quant trading" + a detailed 21-section taxonomy of Indices/Forex/
+Metals quant techniques, with instruction not to skip any category. Full
+coverage map (what's tested, what's an acknowledged gap and why):
+`quant/PHASE5_CONCEPT_COVERAGE.md`. Four new sleeves built and WFO-tested:
+
+- **Sleeve O (FX+Metals session ORB, Asian-range breakout at London open)**:
+  0 trades — the IS edge gate rejected every parameter combo in every
+  quarter (negative in-sample R everywhere), the cleanest/fastest kill in
+  the project. Side discovery: `Forex_Data`'s nominal 15m/1h/4h files are
+  actually daily-resolution pre-2023 (confirmed across symbols) — a real
+  data-quality defect, now documented so it isn't silently relied on again.
+  OOS window necessarily restricted to 2023+ (14 quarters, below the >=20
+  mandate) — reported as diagnostic, not certified.
+- **Sleeve P (Hurst-regime-switched Indices)**: still a net loser after
+  friction (ROI -3.9%), but gross P&L is ~breakeven (-$3) vs Sleeve L's
+  gross -$175 — the Hurst filter demonstrably removes most of pure trend-
+  following's raw-edge bleed on indices, just not enough to clear friction.
+- **Sleeve Q (Copper/Gold intermarket-gated Indices trend)**: dead/
+  inconclusive — the macro gate is so restrictive only 9 OOS trades survive.
+- **Sleeve R (volatility-regime-filtered Sleeve I)**: at the mandated 41bps
+  it's dead like Sleeve I's own baseline (expected — crypto friction
+  mandate mismatch, already disclosed in Phase 3). Run on the same already-
+  disclosed 4bps/no-halt diagnostic basis as `I_diag_nohalt_4bps`: Sharpe
+  1.276 -> **1.420** (+11%), ROI +60.98% -> **+64.12%**, max drawdown
+  $3,087.67 -> **$2,387.54** (-23%), while trading 11% less. **Best Phase-5
+  result** — a genuine, quantified improvement on the project's best
+  strategy by explicitly targeting its known 2022-drawdown weakness.
+
+Two additional fail-fast screens (no backtest needed): Johansen
+cointegration test across SP500/NAS100/DJ30/US2000 found **no** basket-level
+cointegration (trace stat 34.6 vs 90%-critical 44.5) despite PC1 explaining
+86% of variance — PCA/basket stat-arb killed before writing execution code.
+Turn-of-month seasonality on 5 major indices: p=0.57-0.87 across the board,
+no effect survives in the 2020-2026 sample.
+
+Explicitly acknowledged, not-done-this-phase gaps: options/implied-vol
+(no data), FX carry (no rates data), L2/COT/news (no data), a walk-forward
+ML classifier sleeve (scaffolded in `quant/ml_sleeve.py`, not completed/
+certified — deprioritized for the user's FX/Indices/Metals-focused ask),
+GARCH/HMM/Kalman/copulas/deflated-Sharpe (simpler proxies used instead
+where feasible: Hurst exponent for regime, realized-vol percentile for
+vol-regime). Full detail and reasoning: `quant/PHASE5_CONCEPT_COVERAGE.md`.
