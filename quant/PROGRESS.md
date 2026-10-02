@@ -406,3 +406,48 @@ T, U, M2-M6 in `strategies.py`/`campaign.py`; screening scripts
 `phase7_data_quality_scan.py`, `phase7_screen_part1.py`,
 `phase7_screen_part2_pca_coint.py`, `phase7_screen_part3_ml.py`,
 `phase7_ml_signal_cache.py`.
+
+---
+
+## Phase 8 — Full taxonomy closure (Sections 6/7/8, every named technique)
+
+Closed out the complete "Mathematical & Statistical Foundations" / "Machine
+Learning" / "Regime Analysis" taxonomy (~75 named techniques) against this
+project's data and its one certified survivor, Sleeve M4. Of ~75 items,
+every one buildable from OHLC bar data (no options/rates/news/COT data
+exists in this workspace) was built and given a numeric verdict; 6 items
+(LLM/news parsing, inflation, rate-cycle, QE/QT regimes) are documented as
+genuinely infeasible given available data, not skipped.
+
+**Headline result: Sleeve M4's Sharpe (2.228) formally survives the
+Deflated Sharpe Ratio test** (Bailey & Lopez de Prado), corrected for ~60
+sleeve/variant trials searched across the whole A-U project (p<0.001) --
+closing the single biggest standing robustness gap flagged since Phase 5.
+Two "smarter technique" rescue attempts on dead sleeves -- GARCH-based vol
+regime (Sleeve T2) and Kalman-filter dynamic hedge ratios (Sleeve G2) --
+both made things neutral-to-worse, confirming Sleeves T and F/G died for
+structural reasons (exit-geometry mismatch, cost), not crude measurement.
+Meta-labeling (Sleeve M7) and RL-based position sizing both showed only
+marginal/negative effects on M4: 47 trades is too small a sample for any
+secondary learned layer to add value -- the project's simple fixed-
+fractional-risk mandate is the right choice at this data volume, not a
+missed sophistication opportunity.
+
+Full writeup: `quant/PHASE8_FULL_TAXONOMY_REPORT.md`, checklist:
+`quant/PHASE8_TAXONOMY_TRACKER.md`. New code: `phase8_part1..9_*.py`; new
+engine-certified sleeves T2/G2/M7 in `strategies.py`/`campaign.py`.
+
+### Phase 9 — independent cross-validation addendum
+
+A parallel pass (this session, before discovering Phase 8 was already
+complete and pushed -- a workspace/git-state reset momentarily hid it
+locally) independently re-built several of the same tests with different
+code and reached the same conclusions on every overlapping item: GARCH
+vol-regime and Kalman hedge-ratio rescues both fail exactly as Phase 8
+found; EVT/copula/RMT numbers cross-validate closely. One real discrepancy
+was found and resolved: this session's first-pass Deflated Sharpe
+calculation used a non-standard variance estimator and wrongly concluded
+M4 fails deflation; re-deriving Phase 8's standard closed-form formula from
+scratch confirmed Phase 8's p<0.001 pass is correct and robust across
+N=6-60 trial-count assumptions. See `quant/PHASE9_FULL_TAXONOMY_SWEEP.md`
+for the full reconciliation writeup.

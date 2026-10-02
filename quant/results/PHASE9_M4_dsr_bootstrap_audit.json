@@ -1,0 +1,74 @@
+{
+  "n_trades": 47,
+  "mean_r": 0.4993170212765956,
+  "sd_r": 1.5529970990648947,
+  "sharpe_like": 2.2042185615352383,
+  "skew": 0.2975701218601388,
+  "kurtosis_nonexcess": 1.5844445931531657,
+  "iid_bootstrap": {
+    "ci95_sharpe": [
+      0.3394347134175191,
+      4.178001676376613
+    ],
+    "ci95_mean_r": [
+      0.07040617021276595,
+      0.9432277127659573
+    ],
+    "p_mean_r_le_0": 0.0113
+  },
+  "block_bootstrap_by_month": {
+    "ci95_sharpe": [
+      0.01755666627772337,
+      4.320690529086323
+    ],
+    "p_mean_r_le_0": 0.0243
+  },
+  "sign_flip_permutation": {
+    "observed_mean_r": 0.4993170212765956,
+    "p_value": 0.016749162541872906
+  },
+  "deflated_sharpe_all_trials": {
+    "sr0_expected_max_under_null": 3.6142,
+    "deflated_sharpe_prob": 0.0,
+    "z_stat": -9.3149,
+    "N_effective": 49,
+    "empirical_sd_of_all_trial_sharpes": 1.5932
+  },
+  "deflated_sharpe_certified_only": {
+    "sr0_expected_max_under_null": 3.1289,
+    "deflated_sharpe_prob": 0.0,
+    "z_stat": -6.1085,
+    "N_effective": 30,
+    "empirical_sd_of_all_trial_sharpes": 1.5091
+  },
+  "pbo_proxy_all_trials": {
+    "n_trials_considered": 49,
+    "pctile_of_selected_strategy": 0.9592,
+    "n_trials_beating_selected": 2
+  },
+  "pbo_proxy_certified_only": {
+    "n_trials_considered": 30,
+    "pctile_of_selected_strategy": 0.9667,
+    "n_trials_beating_selected": 1
+  },
+  "dsr_N6_family_only": {
+    "sr0_expected_max_under_null": 1.3012,
+    "deflated_sharpe_prob": 1.0,
+    "z_stat": 5.9657,
+    "N_effective": 6,
+    "empirical_sd_of_all_trial_sharpes": 1.0008
+  },
+  "pbo_N6_family_only": {
+    "n_trials_considered": 6,
+    "pctile_of_selected_strategy": 0.8333,
+    "n_trials_beating_selected": 1
+  },
+  "family_sharpes": [
+    1.058,
+    0.954,
+    -0.289,
+    2.228,
+    1.104,
+    -0.468
+  ]
+}

@@ -1,0 +1,968 @@
+{
+  "summary": {
+    "realized_vol_regime": {
+      "n": 7868,
+      "mean_bps": 8.875,
+      "t_stat": 3.411
+    },
+    "Garch_vol_regime": {
+      "n": 5110,
+      "mean_bps": 13.691,
+      "t_stat": 5.022
+    },
+    "EGARCH_vol_regime": {
+      "n": 4877,
+      "mean_bps": 17.942,
+      "t_stat": 6.706
+    },
+    "GJR_vol_regime": {
+      "n": 5388,
+      "mean_bps": 14.335,
+      "t_stat": 5.4
+    }
+  },
+  "per_symbol": [
+    {
+      "symbol": "ALUMINIUM",
+      "n_obs": 1565,
+      "Garch_n_signals": 26,
+      "Garch_mean_bps": -37.839,
+      "EGARCH_n_signals": 30,
+      "EGARCH_mean_bps": -16.532,
+      "GJR_n_signals": 29,
+      "GJR_mean_bps": -43.459
+    },
+    {
+      "symbol": "AU200",
+      "n_obs": 1950,
+      "Garch_n_signals": 54,
+      "Garch_mean_bps": 13.446,
+      "EGARCH_n_signals": 52,
+      "EGARCH_mean_bps": 35.961,
+      "GJR_n_signals": 60,
+      "GJR_mean_bps": 6.561
+    },
+    {
+      "symbol": "AUDCAD",
+      "n_obs": 3000,
+      "Garch_n_signals": 69,
+      "Garch_mean_bps": 8.478,
+      "EGARCH_n_signals": 79,
+      "EGARCH_mean_bps": 6.744,
+      "GJR_n_signals": 68,
+      "GJR_mean_bps": 9.368
+    },
+    {
+      "symbol": "AUDCHF",
+      "n_obs": 3015,
+      "Garch_n_signals": 72,
+      "Garch_mean_bps": 6.2,
+      "EGARCH_n_signals": 80,
+      "EGARCH_mean_bps": 7.513,
+      "GJR_n_signals": 74,
+      "GJR_mean_bps": 5.846
+    },
+    {
+      "symbol": "AUDCNH",
+      "n_obs": 1567,
+      "Garch_n_signals": 31,
+      "Garch_mean_bps": 33.112,
+      "EGARCH_n_signals": 32,
+      "EGARCH_mean_bps": 22.857,
+      "GJR_n_signals": 32,
+      "GJR_mean_bps": 34.534
+    },
+    {
+      "symbol": "AUDJPY",
+      "n_obs": 3000,
+      "Garch_n_signals": 78,
+      "Garch_mean_bps": 16.042,
+      "EGARCH_n_signals": 72,
+      "EGARCH_mean_bps": 19.856,
+      "GJR_n_signals": 76,
+      "GJR_mean_bps": 15.256
+    },
+    {
+      "symbol": "AUDNZD",
+      "n_obs": 3000,
+      "Garch_n_signals": 75,
+      "Garch_mean_bps": 3.649,
+      "EGARCH_n_signals": 74,
+      "EGARCH_mean_bps": 2.246,
+      "GJR_n_signals": 73,
+      "GJR_mean_bps": 3.897
+    },
+    {
+      "symbol": "AUDUSD",
+      "n_obs": 3000,
+      "Garch_n_signals": 81,
+      "Garch_mean_bps": -5.766,
+      "EGARCH_n_signals": 84,
+      "EGARCH_mean_bps": -8.655,
+      "GJR_n_signals": 79,
+      "GJR_mean_bps": -7.156
+    },
+    {
+      "symbol": "CADCHF",
+      "n_obs": 3000,
+      "Garch_n_signals": 74,
+      "Garch_mean_bps": 9.652,
+      "EGARCH_n_signals": 63,
+      "EGARCH_mean_bps": 13.739,
+      "GJR_n_signals": 78,
+      "GJR_mean_bps": 12.584
+    },
+    {
+      "symbol": "CADJPY",
+      "n_obs": 3000,
+      "Garch_n_signals": 66,
+      "Garch_mean_bps": 18.211,
+      "EGARCH_n_signals": 76,
+      "EGARCH_mean_bps": 9.503,
+      "GJR_n_signals": 71,
+      "GJR_mean_bps": 22.491
+    },
+    {
+      "symbol": "CHFJPY",
+      "n_obs": 3000,
+      "Garch_n_signals": 58,
+      "Garch_mean_bps": 1.826,
+      "EGARCH_n_signals": 75,
+      "EGARCH_mean_bps": 3.307,
+      "GJR_n_signals": 57,
+      "GJR_mean_bps": -0.538
+    },
+    {
+      "symbol": "CHFSGD",
+      "n_obs": 2562,
+      "Garch_n_signals": 49,
+      "Garch_mean_bps": 16.501,
+      "GJR_n_signals": 53,
+      "GJR_mean_bps": 21.149
+    },
+    {
+      "symbol": "CHINA50",
+      "n_obs": 1577,
+      "Garch_n_signals": 24,
+      "Garch_mean_bps": 43.74,
+      "EGARCH_n_signals": 23,
+      "EGARCH_mean_bps": 40.263,
+      "GJR_n_signals": 28,
+      "GJR_mean_bps": 59.997
+    },
+    {
+      "symbol": "CHINAH",
+      "n_obs": 2356,
+      "Garch_n_signals": 45,
+      "Garch_mean_bps": 34.742,
+      "EGARCH_n_signals": 46,
+      "EGARCH_mean_bps": 42.822,
+      "GJR_n_signals": 50,
+      "GJR_mean_bps": 32.574
+    },
+    {
+      "symbol": "CNHJPY",
+      "n_obs": 1598,
+      "Garch_n_signals": 28,
+      "Garch_mean_bps": 12.07,
+      "EGARCH_n_signals": 31,
+      "EGARCH_mean_bps": 7.474,
+      "GJR_n_signals": 28,
+      "GJR_mean_bps": 8.308
+    },
+    {
+      "symbol": "COPPER",
+      "n_obs": 1565,
+      "Garch_n_signals": 27,
+      "Garch_mean_bps": 36.394,
+      "EGARCH_n_signals": 27,
+      "EGARCH_mean_bps": 60.953,
+      "GJR_n_signals": 27,
+      "GJR_mean_bps": 54.364
+    },
+    {
+      "symbol": "DJ30",
+      "n_obs": 2998,
+      "Garch_n_signals": 94,
+      "Garch_mean_bps": 42.711,
+      "EGARCH_n_signals": 83,
+      "EGARCH_mean_bps": 68.972,
+      "GJR_n_signals": 109,
+      "GJR_mean_bps": 29.836
+    },
+    {
+      "symbol": "EURAUD",
+      "n_obs": 3000,
+      "Garch_n_signals": 79,
+      "Garch_mean_bps": 16.703,
+      "EGARCH_n_signals": 81,
+      "EGARCH_mean_bps": 12.745,
+      "GJR_n_signals": 78,
+      "GJR_mean_bps": 17.623
+    },
+    {
+      "symbol": "EURCAD",
+      "n_obs": 3000,
+      "Garch_n_signals": 70,
+      "Garch_mean_bps": -0.444,
+      "EGARCH_n_signals": 67,
+      "EGARCH_mean_bps": 3.388,
+      "GJR_n_signals": 78,
+      "GJR_mean_bps": 3.127
+    },
+    {
+      "symbol": "EURCHF",
+      "n_obs": 3000,
+      "Garch_n_signals": 73,
+      "Garch_mean_bps": -1.6,
+      "EGARCH_n_signals": 27,
+      "EGARCH_mean_bps": -2.272,
+      "GJR_n_signals": 66,
+      "GJR_mean_bps": -3.868
+    },
+    {
+      "symbol": "EURCNH",
+      "n_obs": 2239,
+      "Garch_n_signals": 53,
+      "Garch_mean_bps": -1.896,
+      "EGARCH_n_signals": 24,
+      "EGARCH_mean_bps": 4.864,
+      "GJR_n_signals": 55,
+      "GJR_mean_bps": -0.066
+    },
+    {
+      "symbol": "EURGBP",
+      "n_obs": 3000,
+      "Garch_n_signals": 82,
+      "Garch_mean_bps": 1.251,
+      "EGARCH_n_signals": 87,
+      "EGARCH_mean_bps": 6.713,
+      "GJR_n_signals": 83,
+      "GJR_mean_bps": 5.868
+    },
+    {
+      "symbol": "EURHKD",
+      "n_obs": 2562,
+      "Garch_n_signals": 50,
+      "Garch_mean_bps": -5.295,
+      "EGARCH_n_signals": 50,
+      "EGARCH_mean_bps": -8.544,
+      "GJR_n_signals": 50,
+      "GJR_mean_bps": -6.98
+    },
+    {
+      "symbol": "EURHUF",
+      "n_obs": 1593,
+      "Garch_n_signals": 26,
+      "Garch_mean_bps": 7.002,
+      "EGARCH_n_signals": 25,
+      "EGARCH_mean_bps": -0.888,
+      "GJR_n_signals": 26,
+      "GJR_mean_bps": 7.002
+    },
+    {
+      "symbol": "EURJPY",
+      "n_obs": 3000,
+      "Garch_n_signals": 69,
+      "Garch_mean_bps": 2.755,
+      "EGARCH_n_signals": 79,
+      "EGARCH_mean_bps": 0.495,
+      "GJR_n_signals": 68,
+      "GJR_mean_bps": 0.896
+    },
+    {
+      "symbol": "EURMXN",
+      "n_obs": 2199,
+      "Garch_n_signals": 39,
+      "Garch_mean_bps": 26.712,
+      "EGARCH_n_signals": 44,
+      "EGARCH_mean_bps": 21.173,
+      "GJR_n_signals": 45,
+      "GJR_mean_bps": 20.23
+    },
+    {
+      "symbol": "EURNOK",
+      "n_obs": 3000,
+      "Garch_n_signals": 72,
+      "Garch_mean_bps": 12.235,
+      "EGARCH_n_signals": 77,
+      "EGARCH_mean_bps": 9.56,
+      "GJR_n_signals": 74,
+      "GJR_mean_bps": 14.816
+    },
+    {
+      "symbol": "EURNZD",
+      "n_obs": 3000,
+      "Garch_n_signals": 63,
+      "Garch_mean_bps": 21.997,
+      "EGARCH_n_signals": 65,
+      "EGARCH_mean_bps": 12.772,
+      "GJR_n_signals": 67,
+      "GJR_mean_bps": 19.306
+    },
+    {
+      "symbol": "EURSEK",
+      "n_obs": 1593,
+      "Garch_n_signals": 23,
+      "Garch_mean_bps": -13.22,
+      "EGARCH_n_signals": 13,
+      "EGARCH_mean_bps": -16.965,
+      "GJR_n_signals": 25,
+      "GJR_mean_bps": -10.602
+    },
+    {
+      "symbol": "EURSGD",
+      "n_obs": 1578,
+      "Garch_n_signals": 22,
+      "Garch_mean_bps": 6.375,
+      "EGARCH_n_signals": 13,
+      "EGARCH_mean_bps": 10.081,
+      "GJR_n_signals": 23,
+      "GJR_mean_bps": 7.918
+    },
+    {
+      "symbol": "EURUSD",
+      "n_obs": 3015,
+      "Garch_n_signals": 60,
+      "Garch_mean_bps": -4.057,
+      "EGARCH_n_signals": 69,
+      "EGARCH_mean_bps": -5.289,
+      "GJR_n_signals": 61,
+      "GJR_mean_bps": -4.202
+    },
+    {
+      "symbol": "EURZAR",
+      "n_obs": 2562,
+      "Garch_n_signals": 54,
+      "Garch_mean_bps": 49.046,
+      "EGARCH_n_signals": 66,
+      "EGARCH_mean_bps": 46.495,
+      "GJR_n_signals": 57,
+      "GJR_mean_bps": 43.399
+    },
+    {
+      "symbol": "FR40",
+      "n_obs": 3000,
+      "Garch_n_signals": 92,
+      "Garch_mean_bps": 51.034,
+      "EGARCH_n_signals": 84,
+      "EGARCH_mean_bps": 61.929,
+      "GJR_n_signals": 105,
+      "GJR_mean_bps": 54.976
+    },
+    {
+      "symbol": "GAS",
+      "n_obs": 1591,
+      "Garch_n_signals": 32,
+      "Garch_mean_bps": -18.094,
+      "EGARCH_n_signals": 31,
+      "EGARCH_mean_bps": 73.652,
+      "GJR_n_signals": 32,
+      "GJR_mean_bps": -63.341
+    },
+    {
+      "symbol": "GBPAUD",
+      "n_obs": 3000,
+      "Garch_n_signals": 73,
+      "Garch_mean_bps": -0.628,
+      "EGARCH_n_signals": 71,
+      "EGARCH_mean_bps": 2.953,
+      "GJR_n_signals": 71,
+      "GJR_mean_bps": 2.201
+    },
+    {
+      "symbol": "GBPCAD",
+      "n_obs": 3000,
+      "Garch_n_signals": 63,
+      "Garch_mean_bps": 2.147,
+      "EGARCH_n_signals": 65,
+      "EGARCH_mean_bps": -10.271,
+      "GJR_n_signals": 62,
+      "GJR_mean_bps": 5.503
+    },
+    {
+      "symbol": "GBPCHF",
+      "n_obs": 3000,
+      "Garch_n_signals": 83,
+      "Garch_mean_bps": -1.023,
+      "EGARCH_n_signals": 72,
+      "EGARCH_mean_bps": -4.556,
+      "GJR_n_signals": 81,
+      "GJR_mean_bps": -0.927
+    },
+    {
+      "symbol": "GBPCNH",
+      "n_obs": 1598,
+      "Garch_n_signals": 26,
+      "Garch_mean_bps": -0.812,
+      "EGARCH_n_signals": 31,
+      "EGARCH_mean_bps": 2.773,
+      "GJR_n_signals": 28,
+      "GJR_mean_bps": -3.525
+    },
+    {
+      "symbol": "GBPHKD",
+      "n_obs": 2562,
+      "Garch_n_signals": 63,
+      "Garch_mean_bps": -14.835,
+      "EGARCH_n_signals": 57,
+      "EGARCH_mean_bps": 0.382,
+      "GJR_n_signals": 62,
+      "GJR_mean_bps": -10.013
+    },
+    {
+      "symbol": "GBPJPY",
+      "n_obs": 3000,
+      "Garch_n_signals": 74,
+      "Garch_mean_bps": -2.879,
+      "EGARCH_n_signals": 75,
+      "EGARCH_mean_bps": 1.815,
+      "GJR_n_signals": 76,
+      "GJR_mean_bps": -4.428
+    },
+    {
+      "symbol": "GBPNOK",
+      "n_obs": 2562,
+      "Garch_n_signals": 53,
+      "Garch_mean_bps": 21.169,
+      "EGARCH_n_signals": 51,
+      "EGARCH_mean_bps": 30.455,
+      "GJR_n_signals": 49,
+      "GJR_mean_bps": 18.612
+    },
+    {
+      "symbol": "GBPNZD",
+      "n_obs": 3000,
+      "Garch_n_signals": 80,
+      "Garch_mean_bps": 1.186,
+      "EGARCH_n_signals": 63,
+      "EGARCH_mean_bps": 8.05,
+      "GJR_n_signals": 80,
+      "GJR_mean_bps": 4.615
+    },
+    {
+      "symbol": "GBPSEK",
+      "n_obs": 2562,
+      "Garch_n_signals": 47,
+      "Garch_mean_bps": 5.611,
+      "EGARCH_n_signals": 33,
+      "EGARCH_mean_bps": 8.169,
+      "GJR_n_signals": 49,
+      "GJR_mean_bps": 7.305
+    },
+    {
+      "symbol": "GBPSGD",
+      "n_obs": 2562,
+      "Garch_n_signals": 64,
+      "Garch_mean_bps": -11.014,
+      "EGARCH_n_signals": 22,
+      "EGARCH_mean_bps": -18.101,
+      "GJR_n_signals": 68,
+      "GJR_mean_bps": -1.963
+    },
+    {
+      "symbol": "GBPUSD",
+      "n_obs": 3000,
+      "Garch_n_signals": 66,
+      "Garch_mean_bps": -18.432,
+      "EGARCH_n_signals": 67,
+      "EGARCH_mean_bps": -16.233,
+      "GJR_n_signals": 64,
+      "GJR_mean_bps": -20.796
+    },
+    {
+      "symbol": "GER30",
+      "n_obs": 2981,
+      "Garch_n_signals": 77,
+      "Garch_mean_bps": 29.683,
+      "EGARCH_n_signals": 85,
+      "EGARCH_mean_bps": 40.659,
+      "GJR_n_signals": 92,
+      "GJR_mean_bps": 26.757
+    },
+    {
+      "symbol": "GER40",
+      "n_obs": 2995,
+      "Garch_n_signals": 77,
+      "Garch_mean_bps": 29.683,
+      "EGARCH_n_signals": 82,
+      "EGARCH_mean_bps": 43.053,
+      "GJR_n_signals": 92,
+      "GJR_mean_bps": 26.757
+    },
+    {
+      "symbol": "HK50",
+      "n_obs": 2952,
+      "Garch_n_signals": 62,
+      "Garch_mean_bps": 34.785,
+      "EGARCH_n_signals": 57,
+      "EGARCH_mean_bps": 56.122,
+      "GJR_n_signals": 64,
+      "GJR_mean_bps": 32.761
+    },
+    {
+      "symbol": "JP225",
+      "n_obs": 2998,
+      "Garch_n_signals": 78,
+      "Garch_mean_bps": 67.159,
+      "EGARCH_n_signals": 75,
+      "EGARCH_mean_bps": 80.856,
+      "GJR_n_signals": 88,
+      "GJR_mean_bps": 50.433
+    },
+    {
+      "symbol": "LEAD",
+      "n_obs": 1578,
+      "Garch_n_signals": 28,
+      "Garch_mean_bps": 67.989,
+      "EGARCH_n_signals": 30,
+      "EGARCH_mean_bps": 53.336,
+      "GJR_n_signals": 30,
+      "GJR_mean_bps": 46.781
+    },
+    {
+      "symbol": "NAS100",
+      "n_obs": 2998,
+      "Garch_n_signals": 76,
+      "Garch_mean_bps": 76.063,
+      "EGARCH_n_signals": 72,
+      "EGARCH_mean_bps": 55.065,
+      "GJR_n_signals": 94,
+      "GJR_mean_bps": 64.486
+    },
+    {
+      "symbol": "NETH25",
+      "n_obs": 3837,
+      "Garch_n_signals": 111,
+      "Garch_mean_bps": 27.85,
+      "EGARCH_n_signals": 109,
+      "EGARCH_mean_bps": 38.559,
+      "GJR_n_signals": 132,
+      "GJR_mean_bps": 20.373
+    },
+    {
+      "symbol": "NICKEL",
+      "n_obs": 1578,
+      "Garch_n_signals": 34,
+      "Garch_mean_bps": 19.141,
+      "EGARCH_n_signals": 31,
+      "EGARCH_mean_bps": 3.3,
+      "GJR_n_signals": 31,
+      "GJR_mean_bps": 19.258
+    },
+    {
+      "symbol": "NOKJPY",
+      "n_obs": 2562,
+      "Garch_n_signals": 64,
+      "Garch_mean_bps": 30.735,
+      "EGARCH_n_signals": 63,
+      "EGARCH_mean_bps": 29.082,
+      "GJR_n_signals": 66,
+      "GJR_mean_bps": 33.412
+    },
+    {
+      "symbol": "NOKSEK",
+      "n_obs": 2562,
+      "Garch_n_signals": 55,
+      "Garch_mean_bps": 37.413,
+      "EGARCH_n_signals": 40,
+      "EGARCH_mean_bps": 39.233,
+      "GJR_n_signals": 59,
+      "GJR_mean_bps": 32.326
+    },
+    {
+      "symbol": "NZDCAD",
+      "n_obs": 3000,
+      "Garch_n_signals": 68,
+      "Garch_mean_bps": 5.665,
+      "EGARCH_n_signals": 72,
+      "EGARCH_mean_bps": 6.695,
+      "GJR_n_signals": 68,
+      "GJR_mean_bps": 6.77
+    },
+    {
+      "symbol": "NZDCHF",
+      "n_obs": 3000,
+      "Garch_n_signals": 68,
+      "Garch_mean_bps": 5.621,
+      "EGARCH_n_signals": 70,
+      "EGARCH_mean_bps": 6.901,
+      "GJR_n_signals": 72,
+      "GJR_mean_bps": 6.187
+    },
+    {
+      "symbol": "NZDCNH",
+      "n_obs": 1565,
+      "Garch_n_signals": 30,
+      "Garch_mean_bps": 11.601,
+      "EGARCH_n_signals": 39,
+      "EGARCH_mean_bps": 0.161,
+      "GJR_n_signals": 31,
+      "GJR_mean_bps": -1.847
+    },
+    {
+      "symbol": "NZDJPY",
+      "n_obs": 3000,
+      "Garch_n_signals": 72,
+      "Garch_mean_bps": 2.772,
+      "EGARCH_n_signals": 75,
+      "EGARCH_mean_bps": 2.83,
+      "GJR_n_signals": 72,
+      "GJR_mean_bps": 2.405
+    },
+    {
+      "symbol": "NZDSGD",
+      "n_obs": 1958,
+      "Garch_n_signals": 40,
+      "Garch_mean_bps": 17.5,
+      "GJR_n_signals": 39,
+      "GJR_mean_bps": 20.785
+    },
+    {
+      "symbol": "NZDUSD",
+      "n_obs": 3015,
+      "Garch_n_signals": 75,
+      "Garch_mean_bps": -11.23,
+      "EGARCH_n_signals": 76,
+      "EGARCH_mean_bps": -2.985,
+      "GJR_n_signals": 73,
+      "GJR_mean_bps": -3.051
+    },
+    {
+      "symbol": "SGDJPY",
+      "n_obs": 3000,
+      "Garch_n_signals": 78,
+      "Garch_mean_bps": 24.629,
+      "EGARCH_n_signals": 78,
+      "EGARCH_mean_bps": 16.631,
+      "GJR_n_signals": 78,
+      "GJR_mean_bps": 21.522
+    },
+    {
+      "symbol": "SP500",
+      "n_obs": 2998,
+      "Garch_n_signals": 96,
+      "Garch_mean_bps": 39.992,
+      "EGARCH_n_signals": 78,
+      "EGARCH_mean_bps": 61.879,
+      "GJR_n_signals": 112,
+      "GJR_mean_bps": 34.924
+    },
+    {
+      "symbol": "STOXX50",
+      "n_obs": 2982,
+      "Garch_n_signals": 90,
+      "Garch_mean_bps": 46.656,
+      "EGARCH_n_signals": 95,
+      "EGARCH_mean_bps": 53.485,
+      "GJR_n_signals": 113,
+      "GJR_mean_bps": 47.452
+    },
+    {
+      "symbol": "SWISS20",
+      "n_obs": 1558,
+      "Garch_n_signals": 39,
+      "Garch_mean_bps": 29.67,
+      "EGARCH_n_signals": 32,
+      "EGARCH_mean_bps": 33.262,
+      "GJR_n_signals": 45,
+      "GJR_mean_bps": 12.752
+    },
+    {
+      "symbol": "UK100",
+      "n_obs": 2976,
+      "Garch_n_signals": 94,
+      "Garch_mean_bps": 44.962,
+      "EGARCH_n_signals": 79,
+      "EGARCH_mean_bps": 50.614,
+      "GJR_n_signals": 100,
+      "GJR_mean_bps": 46.14
+    },
+    {
+      "symbol": "UKBRENT",
+      "n_obs": 2561,
+      "Garch_n_signals": 58,
+      "Garch_mean_bps": 33.445,
+      "EGARCH_n_signals": 59,
+      "EGARCH_mean_bps": 53.074,
+      "GJR_n_signals": 59,
+      "GJR_mean_bps": -44.913
+    },
+    {
+      "symbol": "US2000",
+      "n_obs": 1592,
+      "Garch_n_signals": 28,
+      "Garch_mean_bps": 21.005,
+      "EGARCH_n_signals": 28,
+      "EGARCH_mean_bps": 19.413,
+      "GJR_n_signals": 35,
+      "GJR_mean_bps": 4.266
+    },
+    {
+      "symbol": "USDCAD",
+      "n_obs": 3000,
+      "Garch_n_signals": 72,
+      "Garch_mean_bps": 2.881,
+      "EGARCH_n_signals": 70,
+      "EGARCH_mean_bps": -0.803,
+      "GJR_n_signals": 77,
+      "GJR_mean_bps": -0.068
+    },
+    {
+      "symbol": "USDCHF",
+      "n_obs": 3000,
+      "Garch_n_signals": 71,
+      "Garch_mean_bps": 0.71,
+      "EGARCH_n_signals": 71,
+      "EGARCH_mean_bps": 8.043,
+      "GJR_n_signals": 75,
+      "GJR_mean_bps": -0.509
+    },
+    {
+      "symbol": "USDCNH",
+      "n_obs": 887,
+      "Garch_n_signals": 6,
+      "Garch_mean_bps": 2.392
+    },
+    {
+      "symbol": "USDHKD",
+      "n_obs": 1593,
+      "Garch_n_signals": 44,
+      "Garch_mean_bps": 0.17,
+      "EGARCH_n_signals": 31,
+      "EGARCH_mean_bps": 0.997,
+      "GJR_n_signals": 41,
+      "GJR_mean_bps": 1.734
+    },
+    {
+      "symbol": "USDHUF",
+      "n_obs": 1578,
+      "Garch_n_signals": 31,
+      "Garch_mean_bps": 13.96,
+      "EGARCH_n_signals": 33,
+      "EGARCH_mean_bps": 7.36,
+      "GJR_n_signals": 27,
+      "GJR_mean_bps": 24.896
+    },
+    {
+      "symbol": "USDJPY",
+      "n_obs": 3000,
+      "Garch_n_signals": 73,
+      "Garch_mean_bps": 12.442,
+      "EGARCH_n_signals": 77,
+      "EGARCH_mean_bps": 10.003,
+      "GJR_n_signals": 69,
+      "GJR_mean_bps": 15.784
+    },
+    {
+      "symbol": "USDMXN",
+      "n_obs": 3000,
+      "Garch_n_signals": 81,
+      "Garch_mean_bps": 1.339,
+      "EGARCH_n_signals": 70,
+      "EGARCH_mean_bps": -10.948,
+      "GJR_n_signals": 92,
+      "GJR_mean_bps": 2.097
+    },
+    {
+      "symbol": "USDNOK",
+      "n_obs": 3000,
+      "Garch_n_signals": 76,
+      "Garch_mean_bps": -18.817,
+      "EGARCH_n_signals": 81,
+      "EGARCH_mean_bps": 0.691,
+      "GJR_n_signals": 78,
+      "GJR_mean_bps": -22.404
+    },
+    {
+      "symbol": "USDSEK",
+      "n_obs": 1593,
+      "Garch_n_signals": 19,
+      "Garch_mean_bps": -0.096,
+      "EGARCH_n_signals": 18,
+      "EGARCH_mean_bps": -9.747,
+      "GJR_n_signals": 24,
+      "GJR_mean_bps": 5.884
+    },
+    {
+      "symbol": "USDSGD",
+      "n_obs": 3000,
+      "Garch_n_signals": 61,
+      "Garch_mean_bps": -0.017,
+      "EGARCH_n_signals": 56,
+      "EGARCH_mean_bps": -8.918,
+      "GJR_n_signals": 68,
+      "GJR_mean_bps": 2.18
+    },
+    {
+      "symbol": "USDTHB",
+      "n_obs": 2562,
+      "Garch_n_signals": 62,
+      "Garch_mean_bps": 18.315,
+      "EGARCH_n_signals": 67,
+      "EGARCH_mean_bps": 12.634,
+      "GJR_n_signals": 61,
+      "GJR_mean_bps": 19.74
+    },
+    {
+      "symbol": "USDZAR",
+      "n_obs": 3000,
+      "Garch_n_signals": 61,
+      "Garch_mean_bps": -5.554,
+      "EGARCH_n_signals": 71,
+      "EGARCH_mean_bps": 1.148,
+      "GJR_n_signals": 69,
+      "GJR_mean_bps": 8.765
+    },
+    {
+      "symbol": "USWTI",
+      "n_obs": 2560,
+      "Garch_n_signals": 65,
+      "Garch_mean_bps": -119.064,
+      "EGARCH_n_signals": 60,
+      "EGARCH_mean_bps": -109.62,
+      "GJR_n_signals": 64,
+      "GJR_mean_bps": -88.925
+    },
+    {
+      "symbol": "XAGAUD",
+      "n_obs": 944,
+      "Garch_n_signals": 9,
+      "Garch_mean_bps": -53.183,
+      "EGARCH_n_signals": 15,
+      "EGARCH_mean_bps": -7.118,
+      "GJR_n_signals": 12,
+      "GJR_mean_bps": -3.611
+    },
+    {
+      "symbol": "XAGEUR",
+      "n_obs": 944,
+      "Garch_n_signals": 10,
+      "Garch_mean_bps": -36.041,
+      "EGARCH_n_signals": 16,
+      "EGARCH_mean_bps": -1.189,
+      "GJR_n_signals": 13,
+      "GJR_mean_bps": 7.564
+    },
+    {
+      "symbol": "XAGSGD",
+      "n_obs": 944,
+      "Garch_n_signals": 11,
+      "Garch_mean_bps": -26.112,
+      "EGARCH_n_signals": 16,
+      "EGARCH_mean_bps": 11.83,
+      "GJR_n_signals": 13,
+      "GJR_mean_bps": -18.562
+    },
+    {
+      "symbol": "XAGUSD",
+      "n_obs": 1576,
+      "Garch_n_signals": 28,
+      "Garch_mean_bps": 72.519,
+      "EGARCH_n_signals": 28,
+      "EGARCH_mean_bps": 65.531,
+      "GJR_n_signals": 28,
+      "GJR_mean_bps": 67.312
+    },
+    {
+      "symbol": "XAUAUD",
+      "n_obs": 944,
+      "Garch_n_signals": 14,
+      "Garch_mean_bps": -128.072,
+      "EGARCH_n_signals": 13,
+      "EGARCH_mean_bps": -18.48,
+      "GJR_n_signals": 16,
+      "GJR_mean_bps": -21.104
+    },
+    {
+      "symbol": "XAUCNH",
+      "n_obs": 959,
+      "Garch_n_signals": 12,
+      "Garch_mean_bps": -24.631,
+      "EGARCH_n_signals": 14,
+      "EGARCH_mean_bps": -24.663,
+      "GJR_n_signals": 16,
+      "GJR_mean_bps": 7.276
+    },
+    {
+      "symbol": "XAUEUR",
+      "n_obs": 944,
+      "Garch_n_signals": 13,
+      "Garch_mean_bps": -55.976,
+      "EGARCH_n_signals": 13,
+      "EGARCH_mean_bps": -21.671,
+      "GJR_n_signals": 14,
+      "GJR_mean_bps": 51.168
+    },
+    {
+      "symbol": "XAUGBP",
+      "n_obs": 944,
+      "Garch_n_signals": 12,
+      "Garch_mean_bps": -61.396,
+      "EGARCH_n_signals": 13,
+      "EGARCH_mean_bps": 6.094,
+      "GJR_n_signals": 16,
+      "GJR_mean_bps": 21.967
+    },
+    {
+      "symbol": "XAUSGD",
+      "n_obs": 944,
+      "Garch_n_signals": 12,
+      "Garch_mean_bps": -68.132,
+      "EGARCH_n_signals": 13,
+      "EGARCH_mean_bps": 4.856,
+      "GJR_n_signals": 14,
+      "GJR_mean_bps": 24.258
+    },
+    {
+      "symbol": "XAUUSD",
+      "n_obs": 1576,
+      "Garch_n_signals": 33,
+      "Garch_mean_bps": 2.051,
+      "EGARCH_n_signals": 32,
+      "EGARCH_mean_bps": 8.165,
+      "GJR_n_signals": 36,
+      "GJR_mean_bps": 5.931
+    },
+    {
+      "symbol": "XPDUSD",
+      "n_obs": 942,
+      "Garch_n_signals": 17,
+      "Garch_mean_bps": 143.139,
+      "EGARCH_n_signals": 15,
+      "EGARCH_mean_bps": 161.251,
+      "GJR_n_signals": 17,
+      "GJR_mean_bps": 150.359
+    },
+    {
+      "symbol": "XPTUSD",
+      "n_obs": 1577,
+      "Garch_n_signals": 27,
+      "Garch_mean_bps": 188.437,
+      "EGARCH_n_signals": 29,
+      "EGARCH_mean_bps": 169.707,
+      "GJR_n_signals": 29,
+      "GJR_mean_bps": 177.312
+    },
+    {
+      "symbol": "ZARJPY",
+      "n_obs": 2562,
+      "Garch_n_signals": 58,
+      "Garch_mean_bps": 47.461,
+      "EGARCH_n_signals": 62,
+      "EGARCH_mean_bps": 42.479,
+      "GJR_n_signals": 67,
+      "GJR_mean_bps": 50.312
+    },
+    {
+      "symbol": "ZINC",
+      "n_obs": 1565,
+      "Garch_n_signals": 32,
+      "Garch_mean_bps": 9.168,
+      "EGARCH_n_signals": 32,
+      "EGARCH_mean_bps": 9.956,
+      "GJR_n_signals": 32,
+      "GJR_mean_bps": 8.734
+    }
+  ]
+}

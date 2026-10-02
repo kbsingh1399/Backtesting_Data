@@ -1,0 +1,986 @@
+{
+  "evt": [
+    {
+      "gpd_shape_xi": 0.3335,
+      "gpd_scale": 0.006697,
+      "threshold_u": 0.02895,
+      "var995_gpd": 0.05245,
+      "var995_gaussian": 0.03663,
+      "var995_empirical": 0.05033,
+      "gaussian_understates_tail_pct": 43.2,
+      "symbol": "ALUMINIUM"
+    },
+    {
+      "gpd_shape_xi": 0.5889,
+      "gpd_scale": 0.009042,
+      "threshold_u": 0.02034,
+      "var995_gpd": 0.06507,
+      "var995_gaussian": 0.03133,
+      "var995_empirical": 0.08005,
+      "gaussian_understates_tail_pct": 107.7,
+      "symbol": "AU200"
+    },
+    {
+      "gpd_shape_xi": 0.1702,
+      "gpd_scale": 0.002712,
+      "threshold_u": 0.00892,
+      "var995_gpd": 0.01658,
+      "var995_gaussian": 0.01176,
+      "var995_empirical": 0.01612,
+      "gaussian_understates_tail_pct": 41.0,
+      "symbol": "AUDCAD"
+    },
+    {
+      "gpd_shape_xi": 0.08,
+      "gpd_scale": 0.00507,
+      "threshold_u": 0.01222,
+      "var995_gpd": 0.02507,
+      "var995_gaussian": 0.01557,
+      "var995_empirical": 0.02313,
+      "gaussian_understates_tail_pct": 61.0,
+      "symbol": "AUDCHF"
+    },
+    {
+      "gpd_shape_xi": 0.4271,
+      "gpd_scale": 0.001655,
+      "threshold_u": 0.01108,
+      "var995_gpd": 0.01766,
+      "var995_gaussian": 0.01373,
+      "var995_empirical": 0.01633,
+      "gaussian_understates_tail_pct": 28.6,
+      "symbol": "AUDCNH"
+    },
+    {
+      "gpd_shape_xi": 0.2859,
+      "gpd_scale": 0.004542,
+      "threshold_u": 0.01504,
+      "var995_gpd": 0.02986,
+      "var995_gaussian": 0.01843,
+      "var995_empirical": 0.02957,
+      "gaussian_understates_tail_pct": 62.0,
+      "symbol": "AUDJPY"
+    },
+    {
+      "gpd_shape_xi": 0.1737,
+      "gpd_scale": 0.001915,
+      "threshold_u": 0.00709,
+      "var995_gpd": 0.01254,
+      "var995_gaussian": 0.0097,
+      "var995_empirical": 0.01298,
+      "gaussian_understates_tail_pct": 29.3,
+      "symbol": "AUDNZD"
+    },
+    {
+      "gpd_shape_xi": 0.3861,
+      "gpd_scale": 0.002641,
+      "threshold_u": 0.01303,
+      "var995_gpd": 0.0229,
+      "var995_gaussian": 0.01629,
+      "var995_empirical": 0.0221,
+      "gaussian_understates_tail_pct": 40.6,
+      "symbol": "AUDUSD"
+    },
+    {
+      "gpd_shape_xi": 0.214,
+      "gpd_scale": 0.003224,
+      "threshold_u": 0.0104,
+      "var995_gpd": 0.02002,
+      "var995_gaussian": 0.01344,
+      "var995_empirical": 0.01894,
+      "gaussian_understates_tail_pct": 48.9,
+      "symbol": "CADCHF"
+    },
+    {
+      "gpd_shape_xi": 0.2938,
+      "gpd_scale": 0.003828,
+      "threshold_u": 0.01349,
+      "var995_gpd": 0.02609,
+      "var995_gaussian": 0.01697,
+      "var995_empirical": 0.02399,
+      "gaussian_understates_tail_pct": 53.7,
+      "symbol": "CADJPY"
+    },
+    {
+      "gpd_shape_xi": 0.2038,
+      "gpd_scale": 0.003704,
+      "threshold_u": 0.00998,
+      "var995_gpd": 0.02088,
+      "var995_gaussian": 0.01304,
+      "var995_empirical": 0.02025,
+      "gaussian_understates_tail_pct": 60.1,
+      "symbol": "CHFJPY"
+    },
+    {
+      "gpd_shape_xi": -0.0495,
+      "gpd_scale": 0.002708,
+      "threshold_u": 0.00691,
+      "var995_gpd": 0.0128,
+      "var995_gaussian": 0.00963,
+      "var995_empirical": 0.01218,
+      "gaussian_understates_tail_pct": 32.9,
+      "symbol": "CHFSGD"
+    },
+    {
+      "gpd_shape_xi": 0.1738,
+      "gpd_scale": 0.009836,
+      "threshold_u": 0.02477,
+      "var995_gpd": 0.05289,
+      "var995_gaussian": 0.03387,
+      "var995_empirical": 0.04819,
+      "gaussian_understates_tail_pct": 56.2,
+      "symbol": "CHINA50"
+    },
+    {
+      "gpd_shape_xi": 0.5837,
+      "gpd_scale": 0.006014,
+      "threshold_u": 0.03026,
+      "var995_gpd": 0.05948,
+      "var995_gaussian": 0.04171,
+      "var995_empirical": 0.06352,
+      "gaussian_understates_tail_pct": 42.6,
+      "symbol": "CHINAH"
+    },
+    {
+      "gpd_shape_xi": -0.1411,
+      "gpd_scale": 0.005977,
+      "threshold_u": 0.0117,
+      "var995_gpd": 0.02351,
+      "var995_gaussian": 0.01418,
+      "var995_empirical": 0.02146,
+      "gaussian_understates_tail_pct": 65.7,
+      "symbol": "CNHJPY"
+    },
+    {
+      "gpd_shape_xi": -0.0581,
+      "gpd_scale": 0.009269,
+      "threshold_u": 0.02861,
+      "var995_gpd": 0.04874,
+      "var995_gaussian": 0.03444,
+      "var995_empirical": 0.04768,
+      "gaussian_understates_tail_pct": 41.5,
+      "symbol": "COPPER"
+    },
+    {
+      "gpd_shape_xi": 0.3392,
+      "gpd_scale": 0.007995,
+      "threshold_u": 0.02159,
+      "var995_gpd": 0.04972,
+      "var995_gaussian": 0.02736,
+      "var995_empirical": 0.04808,
+      "gaussian_understates_tail_pct": 81.7,
+      "symbol": "DJ30"
+    },
+    {
+      "gpd_shape_xi": 0.1091,
+      "gpd_scale": 0.002651,
+      "threshold_u": 0.01007,
+      "var995_gpd": 0.01705,
+      "var995_gaussian": 0.01388,
+      "var995_empirical": 0.01661,
+      "gaussian_understates_tail_pct": 22.8,
+      "symbol": "EURAUD"
+    },
+    {
+      "gpd_shape_xi": -0.0589,
+      "gpd_scale": 0.003205,
+      "threshold_u": 0.00968,
+      "var995_gpd": 0.0166,
+      "var995_gaussian": 0.01247,
+      "var995_empirical": 0.01676,
+      "gaussian_understates_tail_pct": 33.1,
+      "symbol": "EURCAD"
+    },
+    {
+      "gpd_shape_xi": 0.1039,
+      "gpd_scale": 0.001786,
+      "threshold_u": 0.00657,
+      "var995_gpd": 0.01122,
+      "var995_gaussian": 0.00819,
+      "var995_empirical": 0.01052,
+      "gaussian_understates_tail_pct": 37.0,
+      "symbol": "EURCHF"
+    },
+    {
+      "gpd_shape_xi": 0.0372,
+      "gpd_scale": 0.002426,
+      "threshold_u": 0.00795,
+      "var995_gpd": 0.01379,
+      "var995_gaussian": 0.01032,
+      "var995_empirical": 0.01422,
+      "gaussian_understates_tail_pct": 33.6,
+      "symbol": "EURCNH"
+    },
+    {
+      "gpd_shape_xi": -0.1898,
+      "gpd_scale": 0.003585,
+      "threshold_u": 0.00864,
+      "var995_gpd": 0.01535,
+      "var995_gaussian": 0.01178,
+      "var995_empirical": 0.01619,
+      "gaussian_understates_tail_pct": 30.3,
+      "symbol": "EURGBP"
+    },
+    {
+      "gpd_shape_xi": 0.0764,
+      "gpd_scale": 0.002405,
+      "threshold_u": 0.00853,
+      "var995_gpd": 0.01462,
+      "var995_gaussian": 0.01151,
+      "var995_empirical": 0.01474,
+      "gaussian_understates_tail_pct": 26.9,
+      "symbol": "EURHKD"
+    },
+    {
+      "gpd_shape_xi": 0.3059,
+      "gpd_scale": 0.002553,
+      "threshold_u": 0.01077,
+      "var995_gpd": 0.01941,
+      "var995_gaussian": 0.0136,
+      "var995_empirical": 0.02072,
+      "gaussian_understates_tail_pct": 42.7,
+      "symbol": "EURHUF"
+    },
+    {
+      "gpd_shape_xi": 0.3303,
+      "gpd_scale": 0.002871,
+      "threshold_u": 0.01131,
+      "var995_gpd": 0.02125,
+      "var995_gaussian": 0.01423,
+      "var995_empirical": 0.0194,
+      "gaussian_understates_tail_pct": 49.3,
+      "symbol": "EURJPY"
+    },
+    {
+      "gpd_shape_xi": -0.0162,
+      "gpd_scale": 0.004212,
+      "threshold_u": 0.01345,
+      "var995_gpd": 0.02302,
+      "var995_gaussian": 0.01906,
+      "var995_empirical": 0.0237,
+      "gaussian_understates_tail_pct": 20.8,
+      "symbol": "EURMXN"
+    },
+    {
+      "gpd_shape_xi": 0.3306,
+      "gpd_scale": 0.002179,
+      "threshold_u": 0.01049,
+      "var995_gpd": 0.01804,
+      "var995_gaussian": 0.0148,
+      "var995_empirical": 0.01697,
+      "gaussian_understates_tail_pct": 21.9,
+      "symbol": "EURNOK"
+    },
+    {
+      "gpd_shape_xi": 0.0895,
+      "gpd_scale": 0.00298,
+      "threshold_u": 0.00986,
+      "var995_gpd": 0.01749,
+      "var995_gaussian": 0.01398,
+      "var995_empirical": 0.01725,
+      "gaussian_understates_tail_pct": 25.1,
+      "symbol": "EURNZD"
+    },
+    {
+      "gpd_shape_xi": 0.1182,
+      "gpd_scale": 0.002232,
+      "threshold_u": 0.00771,
+      "var995_gpd": 0.01363,
+      "var995_gaussian": 0.01022,
+      "var995_empirical": 0.01254,
+      "gaussian_understates_tail_pct": 33.4,
+      "symbol": "EURSEK"
+    },
+    {
+      "gpd_shape_xi": -0.0436,
+      "gpd_scale": 0.001968,
+      "threshold_u": 0.00588,
+      "var995_gpd": 0.01019,
+      "var995_gaussian": 0.00755,
+      "var995_empirical": 0.00999,
+      "gaussian_understates_tail_pct": 35.1,
+      "symbol": "EURSGD"
+    },
+    {
+      "gpd_shape_xi": -0.0696,
+      "gpd_scale": 0.003522,
+      "threshold_u": 0.00923,
+      "var995_gpd": 0.01673,
+      "var995_gaussian": 0.01244,
+      "var995_empirical": 0.01661,
+      "gaussian_understates_tail_pct": 34.5,
+      "symbol": "EURUSD"
+    },
+    {
+      "gpd_shape_xi": -0.0822,
+      "gpd_scale": 0.004194,
+      "threshold_u": 0.0151,
+      "var995_gpd": 0.02392,
+      "var995_gaussian": 0.02126,
+      "var995_empirical": 0.02375,
+      "gaussian_understates_tail_pct": 12.5,
+      "symbol": "EURZAR"
+    },
+    {
+      "gpd_shape_xi": 0.5396,
+      "gpd_scale": 0.00683,
+      "threshold_u": 0.02396,
+      "var995_gpd": 0.05532,
+      "var995_gaussian": 0.03092,
+      "var995_empirical": 0.05312,
+      "gaussian_understates_tail_pct": 78.9,
+      "symbol": "FR40"
+    },
+    {
+      "gpd_shape_xi": 0.2552,
+      "gpd_scale": 0.016245,
+      "threshold_u": 0.07308,
+      "var995_gpd": 0.12467,
+      "var995_gaussian": 0.09639,
+      "var995_empirical": 0.11521,
+      "gaussian_understates_tail_pct": 29.3,
+      "symbol": "GAS"
+    },
+    {
+      "gpd_shape_xi": 0.3421,
+      "gpd_scale": 0.00254,
+      "threshold_u": 0.01059,
+      "var995_gpd": 0.01953,
+      "var995_gaussian": 0.01422,
+      "var995_empirical": 0.01891,
+      "gaussian_understates_tail_pct": 37.4,
+      "symbol": "GBPAUD"
+    },
+    {
+      "gpd_shape_xi": 0.2762,
+      "gpd_scale": 0.003169,
+      "threshold_u": 0.00973,
+      "var995_gpd": 0.01996,
+      "var995_gaussian": 0.01342,
+      "var995_empirical": 0.01919,
+      "gaussian_understates_tail_pct": 48.7,
+      "symbol": "GBPCAD"
+    },
+    {
+      "gpd_shape_xi": 0.2863,
+      "gpd_scale": 0.002857,
+      "threshold_u": 0.01091,
+      "var995_gpd": 0.02026,
+      "var995_gaussian": 0.01363,
+      "var995_empirical": 0.01793,
+      "gaussian_understates_tail_pct": 48.6,
+      "symbol": "GBPCHF"
+    },
+    {
+      "gpd_shape_xi": 0.1676,
+      "gpd_scale": 0.002583,
+      "threshold_u": 0.0093,
+      "var995_gpd": 0.01657,
+      "var995_gaussian": 0.01177,
+      "var995_empirical": 0.01444,
+      "gaussian_understates_tail_pct": 40.7,
+      "symbol": "GBPCNH"
+    },
+    {
+      "gpd_shape_xi": 0.2236,
+      "gpd_scale": 0.00302,
+      "threshold_u": 0.01068,
+      "var995_gpd": 0.01983,
+      "var995_gaussian": 0.01385,
+      "var995_empirical": 0.0189,
+      "gaussian_understates_tail_pct": 43.2,
+      "symbol": "GBPHKD"
+    },
+    {
+      "gpd_shape_xi": 0.3571,
+      "gpd_scale": 0.003357,
+      "threshold_u": 0.01432,
+      "var995_gpd": 0.02634,
+      "var995_gaussian": 0.01737,
+      "var995_empirical": 0.02549,
+      "gaussian_understates_tail_pct": 51.7,
+      "symbol": "GBPJPY"
+    },
+    {
+      "gpd_shape_xi": 0.1994,
+      "gpd_scale": 0.002889,
+      "threshold_u": 0.01115,
+      "var995_gpd": 0.01965,
+      "var995_gaussian": 0.01587,
+      "var995_empirical": 0.01916,
+      "gaussian_understates_tail_pct": 23.8,
+      "symbol": "GBPNOK"
+    },
+    {
+      "gpd_shape_xi": 0.3179,
+      "gpd_scale": 0.00234,
+      "threshold_u": 0.01083,
+      "var995_gpd": 0.01883,
+      "var995_gaussian": 0.0146,
+      "var995_empirical": 0.01799,
+      "gaussian_understates_tail_pct": 29.0,
+      "symbol": "GBPNZD"
+    },
+    {
+      "gpd_shape_xi": 0.1213,
+      "gpd_scale": 0.002613,
+      "threshold_u": 0.01068,
+      "var995_gpd": 0.01765,
+      "var995_gaussian": 0.01334,
+      "var995_empirical": 0.0178,
+      "gaussian_understates_tail_pct": 32.3,
+      "symbol": "GBPSEK"
+    },
+    {
+      "gpd_shape_xi": 0.1026,
+      "gpd_scale": 0.00303,
+      "threshold_u": 0.00828,
+      "var995_gpd": 0.01618,
+      "var995_gaussian": 0.01085,
+      "var995_empirical": 0.01539,
+      "gaussian_understates_tail_pct": 49.1,
+      "symbol": "GBPSGD"
+    },
+    {
+      "gpd_shape_xi": 0.3508,
+      "gpd_scale": 0.003048,
+      "threshold_u": 0.0111,
+      "var995_gpd": 0.02189,
+      "var995_gaussian": 0.01473,
+      "var995_empirical": 0.01979,
+      "gaussian_understates_tail_pct": 48.6,
+      "symbol": "GBPUSD"
+    },
+    {
+      "gpd_shape_xi": 0.3278,
+      "gpd_scale": 0.009291,
+      "threshold_u": 0.02481,
+      "var995_gpd": 0.05683,
+      "var995_gaussian": 0.03172,
+      "var995_empirical": 0.05169,
+      "gaussian_understates_tail_pct": 79.1,
+      "symbol": "GER30"
+    },
+    {
+      "gpd_shape_xi": 0.3279,
+      "gpd_scale": 0.009291,
+      "threshold_u": 0.02481,
+      "var995_gpd": 0.05681,
+      "var995_gaussian": 0.03168,
+      "var995_empirical": 0.05167,
+      "gaussian_understates_tail_pct": 79.3,
+      "symbol": "GER40"
+    },
+    {
+      "gpd_shape_xi": 0.4482,
+      "gpd_scale": 0.007785,
+      "threshold_u": 0.02775,
+      "var995_gpd": 0.05929,
+      "var995_gaussian": 0.03786,
+      "var995_empirical": 0.06116,
+      "gaussian_understates_tail_pct": 56.6,
+      "symbol": "HK50"
+    },
+    {
+      "gpd_shape_xi": 0.0967,
+      "gpd_scale": 0.013355,
+      "threshold_u": 0.0278,
+      "var995_gpd": 0.06242,
+      "var995_gaussian": 0.03491,
+      "var995_empirical": 0.05836,
+      "gaussian_understates_tail_pct": 78.8,
+      "symbol": "JP225"
+    },
+    {
+      "gpd_shape_xi": 0.2298,
+      "gpd_scale": 0.005626,
+      "threshold_u": 0.02327,
+      "var995_gpd": 0.04053,
+      "var995_gaussian": 0.03125,
+      "var995_empirical": 0.03755,
+      "gaussian_understates_tail_pct": 29.7,
+      "symbol": "LEAD"
+    },
+    {
+      "gpd_shape_xi": 0.1506,
+      "gpd_scale": 0.009322,
+      "threshold_u": 0.03026,
+      "var995_gpd": 0.05597,
+      "var995_gaussian": 0.03527,
+      "var995_empirical": 0.0534,
+      "gaussian_understates_tail_pct": 58.7,
+      "symbol": "NAS100"
+    },
+    {
+      "gpd_shape_xi": 0.4451,
+      "gpd_scale": 0.006551,
+      "threshold_u": 0.02214,
+      "var995_gpd": 0.04843,
+      "var995_gaussian": 0.02793,
+      "var995_empirical": 0.04676,
+      "gaussian_understates_tail_pct": 73.4,
+      "symbol": "NETH25"
+    },
+    {
+      "gpd_shape_xi": 0.6015,
+      "gpd_scale": 0.010546,
+      "threshold_u": 0.04277,
+      "var995_gpd": 0.09549,
+      "var995_gaussian": 0.09055,
+      "var995_empirical": 0.08162,
+      "gaussian_understates_tail_pct": 5.5,
+      "symbol": "NICKEL"
+    },
+    {
+      "gpd_shape_xi": 0.4208,
+      "gpd_scale": 0.004702,
+      "threshold_u": 0.01528,
+      "var995_gpd": 0.03372,
+      "var995_gaussian": 0.0203,
+      "var995_empirical": 0.03658,
+      "gaussian_understates_tail_pct": 66.1,
+      "symbol": "NOKJPY"
+    },
+    {
+      "gpd_shape_xi": 0.499,
+      "gpd_scale": 0.002431,
+      "threshold_u": 0.00995,
+      "var995_gpd": 0.02046,
+      "var995_gaussian": 0.01321,
+      "var995_empirical": 0.02132,
+      "gaussian_understates_tail_pct": 54.9,
+      "symbol": "NOKSEK"
+    },
+    {
+      "gpd_shape_xi": 0.1831,
+      "gpd_scale": 0.002761,
+      "threshold_u": 0.0106,
+      "var995_gpd": 0.01851,
+      "var995_gaussian": 0.01316,
+      "var995_empirical": 0.01826,
+      "gaussian_understates_tail_pct": 40.6,
+      "symbol": "NZDCAD"
+    },
+    {
+      "gpd_shape_xi": 0.169,
+      "gpd_scale": 0.003425,
+      "threshold_u": 0.0124,
+      "var995_gpd": 0.02208,
+      "var995_gaussian": 0.01529,
+      "var995_empirical": 0.02171,
+      "gaussian_understates_tail_pct": 44.4,
+      "symbol": "NZDCHF"
+    },
+    {
+      "gpd_shape_xi": 0.4212,
+      "gpd_scale": 0.002315,
+      "threshold_u": 0.01096,
+      "var995_gpd": 0.02004,
+      "var995_gaussian": 0.01401,
+      "var995_empirical": 0.02014,
+      "gaussian_understates_tail_pct": 43.0,
+      "symbol": "NZDCNH"
+    },
+    {
+      "gpd_shape_xi": 0.4269,
+      "gpd_scale": 0.0029,
+      "threshold_u": 0.01439,
+      "var995_gpd": 0.02582,
+      "var995_gaussian": 0.01765,
+      "var995_empirical": 0.02644,
+      "gaussian_understates_tail_pct": 46.3,
+      "symbol": "NZDJPY"
+    },
+    {
+      "gpd_shape_xi": 0.4889,
+      "gpd_scale": 0.002257,
+      "threshold_u": 0.00989,
+      "var995_gpd": 0.0195,
+      "var995_gaussian": 0.01281,
+      "var995_empirical": 0.02035,
+      "gaussian_understates_tail_pct": 52.2,
+      "symbol": "NZDSGD"
+    },
+    {
+      "gpd_shape_xi": 0.1423,
+      "gpd_scale": 0.003527,
+      "threshold_u": 0.01276,
+      "var995_gpd": 0.02236,
+      "var995_gaussian": 0.01661,
+      "var995_empirical": 0.02281,
+      "gaussian_understates_tail_pct": 34.6,
+      "symbol": "NZDUSD"
+    },
+    {
+      "gpd_shape_xi": 0.2815,
+      "gpd_scale": 0.003474,
+      "threshold_u": 0.01083,
+      "var995_gpd": 0.02214,
+      "var995_gaussian": 0.01308,
+      "var995_empirical": 0.02019,
+      "gaussian_understates_tail_pct": 69.3,
+      "symbol": "SGDJPY"
+    },
+    {
+      "gpd_shape_xi": 0.1991,
+      "gpd_scale": 0.009419,
+      "threshold_u": 0.02329,
+      "var995_gpd": 0.05087,
+      "var995_gaussian": 0.02816,
+      "var995_empirical": 0.04961,
+      "gaussian_understates_tail_pct": 80.7,
+      "symbol": "SP500"
+    },
+    {
+      "gpd_shape_xi": 0.5076,
+      "gpd_scale": 0.007304,
+      "threshold_u": 0.02502,
+      "var995_gpd": 0.05716,
+      "var995_gaussian": 0.03208,
+      "var995_empirical": 0.05383,
+      "gaussian_understates_tail_pct": 78.2,
+      "symbol": "STOXX50"
+    },
+    {
+      "gpd_shape_xi": 0.2116,
+      "gpd_scale": 0.005086,
+      "threshold_u": 0.0175,
+      "var995_gpd": 0.03265,
+      "var995_gaussian": 0.02228,
+      "var995_empirical": 0.03333,
+      "gaussian_understates_tail_pct": 46.5,
+      "symbol": "SWISS20"
+    },
+    {
+      "gpd_shape_xi": 0.3422,
+      "gpd_scale": 0.008055,
+      "threshold_u": 0.02048,
+      "var995_gpd": 0.04888,
+      "var995_gaussian": 0.02582,
+      "var995_empirical": 0.04675,
+      "gaussian_understates_tail_pct": 89.3,
+      "symbol": "UK100"
+    },
+    {
+      "gpd_shape_xi": 0.402,
+      "gpd_scale": 0.015609,
+      "threshold_u": 0.04869,
+      "var995_gpd": 0.10834,
+      "var995_gaussian": 0.06259,
+      "var995_empirical": 0.09891,
+      "gaussian_understates_tail_pct": 73.1,
+      "symbol": "UKBRENT"
+    },
+    {
+      "gpd_shape_xi": -0.5632,
+      "gpd_scale": 0.012896,
+      "threshold_u": 0.02775,
+      "var995_gpd": 0.04446,
+      "var995_gaussian": 0.03618,
+      "var995_empirical": 0.04556,
+      "gaussian_understates_tail_pct": 22.9,
+      "symbol": "US2000"
+    },
+    {
+      "gpd_shape_xi": -0.012,
+      "gpd_scale": 0.0028,
+      "threshold_u": 0.00895,
+      "var995_gpd": 0.01534,
+      "var995_gaussian": 0.01129,
+      "var995_empirical": 0.01558,
+      "gaussian_understates_tail_pct": 35.9,
+      "symbol": "USDCAD"
+    },
+    {
+      "gpd_shape_xi": 0.202,
+      "gpd_scale": 0.003235,
+      "threshold_u": 0.01029,
+      "var995_gpd": 0.01978,
+      "var995_gaussian": 0.0127,
+      "var995_empirical": 0.01968,
+      "gaussian_understates_tail_pct": 55.7,
+      "symbol": "USDCHF"
+    },
+    {
+      "gpd_shape_xi": 0.2859,
+      "gpd_scale": 0.000379,
+      "threshold_u": 0.00103,
+      "var995_gpd": 0.00227,
+      "var995_gaussian": 0.00118,
+      "var995_empirical": 0.00243,
+      "gaussian_understates_tail_pct": 92.2,
+      "symbol": "USDHKD"
+    },
+    {
+      "gpd_shape_xi": 0.0697,
+      "gpd_scale": 0.004143,
+      "threshold_u": 0.01706,
+      "var995_gpd": 0.0274,
+      "var995_gaussian": 0.02111,
+      "var995_empirical": 0.02837,
+      "gaussian_understates_tail_pct": 29.8,
+      "symbol": "USDHUF"
+    },
+    {
+      "gpd_shape_xi": 0.1139,
+      "gpd_scale": 0.005041,
+      "threshold_u": 0.01212,
+      "var995_gpd": 0.02542,
+      "var995_gaussian": 0.01467,
+      "var995_empirical": 0.0252,
+      "gaussian_understates_tail_pct": 73.4,
+      "symbol": "USDJPY"
+    },
+    {
+      "gpd_shape_xi": 0.1194,
+      "gpd_scale": 0.00362,
+      "threshold_u": 0.01431,
+      "var995_gpd": 0.0239,
+      "var995_gaussian": 0.02009,
+      "var995_empirical": 0.02285,
+      "gaussian_understates_tail_pct": 19.0,
+      "symbol": "USDMXN"
+    },
+    {
+      "gpd_shape_xi": 0.0523,
+      "gpd_scale": 0.004449,
+      "threshold_u": 0.0137,
+      "var995_gpd": 0.02459,
+      "var995_gaussian": 0.01929,
+      "var995_empirical": 0.02354,
+      "gaussian_understates_tail_pct": 27.5,
+      "symbol": "USDNOK"
+    },
+    {
+      "gpd_shape_xi": -0.3956,
+      "gpd_scale": 0.007375,
+      "threshold_u": 0.01304,
+      "var995_gpd": 0.02419,
+      "var995_gaussian": 0.01747,
+      "var995_empirical": 0.02499,
+      "gaussian_understates_tail_pct": 38.5,
+      "symbol": "USDSEK"
+    },
+    {
+      "gpd_shape_xi": -0.0472,
+      "gpd_scale": 0.002433,
+      "threshold_u": 0.00629,
+      "var995_gpd": 0.0116,
+      "var995_gaussian": 0.00789,
+      "var995_empirical": 0.01147,
+      "gaussian_understates_tail_pct": 47.1,
+      "symbol": "USDSGD"
+    },
+    {
+      "gpd_shape_xi": -0.0534,
+      "gpd_scale": 0.003158,
+      "threshold_u": 0.00875,
+      "var995_gpd": 0.01559,
+      "var995_gaussian": 0.01114,
+      "var995_empirical": 0.01518,
+      "gaussian_understates_tail_pct": 40.0,
+      "symbol": "USDTHB"
+    },
+    {
+      "gpd_shape_xi": 0.0318,
+      "gpd_scale": 0.004511,
+      "threshold_u": 0.01744,
+      "var995_gpd": 0.02826,
+      "var995_gaussian": 0.02444,
+      "var995_empirical": 0.0275,
+      "gaussian_understates_tail_pct": 15.6,
+      "symbol": "USDZAR"
+    },
+    {
+      "gpd_shape_xi": 0.4575,
+      "gpd_scale": 0.021468,
+      "threshold_u": 0.05155,
+      "var995_gpd": 0.13965,
+      "var995_gaussian": 0.07982,
+      "var995_empirical": 0.12837,
+      "gaussian_understates_tail_pct": 75.0,
+      "symbol": "USWTI"
+    },
+    {
+      "gpd_shape_xi": 0.2551,
+      "gpd_scale": 0.023436,
+      "threshold_u": 0.04172,
+      "var995_gpd": 0.11571,
+      "var995_gaussian": 0.05991,
+      "var995_empirical": 0.09684,
+      "gaussian_understates_tail_pct": 93.1,
+      "symbol": "XAGUSD"
+    },
+    {
+      "gpd_shape_xi": 0.0481,
+      "gpd_scale": 0.010612,
+      "threshold_u": 0.02258,
+      "var995_gpd": 0.04842,
+      "var995_gaussian": 0.02879,
+      "var995_empirical": 0.0447,
+      "gaussian_understates_tail_pct": 68.2,
+      "symbol": "XAUUSD"
+    },
+    {
+      "gpd_shape_xi": 0.3187,
+      "gpd_scale": 0.012969,
+      "threshold_u": 0.04171,
+      "var995_gpd": 0.08578,
+      "var995_gaussian": 0.05362,
+      "var995_empirical": 0.07529,
+      "gaussian_understates_tail_pct": 60.0,
+      "symbol": "XPTUSD"
+    },
+    {
+      "gpd_shape_xi": -0.0479,
+      "gpd_scale": 0.007425,
+      "threshold_u": 0.02053,
+      "var995_gpd": 0.03677,
+      "var995_gaussian": 0.02511,
+      "var995_empirical": 0.03849,
+      "gaussian_understates_tail_pct": 46.5,
+      "symbol": "ZARJPY"
+    },
+    {
+      "gpd_shape_xi": 0.194,
+      "gpd_scale": 0.008496,
+      "threshold_u": 0.03105,
+      "var995_gpd": 0.05582,
+      "var995_gaussian": 0.04071,
+      "var995_empirical": 0.05324,
+      "gaussian_understates_tail_pct": 37.1,
+      "symbol": "ZINC"
+    }
+  ],
+  "copulas": [
+    {
+      "pair": "XAUUSD~XAGUSD",
+      "n": 1575,
+      "pearson": 0.783,
+      "spearman": 0.77,
+      "empirical_upper_tail_dep": 0.456,
+      "empirical_lower_tail_dep": 0.62,
+      "excess_vs_gaussian_copula_assumption": 0.62
+    },
+    {
+      "pair": "COPPER~ALUMINIUM",
+      "n": 1565,
+      "pearson": 0.569,
+      "spearman": 0.555,
+      "empirical_upper_tail_dep": 0.316,
+      "empirical_lower_tail_dep": 0.367,
+      "excess_vs_gaussian_copula_assumption": 0.367
+    },
+    {
+      "pair": "XAUUSD~SP500",
+      "n": 1575,
+      "pearson": 0.157,
+      "spearman": 0.142,
+      "empirical_upper_tail_dep": 0.177,
+      "empirical_lower_tail_dep": 0.139,
+      "excess_vs_gaussian_copula_assumption": 0.177
+    },
+    {
+      "pair": "UKBRENT~USWTI",
+      "n": 2559,
+      "pearson": 0.913,
+      "spearman": 0.969,
+      "empirical_upper_tail_dep": 0.875,
+      "empirical_lower_tail_dep": 0.852,
+      "excess_vs_gaussian_copula_assumption": 0.875
+    },
+    {
+      "pair": "XAUUSD~USDJPY",
+      "n": 1576,
+      "pearson": -0.362,
+      "spearman": -0.393,
+      "empirical_upper_tail_dep": 0.051,
+      "empirical_lower_tail_dep": 0.013,
+      "excess_vs_gaussian_copula_assumption": 0.051
+    }
+  ],
+  "pca_vs_ica": {
+    "pca_explained_variance": [
+      0.5915839048897504,
+      0.1876960757350043,
+      0.08853282641897696,
+      0.04408651989162557,
+      0.030216109196229232
+    ],
+    "pca_resid_frac_stationary": 0.3333333333333333,
+    "ica_resid_frac_stationary": 0.14285714285714285
+  },
+  "rmt": {
+    "N": 21,
+    "T": 1351,
+    "lambda_plus": 1.2648955319277921,
+    "lambda_minus": 0.7661925509737624,
+    "n_signal_eigenvalues": 4,
+    "n_noise_eigenvalues": 3,
+    "frobenius_diff": 0.09024564846094713,
+    "ledoit_wolf_shrinkage": 0.06930373241827965,
+    "cond_number_sample_cov": 1159.8213087201996,
+    "cond_number_lw_cov": 67.05389929713736
+  },
+  "wavelet_fourier": [
+    {
+      "symbol": "XAUUSD",
+      "dominant_fourier_period_days": 4.2,
+      "wavelet_energy_fraction_by_level_approx_to_detail": [
+        0.0874,
+        0.0093,
+        0.0342,
+        0.0554,
+        0.1044,
+        0.2488,
+        0.4603
+      ]
+    },
+    {
+      "symbol": "XAGUSD",
+      "dominant_fourier_period_days": 4.1,
+      "wavelet_energy_fraction_by_level_approx_to_detail": [
+        0.0787,
+        0.0133,
+        0.0269,
+        0.0504,
+        0.1265,
+        0.2643,
+        0.4399
+      ]
+    }
+  ],
+  "frac_diff": [
+    {
+      "symbol": "XAUUSD",
+      "min_d_for_stationarity": 0.6
+    },
+    {
+      "symbol": "XAGUSD",
+      "min_d_for_stationarity": 0.5
+    },
+    {
+      "symbol": "EURUSD",
+      "min_d_for_stationarity": 0.2
+    },
+    {
+      "symbol": "SP500",
+      "min_d_for_stationarity": 0.4
+    }
+  ],
+  "information_theory": [
+    {
+      "symbol": "XAUUSD",
+      "mi_z_score": 0.0,
+      "pearson_z_score": 0.02117,
+      "mi_vol_pctile": 0.06316,
+      "pearson_vol_pctile": -0.009
+    },
+    {
+      "symbol": "XAGUSD",
+      "mi_z_score": 0.01012,
+      "pearson_z_score": 0.00742,
+      "mi_vol_pctile": 0.05051,
+      "pearson_vol_pctile": 0.02665
+    }
+  ]
+}
