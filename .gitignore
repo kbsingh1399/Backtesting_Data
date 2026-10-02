@@ -9,3 +9,10 @@ __pycache__/
 *.pyc
 *.log
 catboost_info/
+
+# Live L2/L3 market data captures (quant/live_data/*.py) — these grow
+# unbounded (gigabytes/day for active symbols) and must never be committed.
+# Only the collector/downloader CODE is version-controlled; captured data
+# stays local or goes to external storage, per project convention.
+quant/live_data/capture/
+quant/live_data/**/*.parquet

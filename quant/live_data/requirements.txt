@@ -1,0 +1,8 @@
+# Install on the machine that will actually RUN these scripts.
+# This sandbox has no outbound internet access to Binance/Coinbase/Dukascopy
+# (only pypi.org/github.com are reachable here), so these can only be
+# unit-tested offline in this environment, not run live. See README.md.
+websockets>=12.0
+requests>=2.31
+pandas>=2.0
+pyarrow>=14.0
