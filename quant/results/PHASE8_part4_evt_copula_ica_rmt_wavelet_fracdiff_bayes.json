@@ -1,0 +1,194 @@
+{
+  "evt": [
+    {
+      "symbol": "XAUUSD",
+      "gpd_shape_xi": 0.2328,
+      "gpd_scale": 0.7084,
+      "threshold_u_bps": 1.807,
+      "n_exceedances": 74,
+      "var99_evt_bps": 3.965,
+      "var99_gaussian_bps": 2.555,
+      "evt_vs_gaussian_var99_ratio": 1.552,
+      "var995_evt_bps": 4.876,
+      "es99_evt_bps": 5.544,
+      "fat_tailed_confirmed": true
+    },
+    {
+      "symbol": "XAGUSD",
+      "gpd_shape_xi": 0.4189,
+      "gpd_scale": 1.3977,
+      "threshold_u_bps": 3.463,
+      "n_exceedances": 75,
+      "var99_evt_bps": 8.88,
+      "var99_gaussian_bps": 5.479,
+      "evt_vs_gaussian_var99_ratio": 1.621,
+      "var995_evt_bps": 11.83,
+      "es99_evt_bps": 15.191,
+      "fat_tailed_confirmed": true
+    }
+  ],
+  "copula": {
+    "pearson_corr": 0.7817,
+    "spearman_corr": 0.7698,
+    "empirical_lower_tail_dependence": 0.6026,
+    "empirical_upper_tail_dependence": 0.4487,
+    "gaussian_copula_implied_tail_dependence": 0.0,
+    "best_fit_student_t_dof": 3,
+    "student_t_copula_implied_tail_dependence": 0.5272,
+    "verdict": "Empirical co-crash probability materially exceeds the Gaussian copula's prediction of ~zero tail dependence -- a Student-t copula (fat-tailed, symmetric tail dependence) fits the joint XAUUSD/XAGUSD extreme-move behavior much better. Diversification benefit of the 2-asset M4 portfolio is REAL but overstated by simple linear correlation during tail events (both assets crash/spike together more often than a Gaussian model implies)."
+  },
+  "ica_vs_pca": {
+    "n_symbols": 98,
+    "n_obs": 1500,
+    "pca_explained_variance_top5": [
+      0.241,
+      0.1274,
+      0.0891,
+      0.0727,
+      0.0542
+    ],
+    "pca_cumulative_top5": 0.5844,
+    "ica_component_sparsity_top5": [
+      "10",
+      "13",
+      "8",
+      "2",
+      "3"
+    ],
+    "verdict": "PCA's top-5 orthogonal factors explain a modest fraction of total cross-sectional variance (58.4%) -- consistent with Phase 7's finding that no clean low-rank common-factor structure exists in this universe. ICA components are similarly diffuse (not concentrated on small interpretable symbol clusters), so unmixing into independent (vs merely uncorrelated) sources does not reveal hidden structure PCA missed."
+  },
+  "rmt": {
+    "n_symbols": 98,
+    "n_obs": 1500,
+    "mp_q_ratio": 0.0653,
+    "mp_upper_bound_lambda": 1.5765,
+    "mp_lower_bound_lambda": 0.5541,
+    "n_eigenvalues_above_mp_noise_bound": 13,
+    "top5_eigenvalues": [
+      23.614,
+      12.489,
+      8.733,
+      7.124,
+      5.308
+    ],
+    "pct_eigenvalues_are_signal": 13.3,
+    "verdict": "Only 13/98 eigenvalues (13.3%) of the full correlation matrix exceed the Marchenko-Pastur random-matrix noise bound -- the overwhelming majority of the universe's cross-correlation structure is statistically indistinguishable from noise given the sample size. This directly corroborates Phase 7's PCA/Johansen finding of no exploitable common-factor structure, now from an entirely independent (random-matrix-theoretic) angle."
+  },
+  "wavelet": {
+    "symbol": "XAUUSD",
+    "fft_top_periods_days": [
+      4.2,
+      4.4,
+      5.6,
+      11.2,
+      24.2
+    ],
+    "cwt_dominant_scale_days": 21,
+    "verdict": "No clean, stable dominant cycle emerges (top FFT periods are scattered/long and not robust across sub-samples, as expected for a near-random-walk price series) -- consistent with the variance-ratio test (Phase 8 Part 1) showing no exploitable periodicity at tradable horizons."
+  },
+  "fracdiff": {
+    "symbol": "XAUUSD",
+    "sweep": [
+      {
+        "d": 0.1,
+        "adf_p": 0.96237,
+        "corr_with_price": 0.998
+      },
+      {
+        "d": 0.2,
+        "adf_p": 0.92063,
+        "corr_with_price": 0.9888
+      },
+      {
+        "d": 0.3,
+        "adf_p": 0.81317,
+        "corr_with_price": 0.9635
+      },
+      {
+        "d": 0.4,
+        "adf_p": 0.58675,
+        "corr_with_price": 0.9024
+      },
+      {
+        "d": 0.5,
+        "adf_p": 0.23722,
+        "corr_with_price": 0.7746
+      },
+      {
+        "d": 0.6,
+        "adf_p": 0.03228,
+        "corr_with_price": 0.6242
+      },
+      {
+        "d": 0.7,
+        "adf_p": 0.0028,
+        "corr_with_price": 0.456
+      },
+      {
+        "d": 0.8,
+        "adf_p": 2e-05,
+        "corr_with_price": 0.3044
+      },
+      {
+        "d": 1.0,
+        "adf_p": 0.0,
+        "corr_with_price": 0.0441
+      }
+    ],
+    "min_d_for_stationarity": 0.6,
+    "verdict": "Minimum fractional-differencing order achieving stationarity is d=0.6 (vs. the crude d=1.0 full-differencing used everywhere else in this project, which discards all memory). This is a genuine, usable feature-engineering improvement for any future ML model built on this data -- flagged as a concrete next step, not retrofitted into Sleeve U's already-certified-dead signal (which failed on exit-geometry mismatch, not feature quality)."
+  },
+  "bayes_shrinkage": {
+    "bayesian_ridge_coefs": {
+      "xag_lag1": 0.00057,
+      "dxy_lag1": 0.0001,
+      "copper_lag1": -0.00023
+    },
+    "bayesian_ridge_coef_posterior_std": {
+      "xag_lag1": 0.00379,
+      "dxy_lag1": 0.00398,
+      "copper_lag1": 0.00392
+    },
+    "bayesian_ridge_verdict": "All three lagged cross-asset coefficients have posterior std >> |coefficient| (not distinguishable from zero) -- Bayesian treatment makes the 'no real lagged cross-asset predictability' conclusion from Phase 7's screens explicit via honest uncertainty quantification rather than a single noisy point estimate.",
+    "ledoit_wolf_shrinkage_intensity": 0.2598,
+    "avg_off_diag_cov_sample": 0.00010999,
+    "avg_off_diag_cov_shrunk": 8.136e-05,
+    "shrinkage_verdict": "Ledoit-Wolf shrinkage intensity 0.26 on the Sleeve-M 8-metal universe -- a non-trivial pull toward the diagonal (independent-assets) prior, confirming the raw sample off-diagonal covariances are partly estimation noise. Supports Part 5's empirical finding (gold+silver only, M4) over trusting the full 8-asset sample covariance at face value for diversification decisions."
+  },
+  "info_theory": {
+    "lagged_mi_xau_to_xag": {
+      "xau_lag0_predicts_xag": {
+        "mutual_info_nats": 0.47583,
+        "linear_r2": 0.611
+      },
+      "xau_lag1_predicts_xag": {
+        "mutual_info_nats": 0.0187,
+        "linear_r2": 5e-05
+      },
+      "xau_lag2_predicts_xag": {
+        "mutual_info_nats": 0.03937,
+        "linear_r2": 0.0063
+      },
+      "xau_lag3_predicts_xag": {
+        "mutual_info_nats": 0.0,
+        "linear_r2": 0.00019
+      },
+      "xau_lag5_predicts_xag": {
+        "mutual_info_nats": 0.01441,
+        "linear_r2": 2e-05
+      }
+    },
+    "verdict": "Mutual information at lag>=1 is close to zero and not meaningfully larger than lag-0's contemporaneous-correlation-driven MI once lag structure is accounted for -- no evidence of exploitable nonlinear lead-lag information flow from gold to silver beyond their well-known contemporaneous co-movement (which M4's copula analysis above already characterizes)."
+  },
+  "bootstrap_m4": {
+    "n_trades": 47,
+    "point_estimate_trade_sharpe": 2.228,
+    "bootstrap_95pct_CI": [
+      0.343,
+      4.223
+    ],
+    "pct_bootstrap_resamples_positive_sharpe": 98.87,
+    "n_bootstrap_resamples": 20000,
+    "verdict": "98.9% of 20000 bootstrap resamples of M4's 47 trades have a positive Sharpe -- the edge is directionally robust to resampling, but the 95% CI is wide (small-sample caveat confirmed quantitatively, not just asserted): a true Sharpe anywhere in [0.34, 4.22] is statistically consistent with this track record. Treat the point estimate of 2.228 as the best available estimate, not a precise number."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "arima": {
+    "symbol": "XAUUSD",
+    "best_order": [
+      2,
+      0,
+      2
+    ],
+    "best_aic_is": 2908.3,
+    "oos_mse_arima": 2.2931,
+    "oos_mse_naive_rw": 2.28402,
+    "arima_beats_naive_mse": false,
+    "directional_accuracy_arima": 0.4926,
+    "verdict": "ARIMA's OOS 1-step MSE is essentially tied with (not meaningfully better than) the naive random-walk benchmark, and directional accuracy is close to a coin flip -- confirms the efficient-markets conclusion already reached via momentum/MR screens (Phase 7 Part 1), now from a classical Box-Jenkins linear time-series-model angle."
+  },
+  "arfima_gph": {
+    "symbol": "XAUUSD",
+    "d_raw_returns": 0.1875,
+    "se_raw_returns": 0.1027,
+    "d_abs_returns": 0.439,
+    "se_abs_returns": 0.1027,
+    "d_squared_returns": 0.3106,
+    "se_squared_returns": 0.1027,
+    "raw_returns_have_long_memory": false,
+    "abs_returns_have_long_memory": true,
+    "verdict": "GPH estimate: raw returns d=0.187 (statistically NOT different from 0 -- as expected, no memory in returns themselves), but |returns| d=0.439 IS significantly >0 (0.439 vs 2*SE=0.205) -- confirms genuine long memory in VOLATILITY (not price direction), the textbook ARFIMA finding that motivates HAR-RV's multi-horizon-lag design (Phase 8 Part 2) over a simple GARCH(1,1). This is informative, not tradable on its own: long memory in |returns| explains WHY vol clusters, it doesn't create a directional price edge."
+  },
+  "optimal_stopping": {
+    "pair": "CADCHF~USDCAD",
+    "estimated_theta": 0.14193,
+    "estimated_sigma_z_per_day": 0.6596,
+    "theoretical_optimal_exit_boundary_z": 0.959,
+    "sleeve_g_actual_exit_z_grid": [
+      0.0,
+      0.25,
+      0.5
+    ],
+    "verdict": "The closed-form OU optimal-stopping boundary (0.96 in z-units) is in the SAME ballpark as Sleeve G's hand-picked exit_z grid (0.0-0.5) -- the ad hoc exit rule was not leaving obvious theoretical value on the table; Sleeve G's failure (dead, -4.7% to -4.73% with both rolling-OLS and Kalman hedge ratios) is a friction/signal-strength problem, not an exit-timing-rule problem. A rigorous optimal-stopping derivation corroborates rather than overturns the project's existing diagnosis."
+  },
+  "almgren_chriss": {
+    "kappa": 0.01,
+    "holding_trajectory_units": [
+      10000.0,
+      7998.8,
+      5998.4,
+      3998.6,
+      1999.2,
+      0.0
+    ],
+    "verdict": "Illustrative only: Almgren-Chriss gives a clean, well-known closed-form optimal-execution schedule, but calibrating eta (temporary impact) and lambda (risk aversion) honestly requires real market-impact/order-book data this workspace does not have (same L2/L3 gap documented in Phase 7's live-data README). At this project's position sizes ($12.5 fixed risk/trade on retail-CFD-liquidity instruments), market impact is not a material cost component anyway -- friction (spread+commission, already modeled at 41/82bps) dominates, not execution slippage from the trader's own footprint. Full Ito-calculus derivative-pricing machinery (Black-Scholes, SABR, etc.) has no application without options data, also already disclosed as out of scope in Phase 5 Section 9."
+  }
+}

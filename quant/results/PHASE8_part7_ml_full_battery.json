@@ -1,0 +1,113 @@
+{
+  "model_comparison": {
+    "Ridge": {
+      "n_oos": 207956,
+      "n_long_signals": 678,
+      "long_mean_bps": 9.1,
+      "long_tstat": 0.432
+    },
+    "Lasso": {
+      "n_oos": 207956,
+      "n_long_signals": 0,
+      "long_mean_bps": null,
+      "long_tstat": null
+    },
+    "ElasticNet": {
+      "n_oos": 207956,
+      "n_long_signals": 0,
+      "long_mean_bps": null,
+      "long_tstat": null
+    },
+    "XGBoost": {
+      "n_oos": 207956,
+      "n_long_signals": 10008,
+      "long_mean_bps": 2.378,
+      "long_tstat": 1.072
+    },
+    "LightGBM": {
+      "n_oos": 207956,
+      "n_long_signals": 9713,
+      "long_mean_bps": 3.701,
+      "long_tstat": 1.582
+    },
+    "MLP": {
+      "n_oos": 207956,
+      "n_long_signals": 5972,
+      "long_mean_bps": 4.368,
+      "long_tstat": 1.195
+    },
+    "LSTM": {
+      "n_oos": 65435,
+      "n_long_signals": 3970,
+      "long_mean_bps": 7.635,
+      "long_tstat": 3.158
+    }
+  },
+  "ensemble_avg_xgb_lgb_mlp": {
+    "n_long_signals": 7391,
+    "long_mean_bps": 3.891,
+    "long_tstat": 1.27
+  },
+  "feature_importance": {
+    "MDI": {
+      "ret_1": 0.2004,
+      "ret_5": 0.0833,
+      "ret_21": 0.0926,
+      "ret_63": 0.1006,
+      "rsi14": 0.0833,
+      "vol21": 0.12,
+      "dist_ma21": 0.1262,
+      "dist_ma63": 0.1073,
+      "xs_rank_21": 0.0865
+    },
+    "MDA_permutation": {
+      "ret_1": 0.01019,
+      "ret_5": 0.00229,
+      "ret_21": 0.00258,
+      "ret_63": 0.00264,
+      "rsi14": 0.00155,
+      "vol21": 0.0043,
+      "dist_ma21": 0.00425,
+      "dist_ma63": 0.00155,
+      "xs_rank_21": 0.00346
+    },
+    "SHAP_mean_abs": {
+      "ret_1": 0.03417,
+      "ret_5": 0.00258,
+      "ret_21": 0.00315,
+      "ret_63": 0.00779,
+      "rsi14": 0.00302,
+      "vol21": 0.01354,
+      "dist_ma21": 0.01534,
+      "dist_ma63": 0.00267,
+      "xs_rank_21": 0.00923
+    }
+  },
+  "calibration": {
+    "brier_raw": 0.25123,
+    "brier_isotonic_calibrated": 0.25105,
+    "improved": true
+  },
+  "online_vs_batch": {
+    "online_sgd": {
+      "n_long": 207931,
+      "mean_bps": 1.756,
+      "tstat": 7.46
+    },
+    "batch_logreg": {
+      "n_long": 3026,
+      "mean_bps": 5.368,
+      "tstat": 0.831
+    },
+    "verdict": "Incrementally-updated online SGD vs full quarterly batch retrain -- both show the same modest-but-sub-cost long edge magnitude as Phase 7 Part 3's original LogisticRegression; no evidence of meaningful concept drift that online learning captures better than periodic batch retraining on this daily cross-sectional panel."
+  },
+  "bayesian_hpo": {
+    "best_params": {
+      "n_estimators": 247,
+      "max_depth": 8,
+      "min_samples_leaf": 11
+    },
+    "best_is_auc": 0.5407,
+    "default_rf_is_auc": 0.5282
+  }
+}

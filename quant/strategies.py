@@ -464,6 +464,74 @@ def sig_sleeve_g(df: pd.DataFrame, params: dict):
 
 
 # ---------------------------------------------------------------------------
+# Sleeve G2 (Phase 8): identical OU-native pairs mechanics to Sleeve G, but
+# the hedge ratio is now a TIME-VARYING Kalman filter state (the classic
+# Ernie Chan pairs-trading recipe: observation y_t = beta_t*x_t + alpha_t +
+# eps_t, state evolves as a random walk) instead of a rolling-OLS window.
+# This was explicitly flagged as unfinished future work in STATARB_REPORT.md
+# -- tests whether a properly time-varying hedge ratio (vs. a fixed 252-day
+# rolling-window OLS that reacts slowly to true regime shifts in the
+# relationship) changes Sleeve G's (-4.7%, dead) result. Strictly causal
+# (pykalman .filter(), a forward-only pass) -- zero lookahead, same
+# discipline as every other sleeve.
+# ---------------------------------------------------------------------------
+SLEEVE_G2_PAIRS = SLEEVE_G_PAIRS
+SLEEVE_G2_HEDGE_WINDOW = SLEEVE_G_HEDGE_WINDOW
+SLEEVE_G2_MIN_OOS_START = SLEEVE_G_MIN_OOS_START
+SLEEVE_G2_PARAM_GRID = SLEEVE_G_PARAM_GRID
+
+
+def _kalman_hedge_ratio(la: pd.Series, lb: pd.Series):
+    from pykalman import KalmanFilter
+    n = len(la)
+    obs_mat = np.array([[lb.values[t], 1.0] for t in range(n)]).reshape(n, 1, 2)
+    kf = KalmanFilter(
+        n_dim_obs=1, n_dim_state=2,
+        initial_state_mean=[0, 0],
+        initial_state_covariance=np.ones((2, 2)),
+        transition_matrices=np.eye(2),
+        observation_matrices=obs_mat,
+        observation_covariance=1.0,
+        transition_covariance=1e-5 * np.eye(2),
+    )
+    state_means, _ = kf.filter(la.values)
+    beta = pd.Series(state_means[:, 0], index=la.index)
+    alpha = pd.Series(state_means[:, 1], index=la.index)
+    return beta, alpha
+
+
+def prep_sleeve_g2(pair_id: str):
+    a_sym, b_sym = pair_id.split("~")
+    da = load_forex(a_sym, "d1")["close"]
+    db = load_forex(b_sym, "d1")["close"]
+    idx = da.index.intersection(db.index)
+    la, lb = np.log(da.loc[idx]), np.log(db.loc[idx])
+
+    beta, alpha = _kalman_hedge_ratio(la, lb)
+    # use YESTERDAY's filtered state to build today's spread (strictly no lookahead
+    # even though the Kalman filter itself is already causal -- belt and suspenders,
+    # matching Sleeve F/G's own shift(1) convention on the rolling-OLS beta)
+    beta_lag, alpha_lag = beta.shift(1), alpha.shift(1)
+
+    spread = la - (alpha_lag + beta_lag * lb)
+    ret_a, ret_b = la.diff(), lb.diff()
+    spread_ret = ret_a - beta_lag * ret_b
+    index = 100.0 * np.exp(spread_ret.fillna(0).cumsum())
+
+    df = pd.DataFrame(index=idx)
+    df["open"], df["high"], df["low"], df["close"] = index, index, index, index
+    z_lookback = 20
+    df["spread_mean"] = spread.rolling(z_lookback).mean()
+    df["spread_std"] = spread.rolling(z_lookback).std()
+    df["z"] = (spread - df["spread_mean"]) / df["spread_std"].replace(0, np.nan)
+    df["kalman_beta"] = beta_lag
+    return df
+
+
+sig_sleeve_g2 = sig_sleeve_g  # identical entry/exit signal logic, only beta estimation differs
+
+
+# ---------------------------------------------------------------------------
 # Sleeve H: same OU-native mechanics as G, but a DIVERSIFIED 28-pair universe
 # (vs G's concentrated 8) selected from the leak-free cointegration scan with
 # a max-3-pairs-per-leg cap, to reduce the single-pair variance that tripped
@@ -1118,6 +1186,56 @@ def sig_sleeve_t(df: pd.DataFrame, params: dict):
 
 
 # ---------------------------------------------------------------------------
+# Sleeve T2 (Phase 8): identical fade-the-extreme-move logic to Sleeve T, but
+# the vol-regime filter is now a walk-forward GARCH(1,1)-conditional-vol
+# percentile rank (cached in PHASE8_garch_vol_cache.parquet, quarterly
+# expanding re-fit, zero lookahead) instead of the simple realized-vol
+# percentile. GARCH(1,1) was the best of 5 vol-forecast families tested on
+# QLIKE loss (Phase 8 Part 2) -- this tests whether a "proper" econometric
+# vol model (vs. the crude percentile-rank proxy) rescues the dead sleeve.
+# ---------------------------------------------------------------------------
+SLEEVE_T2_UNIVERSE = SLEEVE_T_UNIVERSE
+SLEEVE_T2_PARAM_GRID = SLEEVE_T_PARAM_GRID
+
+_GARCH_CACHE = None
+
+
+def _load_garch_cache():
+    global _GARCH_CACHE
+    if _GARCH_CACHE is None:
+        path = os.path.join(os.path.dirname(__file__), "results", "PHASE8_garch_vol_cache.parquet")
+        c = pd.read_parquet(path)
+        date_col = "date" if "date" in c.columns else "datetime"
+        c["date"] = pd.to_datetime(c[date_col], utc=True)
+        _GARCH_CACHE = c
+    return _GARCH_CACHE
+
+
+def prep_sleeve_t2(symbol: str):
+    df = load_forex(symbol, "d1")
+    ret = df["close"].pct_change()
+    roll_mean = ret.rolling(21).mean()
+    roll_std = ret.rolling(21).std()
+    df["ret_z"] = (ret - roll_mean) / roll_std
+    cache = _load_garch_cache()
+    sub = cache[cache["symbol"] == symbol].set_index("date")[["garch_pct"]]
+    df = df.join(sub, how="left")
+    df["vol_pct"] = df["garch_pct"]
+    return df
+
+
+def sig_sleeve_t2(df: pd.DataFrame, params: dict):
+    high_vol = df["vol_pct"] >= params["vol_pct_min"]
+    z = df["ret_z"]
+    z_thresh = params["z_thresh"]
+    long_cond = high_vol & (z < -z_thresh)
+    short_cond = high_vol & (z > z_thresh)
+    entries = (long_cond | short_cond).fillna(False)
+    sides = pd.Series(np.where(long_cond, 1, np.where(short_cond, -1, 0)), index=df.index)
+    return entries, sides, df["atr14"]
+
+
+# ---------------------------------------------------------------------------
 # Sleeve U: ML-SIGNAL-DRIVEN ENTRIES (Phase 7). Uses the walk-forward
 # Logistic Regression long-probability signal from phase7_screen_part3_ml.py
 # (pooled cross-sectional panel across all 98 symbols, quarterly expanding-
@@ -1158,6 +1276,56 @@ def sig_sleeve_u(df: pd.DataFrame, params: dict):
     entries = long_cond
     sides = pd.Series(np.where(long_cond, 1, 0), index=df.index)
     return entries, sides, df["atr14"]
+
+
+# ---------------------------------------------------------------------------
+# Sleeve M7 (Phase 8): META-LABELING + TRIPLE-BARRIER LABELING applied to
+# Sleeve M4's own primary signal (Donchian breakout + ATR-rank filter,
+# don_n=40/atr_rank_min=30 fixed -- the most common IS-locked choice across
+# M4's certified quarters). A walk-forward RandomForest meta-model, trained
+# with de Prado's triple-barrier labels (win/loss from the ACTUAL SL/TP/
+# ratchet/time-decay engine) and uniqueness-based sample weights, predicts
+# P(win) for every raw signal using only pre-trade features; this sleeve
+# only takes the trade when P(win) clears a threshold. Cache built by
+# phase8_part6_metalabel_cache.py (quarterly expanding window, embargoed on
+# trade EXIT time to prevent any leakage -- a trade's label is never used in
+# training until it has fully resolved before the test quarter starts).
+# ---------------------------------------------------------------------------
+SLEEVE_M7_UNIVERSE = ["XAUUSD", "XAGUSD"]
+SLEEVE_M7_FIXED_PARAMS = dict(don_n=40, atr_rank_min=30)
+SLEEVE_M7_PARAM_GRID = [
+    dict(meta_thresh=0.0),   # sanity check: should reduce to plain M4-on-this-param-pair
+    dict(meta_thresh=0.40),
+    dict(meta_thresh=0.45),
+    dict(meta_thresh=0.50),
+]
+
+_METALABEL_CACHE = None
+
+
+def _load_metalabel_cache():
+    global _METALABEL_CACHE
+    if _METALABEL_CACHE is None:
+        path = os.path.join(os.path.dirname(__file__), "results", "PHASE8_metalabel_cache.parquet")
+        c = pd.read_parquet(path)
+        c["signal_time"] = pd.to_datetime(c["signal_time"], utc=True)
+        _METALABEL_CACHE = c
+    return _METALABEL_CACHE
+
+
+def prep_sleeve_m7(symbol: str):
+    df = prep_sleeve_m(symbol)
+    cache = _load_metalabel_cache()
+    sub = cache[cache["symbol"] == symbol].set_index("signal_time")[["meta_proba"]]
+    df = df.join(sub, how="left")
+    return df
+
+
+def sig_sleeve_m7(df: pd.DataFrame, params: dict):
+    entries, sides, atr = sig_sleeve_m(df, SLEEVE_M7_FIXED_PARAMS)
+    meta_ok = (df["meta_proba"] >= params["meta_thresh"]).fillna(False)
+    entries = entries & meta_ok
+    return entries, sides, atr
 
 
 # ---------------------------------------------------------------------------
@@ -1212,6 +1380,10 @@ SLEEVES = {
               sig=sig_sleeve_h, name="H_FX_STATARB_DIVERSIFIED_28PAIR",
               min_oos_start=SLEEVE_H_MIN_OOS_START, friction_bps_roundtrip=82.0,
               trade_fn=generate_statarb_trades),
+    "G2": dict(universe=SLEEVE_G2_PAIRS, grid=SLEEVE_G2_PARAM_GRID, prep=prep_sleeve_g2,
+               sig=sig_sleeve_g2, name="G2_FX_STATARB_KALMAN_HEDGE_RATIO",
+               min_oos_start=SLEEVE_G2_MIN_OOS_START, friction_bps_roundtrip=82.0,
+               trade_fn=generate_statarb_trades),
     "I": dict(universe=SLEEVE_I_UNIVERSE, grid=SLEEVE_I_PARAM_GRID, prep=prep_sleeve_i,
               sig=sig_sleeve_i, name="I_CRYPTO_LSRATIO_CONTRARIAN"),
     "J": dict(universe=SLEEVE_J_UNIVERSE, grid=SLEEVE_J_PARAM_GRID, prep=prep_sleeve_j,
@@ -1241,6 +1413,10 @@ SLEEVES = {
               sig=sig_sleeve_t, name="T_FULLBREADTH_VOLREGIME_MEANREV"),
     "U": dict(universe=SLEEVE_U_UNIVERSE, grid=SLEEVE_U_PARAM_GRID, prep=prep_sleeve_u,
               sig=sig_sleeve_u, name="U_ML_LOGREG_LONGONLY_SIGNAL"),
+    "T2": dict(universe=SLEEVE_T2_UNIVERSE, grid=SLEEVE_T2_PARAM_GRID, prep=prep_sleeve_t2,
+               sig=sig_sleeve_t2, name="T2_GARCH_VOLREGIME_MR"),
+    "M7": dict(universe=SLEEVE_M7_UNIVERSE, grid=SLEEVE_M7_PARAM_GRID, prep=prep_sleeve_m7,
+               sig=sig_sleeve_m7, name="M7_METALABELED_M4"),
     "M2": dict(universe=SLEEVE_M2_UNIVERSE, grid=SLEEVE_M2_PARAM_GRID, prep=prep_sleeve_m,
                sig=sig_sleeve_m, name="M2_PRECIOUS_METALS_ONLY"),
     "M3": dict(universe=SLEEVE_M3_UNIVERSE, grid=SLEEVE_M3_PARAM_GRID, prep=prep_sleeve_m,

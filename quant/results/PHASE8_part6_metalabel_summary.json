@@ -1,0 +1,41 @@
+{
+  "label_params": {
+    "don_n": 40,
+    "atr_rank_min": 30
+  },
+  "n_raw_signals": 70,
+  "n_with_meta_proba": 42,
+  "oos_auc": 0.5773,
+  "threshold_sweep": [
+    {
+      "thresh": 0.0,
+      "n": 42,
+      "win_rate": 0.5238,
+      "mean_r": 0.638
+    },
+    {
+      "thresh": 0.45,
+      "n": 6,
+      "win_rate": 0.5,
+      "mean_r": 0.1386
+    },
+    {
+      "thresh": 0.5,
+      "n": 2,
+      "win_rate": 1.0,
+      "mean_r": 0.1215
+    },
+    {
+      "thresh": 0.55,
+      "n": 1,
+      "win_rate": 1.0,
+      "mean_r": 0.0902
+    },
+    {
+      "thresh": 0.6,
+      "n": 1,
+      "win_rate": 1.0,
+      "mean_r": 0.0902
+    }
+  ]
+}

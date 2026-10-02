@@ -104,7 +104,7 @@ def update_scorecard(label, stats):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("sleeve", choices=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U",
-                                        "M2", "M3", "M4", "M5", "M6"])
+                                        "M2", "M3", "M4", "M5", "M6", "T2", "G2", "M7"])
     ap.add_argument("--variant", default=None)
     ap.add_argument("--tag", default=None)
     ap.add_argument("--min-is-trades", type=int, default=6)

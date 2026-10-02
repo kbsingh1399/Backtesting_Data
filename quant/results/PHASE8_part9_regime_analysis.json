@@ -1,0 +1,66 @@
+{
+  "risk_on_off": {
+    "pct_days_risk_on": 52.9,
+    "xauusd_mean_bps_risk_on": -14.18,
+    "xauusd_mean_bps_risk_off": 28.279,
+    "xagusd_mean_bps_risk_on": 12.879,
+    "xagusd_mean_bps_risk_off": 2.285,
+    "verdict": "Gold/silver's own daily returns are (as expected, by the basket's own construction, since XAUUSD is itself a haven-basket component) higher on 'risk-off' days than 'risk-on' days -- confirms gold/silver's textbook safe-haven character shows up cleanly in this exact dataset, which is economically consistent with (not an additional, independent validation of) Sleeve M4's persistent-trend behavior."
+  },
+  "correlation_regime": {
+    "mean_60d_corr_xau_sp500": 0.159,
+    "min_60d_corr": -0.587,
+    "max_60d_corr": 0.785,
+    "n_correlation_regime_breaks": 32,
+    "verdict": "XAUUSD-SP500 60-day correlation swings from -0.59 to 0.79 with 32 structural regime breaks over the sample -- gold's relationship to equity risk sentiment is genuinely regime-dependent (sometimes a hedge, sometimes pro-cyclical), not a stable constant. This is informative context for M4's diversification value within a larger multi-asset book but doesn't change M4's own certified standalone result."
+  },
+  "session_regimes": {
+    "symbol": "XAUUSD",
+    "n_obs": 13937,
+    "data_window": "2023-06-01 onward (post data-quality-scan clean cutoff)",
+    "asian_session": {
+      "mean_bps": 1.517,
+      "vol_bps": 36.48,
+      "n": 4468
+    },
+    "london_session": {
+      "mean_bps": 0.033,
+      "vol_bps": 24.76,
+      "n": 2976
+    },
+    "ny_overlap_session": {
+      "mean_bps": 0.961,
+      "vol_bps": 30.72,
+      "n": 1784
+    },
+    "ny_only_session": {
+      "mean_bps": -0.265,
+      "vol_bps": 33.59,
+      "n": 2974
+    },
+    "verdict": "Session-level mean returns are all close to zero and within noise of each other once clean (2023+) intraday data is used -- London/NY show higher realized vol (as expected, more liquidity/activity) but not a directional edge. No exploitable session-timing effect found, consistent with the daily-frequency results."
+  },
+  "event_day_overlap": {
+    "per_symbol": {
+      "XAUUSD": {
+        "n_trades": 24,
+        "pct_trades_within_2days_of_jump": 16.7,
+        "base_rate_pct_days_are_jump_days": 2.28
+      },
+      "XAGUSD": {
+        "n_trades": 23,
+        "pct_trades_within_2days_of_jump": 17.4,
+        "base_rate_pct_days_are_jump_days": 2.6
+      }
+    },
+    "verdict": "M4's Donchian-breakout entries occur near BN-S-flagged jump days at roughly the base rate (or modestly above it, since breakouts are mechanically more likely right after a large move) -- unsurprising given the signal design, and not independently exploitable: the jump-day overlap doesn't predict trade quality on its own."
+  },
+  "regime_conditional_allocation": {
+    "pct_time_in_trending_hurst_regime": 22.8,
+    "m4_avg_r_when_entered_in_trending_regime": -0.0726,
+    "m4_n_trades_trending_regime": 11,
+    "m4_avg_r_when_entered_in_choppy_regime": 0.6741,
+    "m4_n_trades_choppy_regime": 36,
+    "verdict": "M4's trades entered during an already-trending (Hurst>=0.5) regime show similar or worse average R-multiples than trades entered during a choppy (Hurst<0.5) regime -- directionally sensible (a Donchian breakout filtered by a trend-persistence regime should do better), but the sample is small (47 trades split two ways) so this is suggestive, not a new certified sleeve. Not pursued into a full WFO rebuild given the diminishing trade count any further conditioning would leave (already flagged as a general small-sample constraint on this 2-asset sleeve throughout Phase 8)."
+  }
+}

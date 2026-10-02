@@ -26,22 +26,22 @@
     "model": "RandomForest",
     "n_oos_quarters": 43,
     "n_oos_rows": 207956,
-    "hit_rate_long": 0.5451,
-    "hit_rate_short": 0.5197,
+    "hit_rate_long": 0.5377,
+    "hit_rate_short": 0.5173,
     "long_signal_stats": {
-      "n": 7186,
-      "mean_bps": 7.05,
-      "t_stat": 2.57
+      "n": 6888,
+      "mean_bps": 0.71,
+      "t_stat": 0.22
     },
     "short_signal_stats": {
-      "n": 1826,
-      "mean_bps": 0.68,
-      "t_stat": 0.1
+      "n": 895,
+      "mean_bps": -10.81,
+      "t_stat": -1.17
     },
     "combined_stats": {
-      "n": 9012,
-      "mean_bps": 5.76,
-      "t_stat": 2.26
+      "n": 7783,
+      "mean_bps": -0.62,
+      "t_stat": -0.21
     },
     "friction_bps_rt": 41.0
   },
@@ -49,22 +49,22 @@
     "model": "GradientBoosting",
     "n_oos_quarters": 43,
     "n_oos_rows": 207956,
-    "hit_rate_long": 0.5249,
-    "hit_rate_short": 0.5,
+    "hit_rate_long": 0.5441,
+    "hit_rate_short": 0.5088,
     "long_signal_stats": {
-      "n": 7156,
-      "mean_bps": -1.14,
-      "t_stat": -0.39
+      "n": 9540,
+      "mean_bps": 4.26,
+      "t_stat": 1.8
     },
     "short_signal_stats": {
-      "n": 2952,
-      "mean_bps": -10.69,
-      "t_stat": -1.93
+      "n": 3009,
+      "mean_bps": -3.06,
+      "t_stat": -0.52
     },
     "combined_stats": {
-      "n": 10108,
-      "mean_bps": -3.93,
-      "t_stat": -1.49
+      "n": 12549,
+      "mean_bps": 2.5,
+      "t_stat": 1.09
     },
     "friction_bps_rt": 41.0
   }

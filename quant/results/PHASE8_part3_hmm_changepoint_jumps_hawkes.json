@@ -1,0 +1,86 @@
+{
+  "XAUUSD": {
+    "n_obs": 1576,
+    "hmm_calm_vol": 0.8167,
+    "hmm_turbulent_vol": 1.847,
+    "hmm_pct_time_turbulent": 20.0,
+    "hmm_persistence_calm": 0.987,
+    "hmm_persistence_turbulent": 0.95,
+    "n_structural_breaks": 2,
+    "avg_segment_len_days": 788.0,
+    "n_jump_days": 36,
+    "pct_jump_days": 2.28,
+    "hawkes": {
+      "mu": 0.00064,
+      "alpha": 4.9,
+      "beta": 5.0,
+      "branching_ratio": 0.98,
+      "neg_loglik": -12.01,
+      "fano_factor_60d_windows": 1.171,
+      "ks_gaps_vs_exponential_p": 0.1285
+    }
+  },
+  "XAGUSD": {
+    "n_obs": 1576,
+    "hmm_calm_vol": 1.6876,
+    "hmm_turbulent_vol": 5.3754,
+    "hmm_pct_time_turbulent": 8.9,
+    "hmm_persistence_calm": 0.988,
+    "hmm_persistence_turbulent": 0.897,
+    "n_structural_breaks": 1,
+    "avg_segment_len_days": 1576.0,
+    "n_jump_days": 41,
+    "pct_jump_days": 2.6,
+    "hawkes": {
+      "mu": 0.00064,
+      "alpha": 4.9,
+      "beta": 5.0,
+      "branching_ratio": 0.98,
+      "neg_loglik": -15.06,
+      "fano_factor_60d_windows": 1.082,
+      "ks_gaps_vs_exponential_p": 0.8069
+    }
+  },
+  "EURUSD": {
+    "n_obs": 2500,
+    "hmm_calm_vol": 0.3198,
+    "hmm_turbulent_vol": 0.5341,
+    "hmm_pct_time_turbulent": 58.3,
+    "hmm_persistence_calm": 0.989,
+    "hmm_persistence_turbulent": 0.989,
+    "n_structural_breaks": 2,
+    "avg_segment_len_days": 1250.0,
+    "n_jump_days": 43,
+    "pct_jump_days": 1.72,
+    "hawkes": {
+      "mu": 0.0004,
+      "alpha": 4.9,
+      "beta": 5.0,
+      "branching_ratio": 0.98,
+      "neg_loglik": -15.79,
+      "fano_factor_60d_windows": 0.69,
+      "ks_gaps_vs_exponential_p": 0.1788
+    }
+  },
+  "COPPER": {
+    "n_obs": 1565,
+    "hmm_calm_vol": 0.9478,
+    "hmm_turbulent_vol": 1.7691,
+    "hmm_pct_time_turbulent": 43.7,
+    "hmm_persistence_calm": 0.941,
+    "hmm_persistence_turbulent": 0.911,
+    "n_structural_breaks": 1,
+    "avg_segment_len_days": 1565.0,
+    "n_jump_days": 29,
+    "pct_jump_days": 1.85,
+    "hawkes": {
+      "mu": 0.00064,
+      "alpha": 4.82694,
+      "beta": 5.0,
+      "branching_ratio": 0.9654,
+      "neg_loglik": -7.75,
+      "fano_factor_60d_windows": 1.057,
+      "ks_gaps_vs_exponential_p": 0.7681
+    }
+  }
+}

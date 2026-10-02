@@ -1,0 +1,78 @@
+{
+  "clustering": {
+    "symbol": "XAUUSD",
+    "k": 4,
+    "cluster_vol_trend_profile": {
+      "0": {
+        "vol21": 0.00904,
+        "trend_63": 0.12211
+      },
+      "1": {
+        "vol21": 0.00892,
+        "trend_63": 0.0313
+      },
+      "2": {
+        "vol21": 0.01012,
+        "trend_63": -0.05254
+      },
+      "3": {
+        "vol21": 0.02131,
+        "trend_63": 0.16197
+      }
+    },
+    "cluster_fwd_return_bps": {
+      "0": 11.246,
+      "1": 6.075,
+      "2": 4.444,
+      "3": -4.21
+    },
+    "verdict": "K-means regime clusters separate cleanly on vol/trend (by construction) but forward-return differences across clusters are small relative to noise -- consistent with every other regime detector tried in this project (HMM, Hurst, vol-percentile): regimes affect risk/character of price action, not exploitable directional edge on their own."
+  },
+  "autoencoder": {
+    "n_features_in": 9,
+    "n_latent": 3,
+    "reconstruction_mse": 1.31972,
+    "downstream_auc_raw_9features": 0.5158,
+    "downstream_auc_3d_autoencoder_latent": 0.5134,
+    "verdict": "3-dim autoencoder compression preserves most of the downstream predictive signal (0.516 raw vs 0.513 latent AUC) -- the 9 engineered features don't have much redundant/noisy structure for an autoencoder to usefully denoise away; consistent with Phase 7/8's broader finding that the available feature set's signal ceiling is low (~0.53-0.58 AUC everywhere), not a feature-engineering or denoising problem."
+  },
+  "cpcv_pbo_deflated_sharpe": {
+    "n_trades": 47,
+    "n_cpcv_splits": 28,
+    "point_sharpe_trade_level": 2.228,
+    "pbo_proxy_frac_negative_oos_splits": 0.1786,
+    "n_trials_assumed_project_wide": 60,
+    "expected_max_sharpe_under_null_given_n_trials": 0.342,
+    "deflated_sharpe_stat": 12.722,
+    "deflated_sharpe_pvalue": 0.0,
+    "survives_deflation_at_5pct": true,
+    "verdict": "Combinatorial-purged-CV: only 17.9% of 28 out-of-sub-sample splits show a negative Sharpe -- directionally robust. Deflated Sharpe Ratio (accounting for ~60 sleeve/variant trials searched across the whole A-U project, the honest multiple-testing correction flagged as a gap since Phase 5): raw trade-level Sharpe 2.23 vs a null-expected max of 0.34 given that many trials -> deflated-Sharpe p-value 0.0 -- still significant after correcting for how many strategies were tried before finding this one. This is the single most important robustness number in the whole project and should accompany any claim that M4 is a 'real' edge."
+  },
+  "rl_sizing": {
+    "n_trades": 47,
+    "fixed_fractional_sharpe": 2.228,
+    "rl_bandit_sizing_sharpe": 2.304,
+    "rl_mean_size_multiplier": 1.117,
+    "improves_over_fixed": true,
+    "verdict": "RL-based adaptive position sizing (contextual bandit over 3 size multipliers, Thompson sampling, trained online with zero lookahead) modestly improves on the mission-mandated fixed-fractional $12.5/trade baseline on M4's 47-trade history -- with only 47 trades there isn't enough data for a bandit to learn a reliable sizing policy; this is consistent with the meta-labeling result (Phase 8 Part 6): every technique that needs hundreds+ of primary-model trades to train reliably is undersupplied by M4's trade count. The project's fixed-fractional mandate remains the right choice given this data volume, not a missed opportunity."
+  },
+  "generative_stress_test": {
+    "XAUUSD": {
+      "n_sims": 200,
+      "horizon_days": 252,
+      "simulated_1yr_return_mean": 17.93,
+      "simulated_1yr_return_p5": -13.19,
+      "simulated_1yr_return_p95": 52.96,
+      "pct_sims_drawdown_exceeds_20pct": 2.5
+    },
+    "XAGUSD": {
+      "n_sims": 200,
+      "horizon_days": 252,
+      "simulated_1yr_return_mean": 17.36,
+      "simulated_1yr_return_p5": -35.25,
+      "simulated_1yr_return_p95": 97.16,
+      "pct_sims_drawdown_exceeds_20pct": 15.0
+    },
+    "verdict": "GARCH-t Monte Carlo scenario generation (200 synthetic 1-year paths per metal, preserving fat tails and volatility clustering) gives a realistic range of forward outcomes beyond the single realized 2021-2026 history M4 was certified on -- useful for stress-testing the $225 hard-drawdown-halt assumption going forward, separate from (and a legitimate complement to) the historical walk-forward OOS certification already performed."
+  }
+}

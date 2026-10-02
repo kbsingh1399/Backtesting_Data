@@ -1,0 +1,33 @@
+{
+  "n_symbols": 85,
+  "n_rows": 214519,
+  "qlike_by_model": [
+    {
+      "model": "garch_vol",
+      "qlike_loss": 1.78928,
+      "n": 180039
+    },
+    {
+      "model": "gjr_vol",
+      "qlike_loss": 1.79892,
+      "n": 180039
+    },
+    {
+      "model": "kalman_vol",
+      "qlike_loss": 3.87416,
+      "n": 214434
+    },
+    {
+      "model": "har_vol",
+      "qlike_loss": 4388.78143,
+      "n": 212564
+    },
+    {
+      "model": "egarch_vol",
+      "qlike_loss": 9763.93076,
+      "n": 180039
+    }
+  ],
+  "corr_garch_kalman_vol_percentile": 0.2034,
+  "runtime_sec": 152.1
+}
