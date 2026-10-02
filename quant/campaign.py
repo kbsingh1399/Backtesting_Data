@@ -103,7 +103,7 @@ def update_scorecard(label, stats):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("sleeve", choices=["A", "B", "C", "D", "E"])
+    ap.add_argument("sleeve", choices=["A", "B", "C", "D", "E", "F", "G"])
     ap.add_argument("--variant", default=None)
     ap.add_argument("--tag", default=None)
     ap.add_argument("--min-is-trades", type=int, default=6)
@@ -118,6 +118,9 @@ if __name__ == "__main__":
     ap.add_argument("--ratchet-lock-r", type=float, default=None)
     ap.add_argument("--time-decay-bars", type=int, default=None)
     ap.add_argument("--time-decay-r", type=float, default=None)
+    ap.add_argument("--friction-bps", type=float, default=None,
+                     help="Override round-trip friction bps (diagnostic only; mandate is 41bps "
+                          "single-instrument / 82bps for 2-leg pairs sleeves).")
     args = ap.parse_args()
 
     sim_kwargs = {}
@@ -133,6 +136,8 @@ if __name__ == "__main__":
         sim_kwargs["time_decay_bars"] = args.time_decay_bars
     if args.time_decay_r is not None:
         sim_kwargs["time_decay_R"] = args.time_decay_r
+    if args.friction_bps is not None:
+        sim_kwargs["friction_bps_roundtrip"] = args.friction_bps
 
     run_sleeve(args.sleeve, sim_kwargs=sim_kwargs or None, min_is_trades=args.min_is_trades,
                is_lookback_quarters=args.is_lookback_quarters, score_fn=args.score_fn,

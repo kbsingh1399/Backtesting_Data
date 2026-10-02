@@ -155,3 +155,40 @@ than the "loosen everything" iteration instinct.
    still unimplemented; would require a 2-leg position model in `engine.py`.
 3. Intraday momentum (first-30min → last-30min, Gao/Han/Li/Zhou) untested
    this session — candidate sleeve F for a future pass.
+
+---
+
+## Addendum (follow-up mission): Sleeve F/G — FX statistical arbitrage
+
+A follow-up request asked for an "always consistent" statistical FX strategy.
+Built and backtested a real cointegration-based pairs sleeve (Engle-Granger
+scan over a leak-free IS window ending 2019-12-31, 8 pairs selected purely by
+coint p-value + OU half-life, 26 OOS quarters from 2020 onward — strictly
+after the selection cutoff). Two risk-management variants were tested:
+
+- **Sleeve F** (ATR-breakout box reused from sleeves A-E): complete failure,
+  0/26 windows ever traded. The synthetic spread index's own daily ATR
+  (~0.3-0.5%) is too small for a 1.5xATR stop to survive 82bps 2-leg
+  friction — friction cost averaged ~1.8R/trade, worse than the entire SL
+  distance. Root-cause diagnosed exactly (see STATARB_REPORT.md §3).
+- **Sleeve G** (OU-native: profit-take on reversion to z=0/0.25/0.5, stop on
+  further divergence, time-stop at 45/60/90 days): recovers a genuine, small,
+  positive gross edge. Gross P&L +$378 over 710 trades is friction-invariant;
+  breakeven round-trip friction is ~4-5bps. Fails to certify at the mandated
+  82bps retail-grade friction (ROI -4.87%, Sharpe -3.85, DD-halted after 2/26
+  windows traded) but at interbank-level cost diagnostics (2-5bps, clearly
+  labeled non-certifying) it visibly beats the B&H "stationary basket"
+  benchmark for multi-year stretches (2021-2024), confirming the edge is real,
+  just too thin for retail/CFD-level execution costs.
+
+Independent confirmation of the cointegration finding: the equal-weight B&H
+benchmark on the 8-pair spread basket is ~flat (+0.03% over 6+ years) —
+exactly what "stationary" predicts, and a useful sanity check that the
+cointegration wasn't spurious.
+
+Full writeup, tables, and honest EV-leak quantification: `quant/STATARB_REPORT.md`.
+Code: `quant/statarb_scan.py` (cointegration scan), `quant/statarb_engine.py`
+(OU-native trade generator), sleeves F/G registered in `strategies.py`,
+`min_oos_start` + `friction_bps_roundtrip` override plumbed through `wfo.py`
+and `campaign.py` (`choices=[...,"F","G"]`, `--friction-bps` CLI flag added
+for diagnostic-only friction overrides).

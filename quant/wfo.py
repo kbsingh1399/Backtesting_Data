@@ -115,7 +115,11 @@ def run_wfo(sleeve_key: str, sim_kwargs: dict | None = None, min_is_trades: int 
     is treated as a fixed override applied uniformly (used for quick fixed
     stress tests, not for a certifiable run)."""
     cfg = strat.SLEEVES[sleeve_key]
-    base_sim_kwargs = sim_kwargs or {}
+    trade_fn = cfg.get("trade_fn", generate_trades)
+    sleeve_default_sim_kwargs = {}
+    if "friction_bps_roundtrip" in cfg:
+        sleeve_default_sim_kwargs["friction_bps_roundtrip"] = cfg["friction_bps_roundtrip"]
+    base_sim_kwargs = {**sleeve_default_sim_kwargs, **(sim_kwargs or {})}
     geom_grid = sim_kwargs_grid if sim_kwargs_grid else [{}]
 
     cache = SigCache(sleeve_key).prep_all()
@@ -125,6 +129,12 @@ def run_wfo(sleeve_key: str, sim_kwargs: dict | None = None, min_is_trades: int 
     quarters = make_quarters(lo, hi)
     n_is = is_lookback_quarters
     oos_quarters = quarters[n_is:]
+    min_oos_start = cfg.get("min_oos_start")
+    if min_oos_start is not None:
+        oos_quarters = [q for q in oos_quarters if q[0] >= min_oos_start]
+        if verbose:
+            print(f"[{cfg['name']}] restricting OOS to >= {min_oos_start.date()} "
+                  f"(pair/feature-selection cutoff) -> {len(oos_quarters)} quarters")
     if verbose:
         print(f"[{cfg['name']}] {len(oos_quarters)} candidate OOS quarters (need >=20)")
 
@@ -148,8 +158,8 @@ def run_wfo(sleeve_key: str, sim_kwargs: dict | None = None, min_is_trades: int 
                         ei = df.index.searchsorted(is_end)
                     except Exception:
                         continue
-                    trades = generate_trades(df, entries, sides, atr, sym, sk,
-                                              start_idx=si, end_idx=ei)
+                    trades = trade_fn(df, entries, sides, atr, sym, {**params, **sk},
+                                       start_idx=si, end_idx=ei)
                     is_trades.extend(trades)
                 score = _score_params(is_trades, min_is_trades, score_fn, require_positive_edge)
                 if score is not None and score > best_score:
@@ -165,8 +175,8 @@ def run_wfo(sleeve_key: str, sim_kwargs: dict | None = None, min_is_trades: int 
                 entries, sides, atr, df = cache.get_signals(sym, best_params)
                 si = df.index.searchsorted(q_start)
                 ei = df.index.searchsorted(q_end)
-                trades = generate_trades(df, entries, sides, atr, sym, sk,
-                                          start_idx=si, end_idx=ei)
+                trades = trade_fn(df, entries, sides, atr, sym, {**best_params, **sk},
+                                   start_idx=si, end_idx=ei)
                 q_trades.extend(trades)
                 all_candidates.extend(trades)
         quarter_log.append(dict(quarter=f"{q_start.date()}", locked_params=best_params,
