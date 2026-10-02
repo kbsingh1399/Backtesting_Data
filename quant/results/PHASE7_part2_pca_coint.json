@@ -1,0 +1,242 @@
+[
+  {
+    "family": "pca_stat_arb",
+    "basket": "G10_majors",
+    "n_symbols": 7,
+    "n_obs": 2999,
+    "pc1_explained_variance": 0.588,
+    "representative_symbol": "USDJPY",
+    "adf_pvalue": 0.9497,
+    "stationary_at_5pct": false
+  },
+  {
+    "family": "pca_stat_arb",
+    "basket": "EUR_crosses",
+    "n_symbols": 7,
+    "n_obs": 2999,
+    "pc1_explained_variance": 0.426,
+    "representative_symbol": "EURCHF",
+    "adf_pvalue": 0.8634,
+    "stationary_at_5pct": false
+  },
+  {
+    "family": "pca_stat_arb",
+    "basket": "GBP_crosses",
+    "n_symbols": 6,
+    "n_obs": 3001,
+    "pc1_explained_variance": 0.598,
+    "representative_symbol": "GBPJPY",
+    "adf_pvalue": 0.8394,
+    "stationary_at_5pct": false
+  },
+  {
+    "family": "pca_stat_arb",
+    "basket": "Commodity_bloc_FX",
+    "n_symbols": 6,
+    "n_obs": 3000,
+    "pc1_explained_variance": 0.533,
+    "representative_symbol": "AUDNZD",
+    "adf_pvalue": 0.4038,
+    "stationary_at_5pct": false
+  },
+  {
+    "family": "pca_stat_arb",
+    "basket": "Precious_metals",
+    "n_symbols": 4,
+    "n_obs": 839,
+    "pc1_explained_variance": 0.731,
+    "representative_symbol": "XPDUSD",
+    "adf_pvalue": 0.1685,
+    "stationary_at_5pct": false
+  },
+  {
+    "family": "pca_stat_arb",
+    "basket": "Base_metals",
+    "n_symbols": 5,
+    "n_obs": 1556,
+    "pc1_explained_variance": 0.543,
+    "representative_symbol": "NICKEL",
+    "adf_pvalue": 0.4314,
+    "stationary_at_5pct": false
+  },
+  {
+    "family": "pca_stat_arb",
+    "basket": "Equity_indices_core",
+    "n_symbols": 7,
+    "n_obs": 1529,
+    "pc1_explained_variance": 0.741,
+    "representative_symbol": "UK100",
+    "adf_pvalue": 0.8429,
+    "stationary_at_5pct": false
+  },
+  {
+    "family": "pairwise_cointegration",
+    "basket": "G10_majors",
+    "n_pairs_tested": 21,
+    "n_cointegrated_at_5pct": 7,
+    "cointegrated_pairs": [
+      {
+        "pair": "NZDUSD-USDJPY",
+        "pvalue": 0.0039,
+        "hedge_ratio": -0.4414,
+        "n_trades_signal": 374,
+        "mean_bps_per_signal": 1.08,
+        "t_stat": 0.31,
+        "clears_82bps_2leg_cost": false
+      },
+      {
+        "pair": "USDCAD-USDJPY",
+        "pvalue": 0.0069,
+        "hedge_ratio": 0.1606,
+        "n_trades_signal": 365,
+        "mean_bps_per_signal": -3.03,
+        "t_stat": -1.16,
+        "clears_82bps_2leg_cost": false
+      },
+      {
+        "pair": "NZDUSD-USDCHF",
+        "pvalue": 0.0106,
+        "hedge_ratio": 0.6512,
+        "n_trades_signal": 358,
+        "mean_bps_per_signal": -4.14,
+        "t_stat": -0.87,
+        "clears_82bps_2leg_cost": false
+      },
+      {
+        "pair": "USDCAD-USDCHF",
+        "pvalue": 0.0129,
+        "hedge_ratio": -0.2077,
+        "n_trades_signal": 348,
+        "mean_bps_per_signal": 0.93,
+        "t_stat": 0.32,
+        "clears_82bps_2leg_cost": false
+      },
+      {
+        "pair": "AUDUSD-USDCHF",
+        "pvalue": 0.0392,
+        "hedge_ratio": 0.3545,
+        "n_trades_signal": 331,
+        "mean_bps_per_signal": 2.9,
+        "t_stat": 0.69,
+        "clears_82bps_2leg_cost": false
+      },
+      {
+        "pair": "USDCHF-USDJPY",
+        "pvalue": 0.0404,
+        "hedge_ratio": -0.3481,
+        "n_trades_signal": 376,
+        "mean_bps_per_signal": -1.23,
+        "t_stat": -0.32,
+        "clears_82bps_2leg_cost": false
+      },
+      {
+        "pair": "AUDUSD-USDJPY",
+        "pvalue": 0.0408,
+        "hedge_ratio": -0.2889,
+        "n_trades_signal": 362,
+        "mean_bps_per_signal": 1.13,
+        "t_stat": 0.31,
+        "clears_82bps_2leg_cost": false
+      }
+    ]
+  },
+  {
+    "family": "pairwise_cointegration",
+    "basket": "EUR_crosses",
+    "n_pairs_tested": 21,
+    "n_cointegrated_at_5pct": 0,
+    "cointegrated_pairs": []
+  },
+  {
+    "family": "pairwise_cointegration",
+    "basket": "GBP_crosses",
+    "n_pairs_tested": 15,
+    "n_cointegrated_at_5pct": 1,
+    "cointegrated_pairs": [
+      {
+        "pair": "GBPCAD-GBPNZD",
+        "pvalue": 0.0426,
+        "hedge_ratio": 0.5677,
+        "n_trades_signal": 398,
+        "mean_bps_per_signal": 1.97,
+        "t_stat": 0.86,
+        "clears_82bps_2leg_cost": false
+      }
+    ]
+  },
+  {
+    "family": "pairwise_cointegration",
+    "basket": "Commodity_bloc_FX",
+    "n_pairs_tested": 15,
+    "n_cointegrated_at_5pct": 4,
+    "cointegrated_pairs": [
+      {
+        "pair": "USDCAD-NZDCAD",
+        "pvalue": 0.0111,
+        "hedge_ratio": -0.3487,
+        "n_trades_signal": 362,
+        "mean_bps_per_signal": -0.23,
+        "t_stat": -0.08,
+        "clears_82bps_2leg_cost": false
+      },
+      {
+        "pair": "NZDUSD-NZDCAD",
+        "pvalue": 0.0187,
+        "hedge_ratio": 1.3478,
+        "n_trades_signal": 364,
+        "mean_bps_per_signal": 0.37,
+        "t_stat": 0.13,
+        "clears_82bps_2leg_cost": false
+      },
+      {
+        "pair": "AUDUSD-NZDCAD",
+        "pvalue": 0.0191,
+        "hedge_ratio": 0.9574,
+        "n_trades_signal": 345,
+        "mean_bps_per_signal": 1.06,
+        "t_stat": 0.3,
+        "clears_82bps_2leg_cost": false
+      },
+      {
+        "pair": "USDCAD-AUDNZD",
+        "pvalue": 0.0205,
+        "hedge_ratio": 0.3977,
+        "n_trades_signal": 338,
+        "mean_bps_per_signal": -0.37,
+        "t_stat": -0.14,
+        "clears_82bps_2leg_cost": false
+      }
+    ]
+  },
+  {
+    "family": "pairwise_cointegration",
+    "basket": "Precious_metals",
+    "n_pairs_tested": 6,
+    "n_cointegrated_at_5pct": 0,
+    "cointegrated_pairs": []
+  },
+  {
+    "family": "pairwise_cointegration",
+    "basket": "Base_metals",
+    "n_pairs_tested": 10,
+    "n_cointegrated_at_5pct": 0,
+    "cointegrated_pairs": []
+  },
+  {
+    "family": "pairwise_cointegration",
+    "basket": "Equity_indices_core",
+    "n_pairs_tested": 21,
+    "n_cointegrated_at_5pct": 1,
+    "cointegrated_pairs": [
+      {
+        "pair": "SP500-DJ30",
+        "pvalue": 0.0073,
+        "hedge_ratio": 1.3382,
+        "n_trades_signal": 192,
+        "mean_bps_per_signal": 0.48,
+        "t_stat": 0.11,
+        "clears_82bps_2leg_cost": false
+      }
+    ]
+  }
+]

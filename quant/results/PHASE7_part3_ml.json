@@ -1,0 +1,71 @@
+[
+  {
+    "model": "LogisticRegression",
+    "n_oos_quarters": 43,
+    "n_oos_rows": 207956,
+    "hit_rate_long": 0.5451,
+    "hit_rate_short": 0.5095,
+    "long_signal_stats": {
+      "n": 10876,
+      "mean_bps": 8.02,
+      "t_stat": 3.61
+    },
+    "short_signal_stats": {
+      "n": 2322,
+      "mean_bps": 1.51,
+      "t_stat": 0.21
+    },
+    "combined_stats": {
+      "n": 13198,
+      "mean_bps": 6.87,
+      "t_stat": 3.07
+    },
+    "friction_bps_rt": 41.0
+  },
+  {
+    "model": "RandomForest",
+    "n_oos_quarters": 43,
+    "n_oos_rows": 207956,
+    "hit_rate_long": 0.5451,
+    "hit_rate_short": 0.5197,
+    "long_signal_stats": {
+      "n": 7186,
+      "mean_bps": 7.05,
+      "t_stat": 2.57
+    },
+    "short_signal_stats": {
+      "n": 1826,
+      "mean_bps": 0.68,
+      "t_stat": 0.1
+    },
+    "combined_stats": {
+      "n": 9012,
+      "mean_bps": 5.76,
+      "t_stat": 2.26
+    },
+    "friction_bps_rt": 41.0
+  },
+  {
+    "model": "GradientBoosting",
+    "n_oos_quarters": 43,
+    "n_oos_rows": 207956,
+    "hit_rate_long": 0.5249,
+    "hit_rate_short": 0.5,
+    "long_signal_stats": {
+      "n": 7156,
+      "mean_bps": -1.14,
+      "t_stat": -0.39
+    },
+    "short_signal_stats": {
+      "n": 2952,
+      "mean_bps": -10.69,
+      "t_stat": -1.93
+    },
+    "combined_stats": {
+      "n": 10108,
+      "mean_bps": -3.93,
+      "t_stat": -1.49
+    },
+    "friction_bps_rt": 41.0
+  }
+]

@@ -1,0 +1,225 @@
+[
+  {
+    "quarter": "2021-04-01",
+    "locked_params": {
+      "proba_thresh": 0.55
+    },
+    "locked_geometry": {},
+    "is_score": 82.271,
+    "is_trades": 159,
+    "oos_trades": 87,
+    "traded": true
+  },
+  {
+    "quarter": "2021-07-01",
+    "locked_params": {
+      "proba_thresh": 0.55
+    },
+    "locked_geometry": {},
+    "is_score": 34.417,
+    "is_trades": 174,
+    "oos_trades": 143,
+    "traded": true
+  },
+  {
+    "quarter": "2021-10-01",
+    "locked_params": {
+      "proba_thresh": 0.6
+    },
+    "locked_geometry": {},
+    "is_score": 22.204,
+    "is_trades": 23,
+    "oos_trades": 22,
+    "traded": true
+  },
+  {
+    "quarter": "2022-01-01",
+    "locked_params": {
+      "proba_thresh": 0.6
+    },
+    "locked_geometry": {},
+    "is_score": 7.705,
+    "is_trades": 39,
+    "oos_trades": 34,
+    "traded": true
+  },
+  {
+    "quarter": "2022-04-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2022-07-01",
+    "locked_params": {
+      "proba_thresh": 0.65
+    },
+    "locked_geometry": {},
+    "is_score": 4.348,
+    "is_trades": 11,
+    "oos_trades": 2,
+    "traded": true
+  },
+  {
+    "quarter": "2022-10-01",
+    "locked_params": {
+      "proba_thresh": 0.65
+    },
+    "locked_geometry": {},
+    "is_score": 1.716,
+    "is_trades": 6,
+    "oos_trades": 1,
+    "traded": true
+  },
+  {
+    "quarter": "2023-01-01",
+    "locked_params": {
+      "proba_thresh": 0.6
+    },
+    "locked_geometry": {},
+    "is_score": 2.388,
+    "is_trades": 25,
+    "oos_trades": 6,
+    "traded": true
+  },
+  {
+    "quarter": "2023-04-01",
+    "locked_params": {
+      "proba_thresh": 0.55
+    },
+    "locked_geometry": {},
+    "is_score": 27.952,
+    "is_trades": 152,
+    "oos_trades": 59,
+    "traded": true
+  },
+  {
+    "quarter": "2023-07-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2023-10-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2024-01-01",
+    "locked_params": {
+      "proba_thresh": 0.55
+    },
+    "locked_geometry": {},
+    "is_score": 32.226,
+    "is_trades": 106,
+    "oos_trades": 21,
+    "traded": true
+  },
+  {
+    "quarter": "2024-04-01",
+    "locked_params": {
+      "proba_thresh": 0.55
+    },
+    "locked_geometry": {},
+    "is_score": 24.463,
+    "is_trades": 71,
+    "oos_trades": 44,
+    "traded": true
+  },
+  {
+    "quarter": "2024-07-01",
+    "locked_params": {
+      "proba_thresh": 0.55
+    },
+    "locked_geometry": {},
+    "is_score": 16.365,
+    "is_trades": 62,
+    "oos_trades": 67,
+    "traded": true
+  },
+  {
+    "quarter": "2024-10-01",
+    "locked_params": {
+      "proba_thresh": 0.55
+    },
+    "locked_geometry": {},
+    "is_score": 20.144,
+    "is_trades": 110,
+    "oos_trades": 36,
+    "traded": true
+  },
+  {
+    "quarter": "2025-01-01",
+    "locked_params": {
+      "proba_thresh": 0.55
+    },
+    "locked_geometry": {},
+    "is_score": 15.225,
+    "is_trades": 97,
+    "oos_trades": 35,
+    "traded": true
+  },
+  {
+    "quarter": "2025-04-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2025-07-01",
+    "locked_params": {
+      "proba_thresh": 0.55
+    },
+    "locked_geometry": {},
+    "is_score": 17.365,
+    "is_trades": 100,
+    "oos_trades": 14,
+    "traded": true
+  },
+  {
+    "quarter": "2025-10-01",
+    "locked_params": {
+      "proba_thresh": 0.55
+    },
+    "locked_geometry": {},
+    "is_score": 35.975,
+    "is_trades": 79,
+    "oos_trades": 50,
+    "traded": true
+  },
+  {
+    "quarter": "2026-01-01",
+    "locked_params": {
+      "proba_thresh": 0.55
+    },
+    "locked_geometry": {},
+    "is_score": 52.631,
+    "is_trades": 64,
+    "oos_trades": 100,
+    "traded": true
+  },
+  {
+    "quarter": "2026-04-01",
+    "locked_params": {
+      "proba_thresh": 0.55
+    },
+    "locked_geometry": {},
+    "is_score": 44.731,
+    "is_trades": 148,
+    "oos_trades": 60,
+    "traded": true
+  }
+]

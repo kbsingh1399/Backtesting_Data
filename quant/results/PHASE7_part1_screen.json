@@ -1,0 +1,455 @@
+[
+  {
+    "family": "ts_momentum",
+    "lookback": 21,
+    "horizon": 1,
+    "n_obs": 223184,
+    "mean_bps_per_period": -0.11,
+    "t_stat": -0.48,
+    "top5_symbols": [
+      [
+        "USWTI",
+        8.3
+      ],
+      [
+        "GAUUSD",
+        7.9
+      ],
+      [
+        "GAS",
+        6.5
+      ],
+      [
+        "UKBRENT",
+        6.4
+      ],
+      [
+        "XAUAUD",
+        5.7
+      ]
+    ]
+  },
+  {
+    "family": "ts_momentum",
+    "lookback": 21,
+    "horizon": 5,
+    "n_obs": 222792,
+    "mean_bps_per_period": -2.64,
+    "t_stat": -5.3,
+    "top5_symbols": [
+      [
+        "GAUUSD",
+        46.7
+      ],
+      [
+        "GAUCNH",
+        33.2
+      ],
+      [
+        "UKBRENT",
+        27.9
+      ],
+      [
+        "GAS",
+        25.9
+      ],
+      [
+        "XAUAUD",
+        22.2
+      ]
+    ]
+  },
+  {
+    "family": "ts_momentum",
+    "lookback": 21,
+    "horizon": 21,
+    "n_obs": 221224,
+    "mean_bps_per_period": -1.23,
+    "t_stat": -1.22,
+    "top5_symbols": [
+      [
+        "GAUUSD",
+        247.2
+      ],
+      [
+        "GAUCNH",
+        205.8
+      ],
+      [
+        "XAUAUD",
+        152.6
+      ],
+      [
+        "XAUGBP",
+        135.2
+      ],
+      [
+        "XAUSGD",
+        134.8
+      ]
+    ]
+  },
+  {
+    "family": "ts_momentum",
+    "lookback": 63,
+    "horizon": 1,
+    "n_obs": 219068,
+    "mean_bps_per_period": -0.74,
+    "t_stat": -3.23,
+    "top5_symbols": [
+      [
+        "GAUUSD",
+        9.5
+      ],
+      [
+        "XAUEUR",
+        7.1
+      ],
+      [
+        "XAUCNH",
+        6.7
+      ],
+      [
+        "ZINC",
+        6.4
+      ],
+      [
+        "XAUSGD",
+        6.4
+      ]
+    ]
+  },
+  {
+    "family": "ts_momentum",
+    "lookback": 63,
+    "horizon": 5,
+    "n_obs": 218676,
+    "mean_bps_per_period": -3.73,
+    "t_stat": -7.4,
+    "top5_symbols": [
+      [
+        "GAUUSD",
+        36.8
+      ],
+      [
+        "XAUGBP",
+        35.1
+      ],
+      [
+        "XAUSGD",
+        33.4
+      ],
+      [
+        "XAUEUR",
+        32.5
+      ],
+      [
+        "XAUCNH",
+        31.1
+      ]
+    ]
+  },
+  {
+    "family": "ts_momentum",
+    "lookback": 63,
+    "horizon": 21,
+    "n_obs": 217108,
+    "mean_bps_per_period": -8.31,
+    "t_stat": -8.18,
+    "top5_symbols": [
+      [
+        "GAUUSD",
+        226.0
+      ],
+      [
+        "XAUSGD",
+        186.9
+      ],
+      [
+        "XAUCNH",
+        180.8
+      ],
+      [
+        "XAUGBP",
+        175.6
+      ],
+      [
+        "GAUCNH",
+        175.0
+      ]
+    ]
+  },
+  {
+    "family": "ts_momentum",
+    "lookback": 126,
+    "horizon": 1,
+    "n_obs": 212894,
+    "mean_bps_per_period": 0.0,
+    "t_stat": 0.0,
+    "top5_symbols": [
+      [
+        "XAGSGD",
+        9.9
+      ],
+      [
+        "XAGAUD",
+        9.7
+      ],
+      [
+        "XAUAUD",
+        9.2
+      ],
+      [
+        "XAGEUR",
+        8.7
+      ],
+      [
+        "XAUCNH",
+        8.3
+      ]
+    ]
+  },
+  {
+    "family": "ts_momentum",
+    "lookback": 126,
+    "horizon": 5,
+    "n_obs": 212502,
+    "mean_bps_per_period": -0.11,
+    "t_stat": -0.22,
+    "top5_symbols": [
+      [
+        "XAGAUD",
+        53.4
+      ],
+      [
+        "XAGSGD",
+        44.1
+      ],
+      [
+        "XAUAUD",
+        44.0
+      ],
+      [
+        "XAGEUR",
+        43.2
+      ],
+      [
+        "XAUSGD",
+        40.1
+      ]
+    ]
+  },
+  {
+    "family": "ts_momentum",
+    "lookback": 126,
+    "horizon": 21,
+    "n_obs": 210934,
+    "mean_bps_per_period": -1.46,
+    "t_stat": -1.41,
+    "top5_symbols": [
+      [
+        "XAGAUD",
+        198.6
+      ],
+      [
+        "XAUAUD",
+        186.6
+      ],
+      [
+        "XAGSGD",
+        173.2
+      ],
+      [
+        "XAGEUR",
+        169.8
+      ],
+      [
+        "XAUCNH",
+        166.8
+      ]
+    ]
+  },
+  {
+    "family": "ts_momentum",
+    "lookback": 252,
+    "horizon": 1,
+    "n_obs": 200546,
+    "mean_bps_per_period": 0.25,
+    "t_stat": 1.02,
+    "top5_symbols": [
+      [
+        "XAGAUD",
+        17.5
+      ],
+      [
+        "XAGSGD",
+        17.3
+      ],
+      [
+        "XAGEUR",
+        16.9
+      ],
+      [
+        "NICKEL",
+        11.2
+      ],
+      [
+        "XAUSGD",
+        11.0
+      ]
+    ]
+  },
+  {
+    "family": "ts_momentum",
+    "lookback": 252,
+    "horizon": 5,
+    "n_obs": 200154,
+    "mean_bps_per_period": 0.88,
+    "t_stat": 1.65,
+    "top5_symbols": [
+      [
+        "XAGAUD",
+        85.1
+      ],
+      [
+        "XAGSGD",
+        83.1
+      ],
+      [
+        "XAGEUR",
+        78.6
+      ],
+      [
+        "XAUSGD",
+        54.7
+      ],
+      [
+        "XAUEUR",
+        54.3
+      ]
+    ]
+  },
+  {
+    "family": "ts_momentum",
+    "lookback": 252,
+    "horizon": 21,
+    "n_obs": 198586,
+    "mean_bps_per_period": 1.93,
+    "t_stat": 1.8,
+    "top5_symbols": [
+      [
+        "XAGAUD",
+        370.8
+      ],
+      [
+        "XAGSGD",
+        366.3
+      ],
+      [
+        "XAGEUR",
+        360.8
+      ],
+      [
+        "XAUSGD",
+        243.1
+      ],
+      [
+        "XAUGBP",
+        239.7
+      ]
+    ]
+  },
+  {
+    "family": "xs_momentum",
+    "asset_class": "FX",
+    "n_months": 14,
+    "mean_bps_per_month": 35.9,
+    "t_stat": 1.14,
+    "n_symbols": 60,
+    "needs_bps_to_clear_2leg_cost": 82.0
+  },
+  {
+    "family": "xs_momentum",
+    "asset_class": "Indices",
+    "n_months": 36,
+    "mean_bps_per_month": -26.3,
+    "t_stat": -0.35,
+    "n_symbols": 16,
+    "needs_bps_to_clear_2leg_cost": 82.0
+  },
+  {
+    "family": "xs_momentum",
+    "asset_class": "Metals",
+    "n_months": 8,
+    "mean_bps_per_month": null,
+    "t_stat": null,
+    "n_symbols": 14,
+    "needs_bps_to_clear_2leg_cost": 82.0
+  },
+  {
+    "family": "xs_momentum",
+    "asset_class": "Energy_Base",
+    "n_months": 59,
+    "mean_bps_per_month": -125.8,
+    "t_stat": -0.86,
+    "n_symbols": 8,
+    "needs_bps_to_clear_2leg_cost": 82.0
+  },
+  {
+    "family": "mean_reversion",
+    "z_thresh": 1.5,
+    "horizon": 1,
+    "n_obs": 27717,
+    "mean_bps_per_trade": 2.71,
+    "t_stat": 3.13
+  },
+  {
+    "family": "mean_reversion",
+    "z_thresh": 1.5,
+    "horizon": 5,
+    "n_obs": 27679,
+    "mean_bps_per_trade": 1.37,
+    "t_stat": 0.78
+  },
+  {
+    "family": "mean_reversion",
+    "z_thresh": 2.0,
+    "horizon": 1,
+    "n_obs": 10124,
+    "mean_bps_per_trade": 4.91,
+    "t_stat": 2.74
+  },
+  {
+    "family": "mean_reversion",
+    "z_thresh": 2.0,
+    "horizon": 5,
+    "n_obs": 10116,
+    "mean_bps_per_trade": -2.15,
+    "t_stat": -0.62
+  },
+  {
+    "family": "mean_reversion",
+    "z_thresh": 2.5,
+    "horizon": 1,
+    "n_obs": 2882,
+    "mean_bps_per_trade": 7.34,
+    "t_stat": 1.47
+  },
+  {
+    "family": "mean_reversion",
+    "z_thresh": 2.5,
+    "horizon": 5,
+    "n_obs": 2880,
+    "mean_bps_per_trade": -10.19,
+    "t_stat": -1.09
+  },
+  {
+    "family": "vol_regime_mr",
+    "high_vol_bps": 19.47,
+    "high_vol_t": 3.65,
+    "high_vol_n": 2957,
+    "low_vol_bps": -1.6,
+    "low_vol_t": -1.04,
+    "low_vol_n": 2862
+  }
+]

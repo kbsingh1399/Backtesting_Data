@@ -357,3 +357,52 @@ Full writeup, account-rule research, scraping findings, and the explicit
 "if you still want the literal number" gambler's-ruin framing (and why it's
 not recommended): `quant/PHASE6_CEO_BLUEBERRY_PLAN.md`. Code: Sleeve S in
 `strategies.py`.
+
+---
+
+## Phase 7 — Full-breadth mathematical/statistical strategy sweep
+
+Mandate: test all math/statistical strategies against the complete
+`Forex_Data` universe (98 FX/metals/indices/energy symbols, not the small
+hand-picked subsets used before), run a multi-grid combination of assets to
+find the best equity curve, use ML where it helps.
+
+Data-quality scan across all 98 symbols x 4 timeframes confirmed the
+Phase 5/6 intraday-mislabeling defect is universal (every symbol affected
+pre-2023/2024 on 15m/1h/4h); classical factor screens and ML were run on D1,
+the only uniformly clean timeframe.
+
+Nine strategy families screened: time-series momentum (dead, mostly
+significantly negative), cross-sectional momentum (dead, insignificant +
+sub-cost), unconditional mean reversion (statistically real at 1-day
+horizon, 2.7-4.9bps vs 41bps friction needed -- dead on cost), vol-regime-
+conditioned mean reversion (strongest raw lead, 19.5bps t=3.65 -- promoted
+to certified Sleeve T, **died under the real ATR/ratchet engine**: -3.8% to
+-4.1% ROI, halted), PCA basket stat-arb (dead, no stationary residual in any
+of 7 baskets incl. FX triangulation groups), pairwise Engle-Granger
+cointegration (13/109 "significant" pairs ~= pure multiple-testing noise,
+zero clear 82bps cost), and a 3-model ML ensemble (Logistic Regression best
+at +8.0bps/t=3.61 but sub-cost; Random Forest weaker; Gradient Boosting
+overfit and went negative -- promoted to certified Sleeve U, **also died**:
+-3.1% to -4.7% ROI, halted both variants).
+
+Multi-grid asset combination (the literal request): tested 5 pre-registered
+universe variants of the one surviving family (Sleeve M's Donchian/ATR-rank
+trend) to avoid look-ahead bias from cherry-picking symbols post-hoc.
+**Winner: M4 (gold+silver only, XAUUSD+XAGUSD)** -- Sharpe 2.228 (vs
+original M's 1.058), ROI 5.87%, max DD $48 (0.96% of account, vs $183
+originally), never halted, 47 trades/21 OOS quarters. Base metals alone are
+dead (M3, halted); adding energy helps mildly (M5); adding equity indices
+kills it (M6, halted) -- confirms more assets isn't automatically better
+when the added asset class has no edge of its own. Honest caveat: gold+
+silver Buy&Hold returned 134.8% over the same span (2023-2026 monetary-
+metals bull market) -- M4 trades off most of that raw magnitude for a
+drawdown of under 1% of equity throughout, which is the right trade for a
+hard-drawdown-constrained mandate (e.g. Blueberry's 5%/10% kill-switches),
+not a claim it "beats" the metal.
+
+Full writeup: `quant/PHASE7_MATH_STAT_STRATEGY_REPORT.md`. New code: Sleeves
+T, U, M2-M6 in `strategies.py`/`campaign.py`; screening scripts
+`phase7_data_quality_scan.py`, `phase7_screen_part1.py`,
+`phase7_screen_part2_pca_coint.py`, `phase7_screen_part3_ml.py`,
+`phase7_ml_signal_cache.py`.

@@ -1525,5 +1525,456 @@
     "min_is_trades_gate": 6,
     "require_positive_is_edge": true,
     "bh_roi_pct": 61.848
+  },
+  "T_baseline": {
+    "n_trades": 27,
+    "roi_pct": -4.116,
+    "final_equity": 4794.22,
+    "max_dd_dollars": 231.68,
+    "win_rate": 0.1852,
+    "payoff_ratio": 1.504,
+    "sharpe": -2.465,
+    "avg_r": -0.6097,
+    "gross_pnl": -127.5,
+    "total_friction": 78.28,
+    "sleeve": "T_FULLBREADTH_VOLREGIME_MEANREV",
+    "variant": "baseline",
+    "n_oos_quarters": 21,
+    "windows_traded": 3,
+    "halted": true,
+    "halt_time": "2024-08-05 00:00:00+00:00",
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": null,
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 18.427
+  },
+  "T_geom_search": {
+    "n_trades": 32,
+    "roi_pct": -3.812,
+    "final_equity": 4809.41,
+    "max_dd_dollars": 238.52,
+    "win_rate": 0.25,
+    "payoff_ratio": 1.349,
+    "sharpe": -1.985,
+    "avg_r": -0.4765,
+    "gross_pnl": -95.62,
+    "total_friction": 94.97,
+    "sleeve": "T_FULLBREADTH_VOLREGIME_MEANREV",
+    "variant": "geom_search",
+    "n_oos_quarters": 21,
+    "windows_traded": 5,
+    "halted": true,
+    "halt_time": "2024-08-05 00:00:00+00:00",
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": [
+      {},
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5
+      },
+      {
+        "tp_R": 2.0
+      },
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5,
+        "tp_R": 2.0
+      },
+      {
+        "tp_R": 1.5,
+        "ratchet_trigger_R": 0.8,
+        "ratchet_lock_R": 0.3
+      },
+      {
+        "tp_R": 1.5
+      }
+    ],
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 18.427
+  },
+  "U_baseline": {
+    "n_trades": 42,
+    "roi_pct": -3.063,
+    "final_equity": 4846.86,
+    "max_dd_dollars": 225.93,
+    "win_rate": 0.2857,
+    "payoff_ratio": 1.47,
+    "sharpe": -1.371,
+    "avg_r": -0.2917,
+    "gross_pnl": -60.0,
+    "total_friction": 93.14,
+    "sleeve": "U_ML_LOGREG_LONGONLY_SIGNAL",
+    "variant": "baseline",
+    "n_oos_quarters": 21,
+    "windows_traded": 17,
+    "halted": true,
+    "halt_time": "2021-10-01 00:00:00+00:00",
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": null,
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 18.427
+  },
+  "U_geom_search": {
+    "n_trades": 41,
+    "roi_pct": -4.704,
+    "final_equity": 4764.81,
+    "max_dd_dollars": 245.66,
+    "win_rate": 0.2439,
+    "payoff_ratio": 1.271,
+    "sharpe": -2.376,
+    "avg_r": -0.4589,
+    "gross_pnl": -147.72,
+    "total_friction": 87.47,
+    "sleeve": "U_ML_LOGREG_LONGONLY_SIGNAL",
+    "variant": "geom_search",
+    "n_oos_quarters": 21,
+    "windows_traded": 19,
+    "halted": true,
+    "halt_time": "2021-09-30 00:00:00+00:00",
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": [
+      {},
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5
+      },
+      {
+        "tp_R": 2.0
+      },
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5,
+        "tp_R": 2.0
+      },
+      {
+        "tp_R": 1.5,
+        "ratchet_trigger_R": 0.8,
+        "ratchet_lock_R": 0.3
+      },
+      {
+        "tp_R": 1.5
+      }
+    ],
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 18.427
+  },
+  "M2_geom_search_v2": {
+    "n_trades": 69,
+    "roi_pct": 2.959,
+    "final_equity": 5147.93,
+    "max_dd_dollars": 166.33,
+    "win_rate": 0.4783,
+    "payoff_ratio": 1.43,
+    "sharpe": 0.954,
+    "avg_r": 0.1715,
+    "gross_pnl": 248.4,
+    "total_friction": 100.46,
+    "sleeve": "M2_PRECIOUS_METALS_ONLY",
+    "variant": "geom_search_v2",
+    "n_oos_quarters": 21,
+    "windows_traded": 11,
+    "halted": false,
+    "halt_time": null,
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": [
+      {},
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5
+      },
+      {
+        "tp_R": 2.0
+      },
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5,
+        "tp_R": 2.0
+      },
+      {
+        "tp_R": 1.5,
+        "ratchet_trigger_R": 0.8,
+        "ratchet_lock_R": 0.3
+      },
+      {
+        "tp_R": 1.5
+      }
+    ],
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 99.969
+  },
+  "M3_geom_search_v2": {
+    "n_trades": 86,
+    "roi_pct": -0.908,
+    "final_equity": 4954.62,
+    "max_dd_dollars": 233.32,
+    "win_rate": 0.4651,
+    "payoff_ratio": 1.064,
+    "sharpe": -0.289,
+    "avg_r": -0.0422,
+    "gross_pnl": 82.62,
+    "total_friction": 128.0,
+    "sleeve": "M3_BASE_METALS_ONLY",
+    "variant": "geom_search_v2",
+    "n_oos_quarters": 21,
+    "windows_traded": 13,
+    "halted": true,
+    "halt_time": "2026-04-17 00:00:00+00:00",
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": [
+      {},
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5
+      },
+      {
+        "tp_R": 2.0
+      },
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5,
+        "tp_R": 2.0
+      },
+      {
+        "tp_R": 1.5,
+        "ratchet_trigger_R": 0.8,
+        "ratchet_lock_R": 0.3
+      },
+      {
+        "tp_R": 1.5
+      }
+    ],
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 21.689
+  },
+  "M4_geom_search_v2": {
+    "n_trades": 47,
+    "roi_pct": 5.867,
+    "final_equity": 5293.35,
+    "max_dd_dollars": 48.14,
+    "win_rate": 0.617,
+    "payoff_ratio": 1.337,
+    "sharpe": 2.228,
+    "avg_r": 0.4993,
+    "gross_pnl": 375.25,
+    "total_friction": 81.9,
+    "sleeve": "M4_GOLD_SILVER_ONLY",
+    "variant": "geom_search_v2",
+    "n_oos_quarters": 21,
+    "windows_traded": 11,
+    "halted": false,
+    "halt_time": null,
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": [
+      {},
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5
+      },
+      {
+        "tp_R": 2.0
+      },
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5,
+        "tp_R": 2.0
+      },
+      {
+        "tp_R": 1.5,
+        "ratchet_trigger_R": 0.8,
+        "ratchet_lock_R": 0.3
+      },
+      {
+        "tp_R": 1.5
+      }
+    ],
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 134.842
+  },
+  "M5_geom_search_v2": {
+    "n_trades": 205,
+    "roi_pct": 5.569,
+    "final_equity": 5278.43,
+    "max_dd_dollars": 155.21,
+    "win_rate": 0.5122,
+    "payoff_ratio": 1.153,
+    "sharpe": 1.104,
+    "avg_r": 0.1087,
+    "gross_pnl": 562.85,
+    "total_friction": 284.42,
+    "sleeve": "M5_METALS_PLUS_ENERGY",
+    "variant": "geom_search_v2",
+    "n_oos_quarters": 21,
+    "windows_traded": 16,
+    "halted": false,
+    "halt_time": null,
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": [
+      {},
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5
+      },
+      {
+        "tp_R": 2.0
+      },
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5,
+        "tp_R": 2.0
+      },
+      {
+        "tp_R": 1.5,
+        "ratchet_trigger_R": 0.8,
+        "ratchet_lock_R": 0.3
+      },
+      {
+        "tp_R": 1.5
+      }
+    ],
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 40.86
+  },
+  "M6_geom_search_v2": {
+    "n_trades": 162,
+    "roi_pct": -1.776,
+    "final_equity": 4911.18,
+    "max_dd_dollars": 238.99,
+    "win_rate": 0.5123,
+    "payoff_ratio": 0.873,
+    "sharpe": -0.468,
+    "avg_r": -0.0439,
+    "gross_pnl": 179.03,
+    "total_friction": 267.84,
+    "sleeve": "M6_GLOBAL_MULTIASSET_CTA",
+    "variant": "geom_search_v2",
+    "n_oos_quarters": 21,
+    "windows_traded": 14,
+    "halted": true,
+    "halt_time": "2025-07-14 00:00:00+00:00",
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": [
+      {},
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5
+      },
+      {
+        "tp_R": 2.0
+      },
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5,
+        "tp_R": 2.0
+      },
+      {
+        "tp_R": 1.5,
+        "ratchet_trigger_R": 0.8,
+        "ratchet_lock_R": 0.3
+      },
+      {
+        "tp_R": 1.5
+      }
+    ],
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 49.736
   }
 }

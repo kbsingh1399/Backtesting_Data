@@ -1043,6 +1043,153 @@ def sig_sleeve_s(df: pd.DataFrame, params: dict):
 
 
 
+# ---------------------------------------------------------------------------
+# Sleeve T: FULL-BREADTH VOL-REGIME-CONDITIONED MEAN REVERSION (Phase 7).
+# Motivated by a fast vectorized screen (phase7_screen_part1.py) across all
+# 98 FX/metals/indices/energy symbols in Forex_Data: unconditional 1-day
+# mean reversion is real but tiny (2.7-4.9bps, far under the 41bps RT
+# friction floor); conditioning on being in a HIGH realized-vol regime
+# (top 30th percentile of trailing 252d vol-of-vol) roughly quadruples the
+# raw edge (19.5bps, t=3.65, n=2957) -- still under the naive friction floor
+# on a fixed-horizon-return basis, but that screen used a flat 1-day holding
+# period, not this project's actual asymmetric R-multiple exit geometry
+# (1.5xATR stop / 3R target / ratchet / time-decay), which is exactly the
+# mechanism that turned a marginal raw edge into Sleeve M's certified
+# result. Tested here for real under the full mission-invariant WFO.
+#
+# Universe is restricted to the 85 symbols with D1 history starting on or
+# before 2020-09-10 (vs. the full 98) -- the remaining 13 (mostly
+# cross-currency-denominated precious-metals variants + USDCNH/AUDSGD/
+# GAUCNH/GAUUSD) only have data from 2023 onward, which would collapse the
+# whole sleeve's common-range intersection (see SigCache.common_range) to
+# <20 OOS quarters, breaching the mandate for every symbol, not just the
+# late starters. Same reasoning Sleeve M already documents for XPDUSD.
+# ---------------------------------------------------------------------------
+SLEEVE_T_UNIVERSE = [
+    "ALUMINIUM", "AU200", "AUDCAD", "AUDCHF", "AUDCNH", "AUDJPY", "AUDNZD",
+    "AUDUSD", "CADCHF", "CADJPY", "CHFJPY", "CHFSGD", "CHINA50", "CHINAH",
+    "CNHJPY", "COPPER", "DJ30", "EURAUD", "EURCAD", "EURCHF", "EURCNH",
+    "EURGBP", "EURHKD", "EURHUF", "EURJPY", "EURMXN", "EURNOK", "EURNZD",
+    "EURSEK", "EURSGD", "EURUSD", "EURZAR", "FR40", "GAS", "GBPAUD",
+    "GBPCAD", "GBPCHF", "GBPCNH", "GBPHKD", "GBPJPY", "GBPNOK", "GBPNZD",
+    "GBPSEK", "GBPSGD", "GBPUSD", "GER30", "GER40", "HK50", "JP225", "LEAD",
+    "NAS100", "NETH25", "NICKEL", "NOKJPY", "NOKSEK", "NZDCAD", "NZDCHF",
+    "NZDCNH", "NZDJPY", "NZDSGD", "NZDUSD", "SGDJPY", "SP500", "STOXX50",
+    "SWISS20", "UK100", "UKBRENT", "US2000", "USDCAD", "USDCHF", "USDHKD",
+    "USDHUF", "USDJPY", "USDMXN", "USDNOK", "USDSEK", "USDSGD", "USDTHB",
+    "USDZAR", "USWTI", "XAGUSD", "XAUUSD", "XPTUSD", "ZARJPY", "ZINC",
+]
+
+SLEEVE_T_PARAM_GRID = [
+    dict(vol_pct_min=0.60, z_thresh=1.5),
+    dict(vol_pct_min=0.60, z_thresh=2.0),
+    dict(vol_pct_min=0.70, z_thresh=1.5),
+    dict(vol_pct_min=0.70, z_thresh=2.0),
+    dict(vol_pct_min=0.70, z_thresh=2.5),
+    dict(vol_pct_min=0.80, z_thresh=2.0),
+    dict(vol_pct_min=0.80, z_thresh=2.5),
+]
+
+
+def prep_sleeve_t(symbol: str):
+    df = load_forex(symbol, "d1")
+    ret = df["close"].pct_change()
+    df["vol21"] = ret.rolling(21).std()
+    df["vol_pct"] = df["vol21"].rolling(252, min_periods=60).rank(pct=True)
+    roll_mean = ret.rolling(21).mean()
+    roll_std = ret.rolling(21).std()
+    df["ret_z"] = (ret - roll_mean) / roll_std
+    return df
+
+
+def sig_sleeve_t(df: pd.DataFrame, params: dict):
+    """Fade a statistically extreme 1-day move, but ONLY while the symbol is
+    in its own top-percentile realized-vol regime (vol_pct >= vol_pct_min).
+    Long = fade a sharp down move (z < -z_thresh); Short = fade a sharp up
+    move (z > z_thresh)."""
+    high_vol = df["vol_pct"] >= params["vol_pct_min"]
+    z = df["ret_z"]
+    z_thresh = params["z_thresh"]
+    long_cond = high_vol & (z < -z_thresh)
+    short_cond = high_vol & (z > z_thresh)
+    entries = (long_cond | short_cond).fillna(False)
+    sides = pd.Series(np.where(long_cond, 1, np.where(short_cond, -1, 0)), index=df.index)
+    return entries, sides, df["atr14"]
+
+
+# ---------------------------------------------------------------------------
+# Sleeve U: ML-SIGNAL-DRIVEN ENTRIES (Phase 7). Uses the walk-forward
+# Logistic Regression long-probability signal from phase7_screen_part3_ml.py
+# (pooled cross-sectional panel across all 98 symbols, quarterly expanding-
+# window retrain, zero lookahead) as the entry trigger, fed through this
+# project's standard ATR/ratchet/time-decay exit engine. Of the three model
+# families screened (Logistic Regression, Random Forest, Gradient Boosting),
+# only Logistic Regression's LONG-side signal showed a statistically real
+# edge (8.02bps/day, t=3.61, n=10876) -- the SHORT side was insignificant
+# and Random Forest/Gradient Boosting were weaker or outright negative
+# (classic overfitting-to-noise pattern for complex models on noisy daily
+# FX/macro data with a modest feature set). This sleeve is LONG-ONLY by
+# design, reflecting that asymmetry honestly rather than forcing a symmetric
+# short side that the screen never supported.
+# ---------------------------------------------------------------------------
+SLEEVE_U_UNIVERSE = SLEEVE_T_UNIVERSE
+
+SLEEVE_U_PARAM_GRID = [
+    dict(proba_thresh=0.55),
+    dict(proba_thresh=0.60),
+    dict(proba_thresh=0.65),
+    dict(proba_thresh=0.70),
+]
+
+
+def prep_sleeve_u(symbol: str):
+    from phase7_ml_signal_cache import load_cache
+    df = load_forex(symbol, "d1")
+    ml = load_cache()
+    ml_sym = ml[ml["symbol"] == symbol].set_index("date")["ml_long_proba"]
+    df["ml_long_proba"] = ml_sym.reindex(df.index)
+    return df
+
+
+def sig_sleeve_u(df: pd.DataFrame, params: dict):
+    """Long-only: enter when the walk-forward ML model's predicted
+    probability of a positive next-day return exceeds proba_thresh."""
+    long_cond = (df["ml_long_proba"] > params["proba_thresh"]).fillna(False)
+    entries = long_cond
+    sides = pd.Series(np.where(long_cond, 1, 0), index=df.index)
+    return entries, sides, df["atr14"]
+
+
+# ---------------------------------------------------------------------------
+# Sleeves M2-M6: "multi-grid combination of assets" (Phase 7). Sleeve M
+# (Donchian+ATR-rank trend/breakout) is the ONLY strategy family in this
+# entire 21-sleeve project (A-U) that survives full WFO certification in the
+# FX/metals/indices/energy universe. Rather than cherry-pick which of its 8
+# symbols individually made money IN THIS SAME HISTORICAL RUN (that would be
+# look-ahead/selection bias dressed up as "optimization" -- picking the
+# subset is itself a decision that needs its own out-of-sample test, not a
+# post-hoc read of the result it's being selected from), these are
+# PRE-REGISTERED, economically-motivated universe groupings, each run as its
+# own complete, independent WFO certification under identical mission
+# invariants. This directly answers "run a multi-grid combination of assets
+# to find the best equity curve" without smuggling in hindsight.
+# ---------------------------------------------------------------------------
+SLEEVE_M2_UNIVERSE = ["XAUUSD", "XAGUSD", "XPTUSD"]                       # precious metals only
+SLEEVE_M3_UNIVERSE = ["COPPER", "ALUMINIUM", "NICKEL", "ZINC", "LEAD"]    # base/industrial metals only
+SLEEVE_M4_UNIVERSE = ["XAUUSD", "XAGUSD"]                                 # monetary metals only (ex-platinum, ex-industrial)
+SLEEVE_M5_UNIVERSE = ["XAUUSD", "XAGUSD", "XPTUSD", "COPPER", "ALUMINIUM",
+                       "NICKEL", "ZINC", "LEAD", "UKBRENT", "USWTI", "GAS"]  # metals + energy (full commodity complex)
+SLEEVE_M6_UNIVERSE = SLEEVE_M5_UNIVERSE + ["SP500", "NAS100", "DJ30", "US2000",
+                                            "GER40", "UK100", "FR40", "JP225",
+                                            "AU200", "HK50"]                 # global multi-asset-class CTA-style book
+
+SLEEVE_M2_PARAM_GRID = SLEEVE_L_PARAM_GRID
+SLEEVE_M3_PARAM_GRID = SLEEVE_L_PARAM_GRID
+SLEEVE_M4_PARAM_GRID = SLEEVE_L_PARAM_GRID
+SLEEVE_M5_PARAM_GRID = SLEEVE_L_PARAM_GRID
+SLEEVE_M6_PARAM_GRID = SLEEVE_L_PARAM_GRID
+
+
 SLEEVES = {
     "A": dict(universe=SLEEVE_A_UNIVERSE, grid=SLEEVE_A_PARAM_GRID, prep=prep_sleeve_a,
               sig=sig_sleeve_a, name="A_CRYPTO_PULLBACK"),
@@ -1090,4 +1237,18 @@ SLEEVES = {
     "S": dict(universe=SLEEVE_S_UNIVERSE, grid=SLEEVE_S_PARAM_GRID, prep=prep_sleeve_s,
               sig=sig_sleeve_s, name="S_GOLD_PDHPDL_SWEEP_REVERSAL",
               min_oos_start=SLEEVE_S_MIN_OOS_START),
+    "T": dict(universe=SLEEVE_T_UNIVERSE, grid=SLEEVE_T_PARAM_GRID, prep=prep_sleeve_t,
+              sig=sig_sleeve_t, name="T_FULLBREADTH_VOLREGIME_MEANREV"),
+    "U": dict(universe=SLEEVE_U_UNIVERSE, grid=SLEEVE_U_PARAM_GRID, prep=prep_sleeve_u,
+              sig=sig_sleeve_u, name="U_ML_LOGREG_LONGONLY_SIGNAL"),
+    "M2": dict(universe=SLEEVE_M2_UNIVERSE, grid=SLEEVE_M2_PARAM_GRID, prep=prep_sleeve_m,
+               sig=sig_sleeve_m, name="M2_PRECIOUS_METALS_ONLY"),
+    "M3": dict(universe=SLEEVE_M3_UNIVERSE, grid=SLEEVE_M3_PARAM_GRID, prep=prep_sleeve_m,
+               sig=sig_sleeve_m, name="M3_BASE_METALS_ONLY"),
+    "M4": dict(universe=SLEEVE_M4_UNIVERSE, grid=SLEEVE_M4_PARAM_GRID, prep=prep_sleeve_m,
+               sig=sig_sleeve_m, name="M4_GOLD_SILVER_ONLY"),
+    "M5": dict(universe=SLEEVE_M5_UNIVERSE, grid=SLEEVE_M5_PARAM_GRID, prep=prep_sleeve_m,
+               sig=sig_sleeve_m, name="M5_METALS_PLUS_ENERGY"),
+    "M6": dict(universe=SLEEVE_M6_UNIVERSE, grid=SLEEVE_M6_PARAM_GRID, prep=prep_sleeve_m,
+               sig=sig_sleeve_m, name="M6_GLOBAL_MULTIASSET_CTA"),
 }
