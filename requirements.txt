@@ -1,0 +1,15 @@
+# Core numerics / IO
+numpy>=1.26
+pandas>=2.1
+pyarrow>=14.0
+polars>=0.20
+
+# Modelling
+scikit-learn>=1.3
+scipy>=1.11
+xgboost>=2.0
+lightgbm>=4.0
+catboost>=1.2        # only needed to reproduce run_s4_audit.py
+
+# Reporting
+matplotlib>=3.8

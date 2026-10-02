@@ -1,0 +1,20 @@
+{
+  "files_profiled": 624,
+  "m15_padded_bars_total": 357601,
+  "m15_padded_share_pct": 3.26,
+  "m15_median_pure_start": "2024-07-18 00:00:00+00:00",
+  "m15_median_padded_span_pct": 60.0,
+  "m15_padded_modal_seconds": 3600.0,
+  "dup_timestamps": 0,
+  "ohlc_violations": 0,
+  "s4_assets_without_15m_at_oos_start": [
+    "EURCNH",
+    "NICKEL",
+    "LEAD",
+    "NZDCNH",
+    "US2000",
+    "GAS",
+    "XAUCNH",
+    "GAUCNH"
+  ]
+}

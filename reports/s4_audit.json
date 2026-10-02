@@ -1,0 +1,87 @@
+{
+  "V4_portfolio": {
+    "start": "2023-11-01",
+    "end": "2026-04-01",
+    "days": 633,
+    "total_return_pct": -77.2,
+    "cagr_pct": -44.49,
+    "ann_vol_pct": 13.0,
+    "sharpe": -4.457,
+    "sortino": -3.481,
+    "max_drawdown_pct": -77.2,
+    "calmar": -0.576,
+    "best_day_pct": 1.9,
+    "worst_day_pct": -9.56,
+    "pct_positive_days": 21.0,
+    "psr": 0.0,
+    "sr0_period": 0.0207,
+    "sr0_ann": 0.328,
+    "dsr": 0.0,
+    "n_trials": 1,
+    "skew": -5.173,
+    "kurtosis": 49.315,
+    "sharpe_ci_lo": -5.647,
+    "sharpe_ci_hi": -3.708,
+    "p_sharpe_gt_0": 0.0,
+    "n_trades": 935,
+    "trades_per_day": 1.48,
+    "win_rate_pct": 38.18,
+    "avg_R": -0.5188,
+    "expectancy_R": -0.5188,
+    "profit_factor": 0.353,
+    "avg_cost_R": 0.4957,
+    "t_stat_R": -7.76
+  },
+  "waterfall": [
+    {
+      "variant": "V0  as reported (label -> +2R/-1R, 20 accounts)",
+      "trades": 2408,
+      "mean_R": 0.5984,
+      "total_R": 1441.0,
+      "summed_window_ROI_pct": 921.3
+    },
+    {
+      "variant": "V1  + book the realised R",
+      "trades": 2408,
+      "mean_R": -0.0761,
+      "total_R": -183.3,
+      "summed_window_ROI_pct": -14.1
+    },
+    {
+      "variant": "V2  + realistic transaction costs",
+      "trades": 2408,
+      "mean_R": -0.342,
+      "total_R": -823.6,
+      "summed_window_ROI_pct": -242.4
+    },
+    {
+      "variant": "V2b  ... cost-viable instruments only (13/18)",
+      "trades": 1961,
+      "mean_R": -0.1034,
+      "total_R": -202.7,
+      "summed_window_ROI_pct": -23.3
+    },
+    {
+      "variant": "V3  + genuine 15m bars only",
+      "trades": 2423,
+      "mean_R": -0.4074,
+      "total_R": -987.0,
+      "summed_window_ROI_pct": -299.2
+    },
+    {
+      "variant": "V4  + one portfolio account",
+      "trades": 935,
+      "mean_R": -0.5188,
+      "total_R": -485.1,
+      "summed_window_ROI_pct": -77.2
+    }
+  ],
+  "defects": {
+    "label_booking_inflation_x": 1441000000000.0,
+    "reported_total_R": 1441.0,
+    "realised_total_R": -183.3,
+    "win_rate_typo": "tot_wins/tot_trades*100.2",
+    "mean_modelled_cost_R": 0.3459,
+    "s4_assumed_cost_R": 0.08
+  }
+}

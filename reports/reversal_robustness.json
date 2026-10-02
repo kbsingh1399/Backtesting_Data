@@ -1,0 +1,260 @@
+{
+  "T1  IMPLEMENTATION LAG  (lag=0 is the unrealistic same-close fill)": [
+    {
+      "horizon_h": 1,
+      "lag_bars": 0,
+      "n": 4832,
+      "gross_bps": 1.57,
+      "net_bps": 0.702,
+      "net_sharpe": 5.76,
+      "ann_ret_pct": 42.5
+    },
+    {
+      "horizon_h": 1,
+      "lag_bars": 1,
+      "n": 4830,
+      "gross_bps": 0.065,
+      "net_bps": -0.784,
+      "net_sharpe": -9.88,
+      "ann_ret_pct": -47.4
+    },
+    {
+      "horizon_h": 1,
+      "lag_bars": 2,
+      "n": 4829,
+      "gross_bps": 0.065,
+      "net_bps": -0.78,
+      "net_sharpe": -10.54,
+      "ann_ret_pct": -47.2
+    },
+    {
+      "horizon_h": 4,
+      "lag_bars": 0,
+      "n": 1208,
+      "gross_bps": 2.419,
+      "net_bps": 1.241,
+      "net_sharpe": 3.68,
+      "ann_ret_pct": 18.8
+    },
+    {
+      "horizon_h": 4,
+      "lag_bars": 1,
+      "n": 1207,
+      "gross_bps": -0.37,
+      "net_bps": -1.433,
+      "net_sharpe": -5.38,
+      "ann_ret_pct": -21.7
+    },
+    {
+      "horizon_h": 4,
+      "lag_bars": 2,
+      "n": 1207,
+      "gross_bps": -0.487,
+      "net_bps": -1.489,
+      "net_sharpe": -5.74,
+      "ann_ret_pct": -22.5
+    }
+  ],
+  "T2  SUB-UNIVERSE  (all with 1-bar implementation lag)": [
+    {
+      "universe": "ALL (46)",
+      "n_assets": 33,
+      "n": 4830,
+      "gross_bps": 0.065,
+      "net_bps": -0.784,
+      "net_sharpe": -9.88,
+      "ann_ret_pct": -47.4
+    },
+    {
+      "universe": "FX only",
+      "n_assets": 26,
+      "n": 4830,
+      "gross_bps": 0.039,
+      "net_bps": -0.746,
+      "net_sharpe": -11.04,
+      "ann_ret_pct": -45.1
+    },
+    {
+      "universe": "No gold/silver",
+      "n_assets": 33,
+      "n": 4830,
+      "gross_bps": 0.065,
+      "net_bps": -0.784,
+      "net_sharpe": -9.88,
+      "ann_ret_pct": -47.4
+    },
+    {
+      "universe": "1 per cluster",
+      "n_assets": 18,
+      "n": 4830,
+      "gross_bps": 0.095,
+      "net_bps": -0.815,
+      "net_sharpe": -10.54,
+      "ann_ret_pct": -49.3
+    }
+  ],
+  "T3  STALE-QUOTE FILTERS": [
+    {
+      "filter": "none",
+      "n": 4830,
+      "gross_bps": 0.065,
+      "net_bps": -0.784,
+      "net_sharpe": -9.88,
+      "ann_ret_pct": -47.4
+    },
+    {
+      "filter": "tick_volume > 0",
+      "n": 4830,
+      "gross_bps": 0.065,
+      "net_bps": -0.784,
+      "net_sharpe": -9.88,
+      "ann_ret_pct": -47.4
+    },
+    {
+      "filter": "index cash hours",
+      "n": 4830,
+      "gross_bps": 0.108,
+      "net_bps": -0.741,
+      "net_sharpe": -10.63,
+      "ann_ret_pct": -44.8
+    },
+    {
+      "filter": "both",
+      "n": 4830,
+      "gross_bps": 0.108,
+      "net_bps": -0.741,
+      "net_sharpe": -10.63,
+      "ann_ret_pct": -44.8
+    }
+  ],
+  "T4  COST STRESS  (proxy for market impact, clean universe + lag)": [
+    {
+      "cost_x": 1.0,
+      "n": 4830,
+      "gross_bps": 0.108,
+      "net_bps": -0.741,
+      "net_sharpe": -10.63,
+      "ann_ret_pct": -44.8
+    },
+    {
+      "cost_x": 1.5,
+      "n": 4830,
+      "gross_bps": 0.108,
+      "net_bps": -1.166,
+      "net_sharpe": -16.38,
+      "ann_ret_pct": -70.5
+    },
+    {
+      "cost_x": 2.0,
+      "n": 4830,
+      "gross_bps": 0.108,
+      "net_bps": -1.591,
+      "net_sharpe": -21.75,
+      "ann_ret_pct": -96.2
+    },
+    {
+      "cost_x": 3.0,
+      "n": 4830,
+      "gross_bps": 0.108,
+      "net_bps": -2.44,
+      "net_sharpe": -31.18,
+      "ann_ret_pct": -147.6
+    },
+    {
+      "cost_x": 5.0,
+      "n": 4830,
+      "gross_bps": 0.108,
+      "net_bps": -4.138,
+      "net_sharpe": -44.72,
+      "ann_ret_pct": -250.3
+    }
+  ],
+  "T5  SUB-PERIOD STABILITY": [
+    {
+      "half": "H1",
+      "from": "2023-09-15",
+      "to": "2024-02-07",
+      "n": 2382,
+      "gross_bps": -0.046,
+      "net_bps": -0.825,
+      "net_sharpe": -11.09,
+      "ann_ret_pct": -49.9
+    },
+    {
+      "half": "H2",
+      "from": "2024-02-08",
+      "to": "2024-06-28",
+      "n": 2446,
+      "gross_bps": 0.255,
+      "net_bps": -0.663,
+      "net_sharpe": -10.2,
+      "ann_ret_pct": -40.1
+    }
+  ],
+  "T6  REVERSAL LOOKBACK": [
+    {
+      "lookback_h": 1,
+      "n": 4830,
+      "gross_bps": 0.074,
+      "net_bps": -1.071,
+      "net_sharpe": -15.39,
+      "ann_ret_pct": -64.7
+    },
+    {
+      "lookback_h": 2,
+      "n": 4830,
+      "gross_bps": 0.108,
+      "net_bps": -0.741,
+      "net_sharpe": -10.63,
+      "ann_ret_pct": -44.8
+    },
+    {
+      "lookback_h": 3,
+      "n": 4830,
+      "gross_bps": 0.037,
+      "net_bps": -0.692,
+      "net_sharpe": -10.23,
+      "ann_ret_pct": -41.8
+    },
+    {
+      "lookback_h": 4,
+      "n": 4830,
+      "gross_bps": 0.055,
+      "net_bps": -0.578,
+      "net_sharpe": -8.69,
+      "ann_ret_pct": -34.9
+    },
+    {
+      "lookback_h": 6,
+      "n": 4830,
+      "gross_bps": 0.088,
+      "net_bps": -0.436,
+      "net_sharpe": -6.67,
+      "ann_ret_pct": -26.4
+    },
+    {
+      "lookback_h": 8,
+      "n": 4830,
+      "gross_bps": 0.073,
+      "net_bps": -0.347,
+      "net_sharpe": -5.36,
+      "ann_ret_pct": -21.0
+    },
+    {
+      "lookback_h": 12,
+      "n": 4830,
+      "gross_bps": 0.045,
+      "net_bps": -0.32,
+      "net_sharpe": -5.0,
+      "ann_ret_pct": -19.4
+    },
+    {
+      "lookback_h": 24,
+      "n": 4830,
+      "gross_bps": 0.039,
+      "net_bps": -0.204,
+      "net_sharpe": -3.12,
+      "ann_ret_pct": -12.3
+    }
+  ]
+}
