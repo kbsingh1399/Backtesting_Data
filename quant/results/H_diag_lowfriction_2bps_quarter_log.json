@@ -1,0 +1,336 @@
+[
+  {
+    "quarter": "2020-01-01",
+    "locked_params": {
+      "entry_z": 1.5,
+      "exit_z": 0.0,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 65.963,
+    "is_trades": 230,
+    "oos_trades": 165,
+    "traded": true
+  },
+  {
+    "quarter": "2020-04-01",
+    "locked_params": {
+      "entry_z": 1.5,
+      "exit_z": 0.0,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 87.471,
+    "is_trades": 287,
+    "oos_trades": 94,
+    "traded": true
+  },
+  {
+    "quarter": "2020-07-01",
+    "locked_params": {
+      "entry_z": 2.5,
+      "exit_z": 0.0,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 43.34,
+    "is_trades": 66,
+    "oos_trades": 33,
+    "traded": true
+  },
+  {
+    "quarter": "2020-10-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2021-01-01",
+    "locked_params": {
+      "entry_z": 1.5,
+      "exit_z": 0.0,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 36.628,
+    "is_trades": 255,
+    "oos_trades": 143,
+    "traded": true
+  },
+  {
+    "quarter": "2021-04-01",
+    "locked_params": {
+      "entry_z": 2.5,
+      "exit_z": 0.0,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 14.892,
+    "is_trades": 48,
+    "oos_trades": 33,
+    "traded": true
+  },
+  {
+    "quarter": "2021-07-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2021-10-01",
+    "locked_params": {
+      "entry_z": 1.75,
+      "exit_z": 0.25,
+      "stop_extra_z": 1.75,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 25.266,
+    "is_trades": 200,
+    "oos_trades": 103,
+    "traded": true
+  },
+  {
+    "quarter": "2022-01-01",
+    "locked_params": {
+      "entry_z": 1.5,
+      "exit_z": 0.0,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 29.963,
+    "is_trades": 252,
+    "oos_trades": 150,
+    "traded": true
+  },
+  {
+    "quarter": "2022-04-01",
+    "locked_params": {
+      "entry_z": 1.75,
+      "exit_z": 0.25,
+      "stop_extra_z": 1.75,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 20.776,
+    "is_trades": 211,
+    "oos_trades": 128,
+    "traded": true
+  },
+  {
+    "quarter": "2022-07-01",
+    "locked_params": {
+      "entry_z": 2.0,
+      "exit_z": 0.5,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 45
+    },
+    "locked_geometry": {},
+    "is_score": 22.688,
+    "is_trades": 191,
+    "oos_trades": 73,
+    "traded": true
+  },
+  {
+    "quarter": "2022-10-01",
+    "locked_params": {
+      "entry_z": 1.75,
+      "exit_z": 0.25,
+      "stop_extra_z": 1.75,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 26.355,
+    "is_trades": 213,
+    "oos_trades": 93,
+    "traded": true
+  },
+  {
+    "quarter": "2023-01-01",
+    "locked_params": {
+      "entry_z": 1.5,
+      "exit_z": 0.0,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 5.684,
+    "is_trades": 225,
+    "oos_trades": 116,
+    "traded": true
+  },
+  {
+    "quarter": "2023-04-01",
+    "locked_params": {
+      "entry_z": 2.0,
+      "exit_z": 0.5,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 45
+    },
+    "locked_geometry": {},
+    "is_score": 29.662,
+    "is_trades": 139,
+    "oos_trades": 80,
+    "traded": true
+  },
+  {
+    "quarter": "2023-07-01",
+    "locked_params": {
+      "entry_z": 2.0,
+      "exit_z": 0.0,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 54.274,
+    "is_trades": 150,
+    "oos_trades": 80,
+    "traded": true
+  },
+  {
+    "quarter": "2023-10-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2024-01-01",
+    "locked_params": {
+      "entry_z": 2.5,
+      "exit_z": 0.0,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 1.153,
+    "is_trades": 62,
+    "oos_trades": 26,
+    "traded": true
+  },
+  {
+    "quarter": "2024-04-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2024-07-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2024-10-01",
+    "locked_params": {
+      "entry_z": 2.0,
+      "exit_z": 0.0,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 15.698,
+    "is_trades": 148,
+    "oos_trades": 75,
+    "traded": true
+  },
+  {
+    "quarter": "2025-01-01",
+    "locked_params": {
+      "entry_z": 2.0,
+      "exit_z": 0.5,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 45
+    },
+    "locked_geometry": {},
+    "is_score": 14.64,
+    "is_trades": 170,
+    "oos_trades": 79,
+    "traded": true
+  },
+  {
+    "quarter": "2025-04-01",
+    "locked_params": {
+      "entry_z": 2.5,
+      "exit_z": 0.0,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 1.265,
+    "is_trades": 48,
+    "oos_trades": 42,
+    "traded": true
+  },
+  {
+    "quarter": "2025-07-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2025-10-01",
+    "locked_params": {
+      "entry_z": 1.5,
+      "exit_z": 0.0,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 33.722,
+    "is_trades": 229,
+    "oos_trades": 132,
+    "traded": true
+  },
+  {
+    "quarter": "2026-01-01",
+    "locked_params": {
+      "entry_z": 2.0,
+      "exit_z": 0.5,
+      "stop_extra_z": 1.5,
+      "max_hold_days": 45
+    },
+    "locked_geometry": {},
+    "is_score": 34.126,
+    "is_trades": 154,
+    "oos_trades": 95,
+    "traded": true
+  },
+  {
+    "quarter": "2026-04-01",
+    "locked_params": {
+      "entry_z": 1.75,
+      "exit_z": 0.25,
+      "stop_extra_z": 1.75,
+      "max_hold_days": 60
+    },
+    "locked_geometry": {},
+    "is_score": 20.627,
+    "is_trades": 200,
+    "oos_trades": 97,
+    "traded": true
+  }
+]

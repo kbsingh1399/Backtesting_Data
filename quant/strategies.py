@@ -463,6 +463,155 @@ def sig_sleeve_g(df: pd.DataFrame, params: dict):
     return entries, sides, std_series
 
 
+# ---------------------------------------------------------------------------
+# Sleeve H: same OU-native mechanics as G, but a DIVERSIFIED 28-pair universe
+# (vs G's concentrated 8) selected from the leak-free cointegration scan with
+# a max-3-pairs-per-leg cap, to reduce the single-pair variance that tripped
+# Sleeve G's drawdown halt. This directly tests the "more breadth = smoother
+# equity" quant diversification hypothesis on the exact same validated edge.
+# ---------------------------------------------------------------------------
+SLEEVE_H_PAIRS = [
+    "CADCHF~USDCAD", "USDCHF~USDMXN", "CADCHF~USDNOK", "NZDUSD~ZARJPY",
+    "CADCHF~EURUSD", "CHFJPY~GBPSEK", "USDCHF~USDZAR", "GBPCHF~GBPUSD",
+    "EURCAD~EURCHF", "GBPCAD~GBPCHF", "AUDCHF~AUDUSD", "CADJPY~CHFJPY",
+    "AUDCAD~ZARJPY", "EURZAR~NZDCAD", "USDCHF~USDNOK", "CHFJPY~USDJPY",
+    "AUDCHF~NZDUSD", "NZDCAD~NZDCHF", "NZDCAD~ZARJPY", "AUDNZD~EURJPY",
+    "CADJPY~GBPSEK", "NZDCHF~NZDUSD", "AUDCAD~AUDCHF", "AUDNZD~GBPUSD",
+    "AUDNZD~GBPJPY", "CADJPY~GBPNOK", "EURCHF~EURUSD", "GBPNOK~NOKJPY",
+]
+SLEEVE_H_MIN_OOS_START = SLEEVE_F_MIN_OOS_START
+SLEEVE_H_PARAM_GRID = SLEEVE_G_PARAM_GRID
+prep_sleeve_h = prep_sleeve_g
+sig_sleeve_h = sig_sleeve_g
+
+
+# ---------------------------------------------------------------------------
+# Sleeve I: crypto long/short-ratio CONTRARIAN (fade the crowd). Raw-edge
+# screen (screen_candidates.py / screen_candidates2.py) found this to be the
+# strongest, cleanest, most intuitive new signal: when the exchange-wide
+# long/short account ratio is extremely stretched long, forward 1-day raw
+# returns are significantly negative (t=-23 over 116k 15m obs); extremely
+# short, forward returns are significantly positive (t=+23). Both legs are
+# profitable in ABSOLUTE (not just market-relative) terms, so this trades on
+# the existing per-instrument ATR engine like sleeves A-E, at real prices
+# (no synthetic-index ATR mismatch like sleeve F).
+# ---------------------------------------------------------------------------
+SLEEVE_I_UNIVERSE = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT", "XRPUSDT",
+                     "AVAXUSDT", "LINKUSDT", "DOGEUSDT", "ADAUSDT", "DOTUSDT"]
+SLEEVE_I_PARAM_GRID = [
+    dict(z_lookback_bars=672, entry_z=2.0),   # 672 bars = 7 days of 15m
+    dict(z_lookback_bars=672, entry_z=2.5),
+    dict(z_lookback_bars=288, entry_z=2.0),   # 3-day lookback
+    dict(z_lookback_bars=288, entry_z=2.5),
+    dict(z_lookback_bars=96, entry_z=2.0),    # 1-day lookback
+]
+
+
+def prep_sleeve_i(symbol: str):
+    df = load_binance(symbol)
+    out = df[["open", "high", "low", "close"]].copy()
+    out["atr14"] = df["atr14_w"]
+    ls = df["ls_ratio_global"]
+    for w in {g["z_lookback_bars"] for g in SLEEVE_I_PARAM_GRID}:
+        m = ls.rolling(w).mean()
+        s = ls.rolling(w).std()
+        out[f"lsz_{w}"] = (ls - m) / s.replace(0, np.nan)
+    return out
+
+
+def sig_sleeve_i(df: pd.DataFrame, params: dict):
+    z = df[f"lsz_{params['z_lookback_bars']}"]
+    long_cond = z <= -params["entry_z"]   # crowd extremely SHORT -> fade -> go long
+    short_cond = z >= params["entry_z"]   # crowd extremely LONG -> fade -> go short
+    long_cond = long_cond.fillna(False) & ~long_cond.shift(1).fillna(False)
+    short_cond = short_cond.fillna(False) & ~short_cond.shift(1).fillna(False)
+    entries = (long_cond | short_cond).fillna(False)
+    sides = pd.Series(np.where(long_cond, 1, np.where(short_cond, -1, 0)), index=df.index)
+    return entries, sides, df["atr14"]
+
+
+# ---------------------------------------------------------------------------
+# Sleeve J: crypto funding-rate extreme LONG-ONLY momentum-confirmation
+# filter. Raw-edge screen found funding is NOT a clean contrarian signal
+# (both high and low funding precede positive raw returns -- a market-beta
+# confound), but the high-funding side alone is a strong, large, LONG-ONLY
+# timing filter (raw 1d fwd +93.9bps, t=22.6, market-neutral excess +31.3bps,
+# t=9.0): crowded, heavily-paid-for longs keep working short-term more often
+# than not. Tested honestly here as a long-only entry filter (no short leg --
+# the low-funding side showed no exploitable short edge).
+# ---------------------------------------------------------------------------
+SLEEVE_J_UNIVERSE = SLEEVE_I_UNIVERSE
+SLEEVE_J_PARAM_GRID = [
+    dict(z_lookback_bars=672, entry_z=2.0),
+    dict(z_lookback_bars=672, entry_z=2.5),
+    dict(z_lookback_bars=288, entry_z=2.0),
+    dict(z_lookback_bars=288, entry_z=2.5),
+    dict(z_lookback_bars=96, entry_z=2.0),
+]
+
+
+def prep_sleeve_j(symbol: str):
+    df = load_binance(symbol)
+    out = df[["open", "high", "low", "close"]].copy()
+    out["atr14"] = df["atr14_w"]
+    fr = df["funding_rate_pct"]
+    for w in {g["z_lookback_bars"] for g in SLEEVE_J_PARAM_GRID}:
+        m = fr.rolling(w).mean()
+        s = fr.rolling(w).std()
+        out[f"frz_{w}"] = (fr - m) / s.replace(0, np.nan)
+    return out
+
+
+def sig_sleeve_j(df: pd.DataFrame, params: dict):
+    z = df[f"frz_{params['z_lookback_bars']}"]
+    long_cond = z >= params["entry_z"]
+    long_cond = long_cond.fillna(False) & ~long_cond.shift(1).fillna(False)
+    entries = long_cond.fillna(False)
+    sides = pd.Series(np.where(long_cond, 1, 0), index=df.index)
+    return entries, sides, df["atr14"]
+
+
+# ---------------------------------------------------------------------------
+# Sleeve K: FX day-of-week seasonality. Per-symbol check (not just pooled)
+# showed a consistent Monday-positive / Friday-negative daily-return pattern
+# across 8/10 majors independently (not just a cross-symbol-correlation
+# pooling artifact), t-stats in the double digits when pooled. Flagged
+# honestly: this could be a genuine weekly flow/positioning effect, OR a
+# data-vendor convention in how weekly OHLC candles are stitched across the
+# weekend gap -- cannot fully rule out the latter without an independent data
+# source. Tested as: long at Monday's open, exit at Monday's close; short at
+# Friday's open, exit at Friday's close -- using the same ATR institutional
+# risk box as sleeves A-E (so a real SL can still cut a bad Monday/Friday
+# short).
+# ---------------------------------------------------------------------------
+SLEEVE_K_UNIVERSE = ["EURUSD", "GBPUSD", "USDJPY", "AUDUSD", "USDCAD", "USDCHF",
+                     "NZDUSD", "USDMXN", "EURJPY", "GBPJPY"]
+SLEEVE_K_PARAM_GRID = [
+    dict(mode="mon_long_fri_short"),
+    dict(mode="mon_long_only"),
+    dict(mode="fri_short_only"),
+]
+
+
+def prep_sleeve_k(symbol: str):
+    df = load_forex(symbol, "d1")
+    out = df[["open", "high", "low", "close"]].copy()
+    out["atr14"] = wilder_atr(out, 14)
+    out["weekday"] = out.index.weekday
+    return out
+
+
+def sig_sleeve_k(df: pd.DataFrame, params: dict):
+    mode = params["mode"]
+    is_mon = df["weekday"] == 0
+    is_fri = df["weekday"] == 4
+    long_cond = is_mon if mode in ("mon_long_fri_short", "mon_long_only") else pd.Series(False, index=df.index)
+    short_cond = is_fri if mode in ("mon_long_fri_short", "fri_short_only") else pd.Series(False, index=df.index)
+    entries = (long_cond | short_cond)
+    sides = pd.Series(np.where(long_cond, 1, np.where(short_cond, -1, 0)), index=df.index)
+    return entries, sides, df["atr14"]
+
+
 SLEEVES = {
     "A": dict(universe=SLEEVE_A_UNIVERSE, grid=SLEEVE_A_PARAM_GRID, prep=prep_sleeve_a,
               sig=sig_sleeve_a, name="A_CRYPTO_PULLBACK"),
@@ -481,4 +630,14 @@ SLEEVES = {
               sig=sig_sleeve_g, name="G_FX_STATARB_PAIRS_OU_NATIVE",
               min_oos_start=SLEEVE_G_MIN_OOS_START, friction_bps_roundtrip=82.0,
               trade_fn=generate_statarb_trades),
+    "H": dict(universe=SLEEVE_H_PAIRS, grid=SLEEVE_H_PARAM_GRID, prep=prep_sleeve_h,
+              sig=sig_sleeve_h, name="H_FX_STATARB_DIVERSIFIED_28PAIR",
+              min_oos_start=SLEEVE_H_MIN_OOS_START, friction_bps_roundtrip=82.0,
+              trade_fn=generate_statarb_trades),
+    "I": dict(universe=SLEEVE_I_UNIVERSE, grid=SLEEVE_I_PARAM_GRID, prep=prep_sleeve_i,
+              sig=sig_sleeve_i, name="I_CRYPTO_LSRATIO_CONTRARIAN"),
+    "J": dict(universe=SLEEVE_J_UNIVERSE, grid=SLEEVE_J_PARAM_GRID, prep=prep_sleeve_j,
+              sig=sig_sleeve_j, name="J_CRYPTO_FUNDING_MOMENTUM_LONGONLY"),
+    "K": dict(universe=SLEEVE_K_UNIVERSE, grid=SLEEVE_K_PARAM_GRID, prep=prep_sleeve_k,
+              sig=sig_sleeve_k, name="K_FX_DOW_SEASONALITY"),
 }

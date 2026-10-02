@@ -192,3 +192,43 @@ Code: `quant/statarb_scan.py` (cointegration scan), `quant/statarb_engine.py`
 `min_oos_start` + `friction_bps_roundtrip` override plumbed through `wfo.py`
 and `campaign.py` (`choices=[...,"F","G"]`, `--friction-bps` CLI flag added
 for diagnostic-only friction overrides).
+
+---
+
+## Addendum (phase 2): 12-strategy systematic search, headline finding = Sleeve I
+
+Following a further request to keep searching broadly ("minimum 10
+strategies, think like a Citadel lead"), ran a fail-fast raw-edge screen
+across 9 additional ideas (FX cross-sectional momentum, FX trend-following,
+turn-of-month seasonality, crypto liquidation cascades, crypto OI/price
+divergence, crypto basis mean reversion — all killed with quantified
+numbers) and built 4 new full honest WFO sleeves (H, I, J, K):
+
+- **Sleeve H** (28-pair diversified stat-arb, scaling Sleeve G): didn't help
+  — fixed 3-concurrent-slot risk budget doesn't benefit from more candidate
+  pairs without also scaling position limits. Dead/negative at low friction.
+- **Sleeve J** (crypto funding-rate momentum): looked positive only under
+  the DD-halt-truncated backtest; full-sample it's negative at every
+  friction level tested — a market-beta confound, not a real factor. Dead.
+- **Sleeve K** (FX day-of-week seasonality): the raw Monday+/Friday- pattern
+  is statistically real per-symbol but does not survive translation into an
+  actual ATR-risk-managed position (Friday-short leg actively unprofitable
+  gross). Dead as a tradeable strategy.
+- **Sleeve I (crypto long/short-ratio contrarian) — the best result of the
+  entire project.** Fails at the mandated uniform 41bps friction (an FX-
+  retail cost assumption, 5-10x too high for a USDT-perp market), but at
+  realistic crypto execution costs (4-5bps, achievable via maker/limit
+  orders since this is mean-reversion not momentum) delivers ROI +61%,
+  Sharpe 1.28 over the full 6-year, 21-quarter OOS span with NO drawdown
+  halt, and dramatically shallower drawdowns than Buy&Hold throughout
+  (~35% max DD during the 2022 crash vs B&H's ~85%). The fixed $225 FX-
+  calibrated DD halt is mechanically the wrong tool for a ~2,000-trade/yr
+  book (trips in weeks on pure variance); right-sizing it ($500, or 20-30%
+  trailing) still eventually trips during the 2022 crypto bear market
+  specifically — an honest, quantified regime-dependency finding (mean-
+  reversion strategies are known to fail during genuine capitulation, not
+  just noisy chop), flagged as the clear next engineering step (add a
+  regime/vol filter) rather than papered over.
+
+Full writeup: `quant/STRATEGY_SEARCH_PHASE2.md`. Code: `quant/screen_candidates.py`,
+`quant/screen_candidates2.py`, sleeves H/I/J/K in `strategies.py`.
