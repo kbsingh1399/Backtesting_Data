@@ -1,0 +1,218 @@
+{
+  "ADAUSDT": {
+    "symbol": "ADAUSDT",
+    "passed": true,
+    "master_rows": 211211,
+    "ladder_rows": 1317070,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "APTUSDT": {
+    "symbol": "APTUSDT",
+    "passed": true,
+    "master_rows": 136536,
+    "ladder_rows": 482320,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "ARBUSDT": {
+    "symbol": "ARBUSDT",
+    "passed": true,
+    "master_rows": 121605,
+    "ladder_rows": 273460,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "AVAXUSDT": {
+    "symbol": "AVAXUSDT",
+    "passed": true,
+    "master_rows": 209076,
+    "ladder_rows": 735798,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "BCHUSDT": {
+    "symbol": "BCHUSDT",
+    "passed": true,
+    "master_rows": 211226,
+    "ladder_rows": 742526,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "BNBUSDT": {
+    "symbol": "BNBUSDT",
+    "passed": true,
+    "master_rows": 211206,
+    "ladder_rows": 658917,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "BTCUSDT": {
+    "symbol": "BTCUSDT",
+    "passed": true,
+    "master_rows": 211189,
+    "ladder_rows": 1096183,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "DOGEUSDT": {
+    "symbol": "DOGEUSDT",
+    "passed": true,
+    "master_rows": 211208,
+    "ladder_rows": 463908,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "DOTUSDT": {
+    "symbol": "DOTUSDT",
+    "passed": true,
+    "master_rows": 211220,
+    "ladder_rows": 1144270,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "ETHUSDT": {
+    "symbol": "ETHUSDT",
+    "passed": true,
+    "master_rows": 211195,
+    "ladder_rows": 1556817,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "LINKUSDT": {
+    "symbol": "LINKUSDT",
+    "passed": true,
+    "master_rows": 211214,
+    "ladder_rows": 845864,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "LTCUSDT": {
+    "symbol": "LTCUSDT",
+    "passed": true,
+    "master_rows": 211221,
+    "ladder_rows": 952132,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "NEARUSDT": {
+    "symbol": "NEARUSDT",
+    "passed": true,
+    "master_rows": 206963,
+    "ladder_rows": 628746,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "OPUSDT": {
+    "symbol": "OPUSDT",
+    "passed": true,
+    "master_rows": 149930,
+    "ladder_rows": 323363,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "SOLUSDT": {
+    "symbol": "SOLUSDT",
+    "passed": true,
+    "master_rows": 209927,
+    "ladder_rows": 930490,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "SUIUSDT": {
+    "symbol": "SUIUSDT",
+    "passed": true,
+    "master_rows": 117664,
+    "ladder_rows": 282635,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "TRXUSDT": {
+    "symbol": "TRXUSDT",
+    "passed": true,
+    "master_rows": 211213,
+    "ladder_rows": 710574,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  },
+  "XRPUSDT": {
+    "symbol": "XRPUSDT",
+    "passed": true,
+    "master_rows": 211201,
+    "ladder_rows": 929770,
+    "agent_status": {
+      "Agent1:Continuity": "PASS",
+      "Agent2:Microstructure": "PASS",
+      "Agent3:Schema": "PASS"
+    },
+    "findings": []
+  }
+}
