@@ -1,0 +1,255 @@
+[
+  {
+    "quarter": "2021-04-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2021-07-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.0,
+      "price_confirm": false
+    },
+    "locked_geometry": {},
+    "is_score": 5.362,
+    "is_trades": 118,
+    "oos_trades": 59,
+    "traded": true
+  },
+  {
+    "quarter": "2021-10-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.0,
+      "price_confirm": true
+    },
+    "locked_geometry": {},
+    "is_score": 11.595,
+    "is_trades": 101,
+    "oos_trades": 45,
+    "traded": true
+  },
+  {
+    "quarter": "2022-01-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.5,
+      "price_confirm": true
+    },
+    "locked_geometry": {},
+    "is_score": 18.448,
+    "is_trades": 66,
+    "oos_trades": 36,
+    "traded": true
+  },
+  {
+    "quarter": "2022-04-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.0,
+      "price_confirm": false
+    },
+    "locked_geometry": {},
+    "is_score": 17.554,
+    "is_trades": 85,
+    "oos_trades": 43,
+    "traded": true
+  },
+  {
+    "quarter": "2022-07-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.0,
+      "price_confirm": false
+    },
+    "locked_geometry": {},
+    "is_score": 14.508,
+    "is_trades": 85,
+    "oos_trades": 41,
+    "traded": true
+  },
+  {
+    "quarter": "2022-10-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.0,
+      "price_confirm": false
+    },
+    "locked_geometry": {},
+    "is_score": 26.253,
+    "is_trades": 71,
+    "oos_trades": 52,
+    "traded": true
+  },
+  {
+    "quarter": "2023-01-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.0,
+      "price_confirm": true
+    },
+    "locked_geometry": {},
+    "is_score": 0.126,
+    "is_trades": 85,
+    "oos_trades": 61,
+    "traded": true
+  },
+  {
+    "quarter": "2023-04-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.0,
+      "price_confirm": true
+    },
+    "locked_geometry": {},
+    "is_score": 0.596,
+    "is_trades": 97,
+    "oos_trades": 35,
+    "traded": true
+  },
+  {
+    "quarter": "2023-07-01",
+    "locked_params": {
+      "cvd_lookback": 10,
+      "cvd_z_entry": 1.5,
+      "price_confirm": true
+    },
+    "locked_geometry": {},
+    "is_score": 4.782,
+    "is_trades": 74,
+    "oos_trades": 36,
+    "traded": true
+  },
+  {
+    "quarter": "2023-10-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.0,
+      "price_confirm": false
+    },
+    "locked_geometry": {},
+    "is_score": 0.846,
+    "is_trades": 78,
+    "oos_trades": 72,
+    "traded": true
+  },
+  {
+    "quarter": "2024-01-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2024-04-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2024-07-01",
+    "locked_params": {
+      "cvd_lookback": 30,
+      "cvd_z_entry": 1.5,
+      "price_confirm": true
+    },
+    "locked_geometry": {},
+    "is_score": 3.427,
+    "is_trades": 64,
+    "oos_trades": 39,
+    "traded": true
+  },
+  {
+    "quarter": "2024-10-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.5,
+      "price_confirm": true
+    },
+    "locked_geometry": {},
+    "is_score": 20.838,
+    "is_trades": 68,
+    "oos_trades": 46,
+    "traded": true
+  },
+  {
+    "quarter": "2025-01-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2025-04-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2025-07-01",
+    "locked_params": {
+      "cvd_lookback": 30,
+      "cvd_z_entry": 1.5,
+      "price_confirm": true
+    },
+    "locked_geometry": {},
+    "is_score": 10.014,
+    "is_trades": 60,
+    "oos_trades": 47,
+    "traded": true
+  },
+  {
+    "quarter": "2025-10-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.5,
+      "price_confirm": true
+    },
+    "locked_geometry": {},
+    "is_score": 29.103,
+    "is_trades": 76,
+    "oos_trades": 26,
+    "traded": true
+  },
+  {
+    "quarter": "2026-01-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.5,
+      "price_confirm": true
+    },
+    "locked_geometry": {},
+    "is_score": 46.045,
+    "is_trades": 63,
+    "oos_trades": 34,
+    "traded": true
+  },
+  {
+    "quarter": "2026-04-01",
+    "locked_params": {
+      "cvd_lookback": 20,
+      "cvd_z_entry": 1.5,
+      "price_confirm": false
+    },
+    "locked_geometry": {},
+    "is_score": 24.585,
+    "is_trades": 51,
+    "oos_trades": 32,
+    "traded": true
+  }
+]
