@@ -1494,5 +1494,36 @@
     "min_is_trades_gate": 6,
     "require_positive_is_edge": true,
     "bh_roi_pct": 11.929
+  },
+  "S_baseline": {
+    "n_trades": 0,
+    "roi_pct": 0.0,
+    "final_equity": 5000.0,
+    "max_dd_dollars": 0.0,
+    "win_rate": 0.0,
+    "payoff_ratio": NaN,
+    "sharpe": 0.0,
+    "avg_r": 0.0,
+    "sleeve": "S_GOLD_PDHPDL_SWEEP_REVERSAL",
+    "variant": "baseline",
+    "n_oos_quarters": 10,
+    "windows_traded": 0,
+    "halted": false,
+    "halt_time": null,
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": null,
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 61.848
   }
 }

@@ -311,3 +311,49 @@ certified — deprioritized for the user's FX/Indices/Metals-focused ask),
 GARCH/HMM/Kalman/copulas/deflated-Sharpe (simpler proxies used instead
 where feasible: Hurst exponent for regime, realized-vol percentile for
 vol-regime). Full detail and reasoning: `quant/PHASE5_CONCEPT_COVERAGE.md`.
+
+---
+
+## Addendum (phase 6): "$5K Blueberry Funded, CEO of Jane Street" literal 10%/month mandate
+
+User framed a hypothetical (CEO of Jane Street, $5,000 Blueberry Funded
+2-Step account) and demanded a portfolio, built from scraped GitHub/SSRN
+strategies, that clears a **literal minimum 10% ROI per month**, explicitly
+accepting this would likely require high leverage/concentration or prove
+unachievable without overfitting, and asking to see "what it takes."
+
+Researched Blueberry Funded's actual $5K 2-Step rules (10%→5% one-time
+profit targets, 5% daily loss / 10% max drawdown kill-switches, FX 1:50 /
+metals-indices 1:10 leverage, HFT/tick-scalping banned). Scraped GitHub for
+FX/gold strategy repos and SSRN (via web-search snippets) for FX carry/
+momentum/gold-momentum academic literature — every verifiable claim found
+clusters at Sharpe 0.5-1.3, single-digit-to-low-teens annual returns;
+nothing in 40+ years of published currency/commodity systematic-strategy
+research documents anything close to 10%/month. Cloned and re-tested one
+popular scraped idea (gold PDH/PDL liquidity-sweep reversal, claimed ~70%
+win rate with no friction/stop-loss modeled in the original repo) as new
+**Sleeve S** under this project's full engine (real ATR stop/TP, 41bps
+friction, WFO IS-gate): win rate inverted to 3.8%-14.0% across 4 symbols
+tested, sum-of-R deeply negative everywhere (e.g. GBPUSD -955.7R/234
+trades) -- a clean, concrete demonstration of why scraped backtests can't
+be trusted without independently re-modeling exits and costs.
+
+Central deliverable: a leverage-sweep analysis (`PHASE6_leverage_vs_ruin.png`)
+showing that **Sleeve M (the only surviving FX/Metals/Indices/Energy edge)
+scaled to the maximum leverage that never breaches Blueberry's own 10%
+max-DD rule (~2.7x) yields only ~0.19%/month** -- about 53x short of the
+10%/month target -- and that literally reaching 10%/month would require
+~10,550x leverage, at which point the strategy's own worst historical day
+becomes a $304,600 loss on a $5,000 account (i.e. already-realized
+historical data proves instant, repeated ruin, not a tail-risk estimate).
+Cross-checked with Sleeve R (best strategy in the whole 19-sleeve project,
+any asset class): even unleveraged, its worst single day already breaches
+Blueberry's 5% daily cap, and its max-DD-survivable size also converges to
+~0.2%/month -- independent confirmation that no amount of further strategy
+search fixes this; it's a structural leverage-invariant-Sharpe problem, not
+a missing-strategy problem.
+
+Full writeup, account-rule research, scraping findings, and the explicit
+"if you still want the literal number" gambler's-ruin framing (and why it's
+not recommended): `quant/PHASE6_CEO_BLUEBERRY_PLAN.md`. Code: Sleeve S in
+`strategies.py`.

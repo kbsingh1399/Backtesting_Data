@@ -961,6 +961,88 @@ def sig_sleeve_r(df: pd.DataFrame, params: dict):
     return entries, sides, atr
 
 
+# ---------------------------------------------------------------------------
+# Sleeve S: GOLD PDH/PDL LIQUIDITY-SWEEP REVERSAL. Cloned and re-tested (not
+# blindly trusted) from a public GitHub strategy idea (ikeawesom/xauusd-
+# backtest, "~70% win rate" claim with NO spread/commission/slippage modeled
+# in the original repo) found while scraping for Phase-6 portfolio ideas.
+# Mechanics as described: previous day's candle direction sets a directional
+# bias; if price sweeps below/above the previous day's low/high and then
+# reclaims it, enter in the bias direction. Re-implemented here with this
+# project's full engine (real ATR stop/TP/ratchet, mandated 41bps friction,
+# honest walk-forward IS/OOS locking) rather than the original's frictionless
+# fixed R:R exit -- this is the "clone and test" half of the scraping
+# mandate: verify a scraped claim under our own rigor rather than trust it.
+# ---------------------------------------------------------------------------
+# Same intraday-resolution data-quality issue discovered building Sleeve O:
+# XAUUSD/XAGUSD only become genuinely intraday from 2024-01, so the mixed
+# universe's OOS window is restricted accordingly (expected to land below
+# the >=20 quarter mandate -- reported as diagnostic).
+SLEEVE_S_MIN_OOS_START = pd.Timestamp("2024-01-01", tz="UTC")
+SLEEVE_S_UNIVERSE = ["XAUUSD", "XAGUSD", "EURUSD", "GBPUSD"]
+SLEEVE_S_PARAM_GRID = [
+    dict(min_sweep_atr=0.0),
+    dict(min_sweep_atr=0.1),
+    dict(min_sweep_atr=0.25),
+]
+
+
+def prep_sleeve_s(symbol: str):
+    df15 = load_forex(symbol, "15m")
+    d1 = load_forex(symbol, "d1")
+    bias_prev = np.sign(d1["close"] - d1["open"]).shift(1)
+    pdh_prev = d1["high"].shift(1)
+    pdl_prev = d1["low"].shift(1)
+    daily = pd.DataFrame({"bias": bias_prev, "pdh": pdh_prev, "pdl": pdl_prev})
+    daily.index = daily.index.date
+    df15 = df15.copy()
+    df15["date"] = df15.index.date
+    df15 = df15.join(daily, on="date")
+    return df15
+
+
+def sig_sleeve_s(df: pd.DataFrame, params: dict):
+    min_atr = params["min_sweep_atr"]
+    long_idx, short_idx = [], []
+    for date, g in df.groupby("date", sort=False):
+        bias = g["bias"].iloc[0]
+        pdl, pdh = g["pdl"].iloc[0], g["pdh"].iloc[0]
+        if pd.isna(bias) or pd.isna(pdl) or pd.isna(pdh) or len(g) < 3:
+            continue
+        atr_day = g["atr14"].iloc[0] if not pd.isna(g["atr14"].iloc[0]) else 0.0
+        buf = min_atr * atr_day
+        gi = g.reset_index()  # positional access, immune to duplicate timestamps
+        if bias > 0:
+            swept = (gi["low"] <= (pdl - buf)).to_numpy()
+            if not swept.any():
+                continue
+            pos = int(np.argmax(swept))
+            after = gi.iloc[pos + 1:]
+            reclaim = (after["close"] > pdl).to_numpy()
+            if reclaim.any():
+                row = after.iloc[int(np.argmax(reclaim))]
+                long_idx.append(row["datetime"])
+        elif bias < 0:
+            swept = (gi["high"] >= (pdh + buf)).to_numpy()
+            if not swept.any():
+                continue
+            pos = int(np.argmax(swept))
+            after = gi.iloc[pos + 1:]
+            reclaim = (after["close"] < pdh).to_numpy()
+            if reclaim.any():
+                row = after.iloc[int(np.argmax(reclaim))]
+                short_idx.append(row["datetime"])
+
+    entries = pd.Series(False, index=df.index)
+    sides = pd.Series(0, index=df.index)
+    entries.loc[long_idx] = True
+    sides.loc[long_idx] = 1
+    entries.loc[short_idx] = True
+    sides.loc[short_idx] = -1
+    return entries, sides, df["atr14"]
+
+
+
 SLEEVES = {
     "A": dict(universe=SLEEVE_A_UNIVERSE, grid=SLEEVE_A_PARAM_GRID, prep=prep_sleeve_a,
               sig=sig_sleeve_a, name="A_CRYPTO_PULLBACK"),
@@ -1005,4 +1087,7 @@ SLEEVES = {
               sig=sig_sleeve_q, name="Q_INDICES_COPPERGOLD_INTERMARKET_GATE"),
     "R": dict(universe=SLEEVE_R_UNIVERSE, grid=SLEEVE_R_PARAM_GRID, prep=prep_sleeve_r,
               sig=sig_sleeve_r, name="R_CRYPTO_LSRATIO_VOLREGIME_FILTERED"),
+    "S": dict(universe=SLEEVE_S_UNIVERSE, grid=SLEEVE_S_PARAM_GRID, prep=prep_sleeve_s,
+              sig=sig_sleeve_s, name="S_GOLD_PDHPDL_SWEEP_REVERSAL",
+              min_oos_start=SLEEVE_S_MIN_OOS_START),
 }
