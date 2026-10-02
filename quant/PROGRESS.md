@@ -232,3 +232,34 @@ numbers) and built 4 new full honest WFO sleeves (H, I, J, K):
 
 Full writeup: `quant/STRATEGY_SEARCH_PHASE2.md`. Code: `quant/screen_candidates.py`,
 `quant/screen_candidates2.py`, sleeves H/I/J/K in `strategies.py`.
+
+---
+
+## Addendum (phase 3): dedicated per-asset-class strategies
+
+Confirmed `Forex_Data/` actually holds 5 asset classes (60 FX pairs, 16
+equity indices, 19 metals, 3 energy instruments, 58 crypto CFDs already
+redundant with the richer `Binance_Data/`), and built 3 new, genuinely
+separate asset-class sleeves:
+
+- **Sleeve L (Equity Indices, Donchian breakout)**: clean, complete failure
+  (ROI -4.7%, Sharpe -4.18, only 5/21 windows clear the gate) against a
+  +59.5% Buy&Hold over the same span — indices trended too smoothly/strongly
+  for active breakout trading with mandated friction to add value. Argues
+  for passive exposure over active trading in this asset class.
+- **Sleeve M (Metals, same breakout design)**: first tested the obvious
+  gold/silver-ratio and platinum/palladium pairs-trade idea via
+  cointegration — none passed (p=0.40-0.91), an honest negative finding, so
+  pivoted to trend/breakout instead. Baseline landed almost exactly at the
+  41bps friction breakeven line; the disciplined geometry-search variant
+  (IS-locked, no OOS peeking) turned genuinely positive: ROI +4.7%, Sharpe
+  1.06, never halted — modest but real, far below Buy&Hold's +51% in this
+  gold-bull sample but a legitimate surviving edge.
+- **Sleeve N (Energy, WTI-Brent spread stat-arb)**: WTI/Brent IS genuinely
+  cointegrated (p=0.001, half-life 17 days) unlike the metals pairs, but
+  still failed — gross P&L negative in every parameter combination tested,
+  even before friction. Diagnosis: the 2020 negative-WTI event and 2022
+  Ukraine-war Brent premium are large structural dislocations that aggregate
+  cointegration doesn't protect against at the trade level.
+
+Full writeup: `quant/ASSET_CLASS_REPORT.md`. Code: sleeves L/M/N in `strategies.py`.

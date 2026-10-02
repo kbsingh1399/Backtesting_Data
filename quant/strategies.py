@@ -612,6 +612,119 @@ def sig_sleeve_k(df: pd.DataFrame, params: dict):
     return entries, sides, df["atr14"]
 
 
+# ---------------------------------------------------------------------------
+# Sleeve L: EQUITY INDICES, dedicated asset class. Indices have historically
+# shown much stronger, more persistent secular trends than mean-reverting FX
+# crosses (this exact dataset spans the entire 2015-2026 equity bull market,
+# interrupted only by 2018Q4, 2020 COVID, and 2022), so a trend/breakout
+# design -- not a mean-reversion one -- is the economically appropriate
+# paradigm here (same Donchian + ATR-rank filter pattern validated in
+# Sleeve C, but re-tested on a pure, dedicated index universe rather than
+# folding XAUUSD into an FX-majors sleeve).
+# ---------------------------------------------------------------------------
+SLEEVE_L_UNIVERSE = ["SP500", "NAS100", "DJ30", "US2000", "GER40", "UK100",
+                     "FR40", "JP225", "AU200", "HK50"]
+
+SLEEVE_L_PARAM_GRID = [
+    dict(don_n=55, atr_rank_min=50),
+    dict(don_n=40, atr_rank_min=50),
+    dict(don_n=80, atr_rank_min=50),
+    dict(don_n=55, atr_rank_min=70),
+    dict(don_n=40, atr_rank_min=30),
+    dict(don_n=20, atr_rank_min=50),
+]
+
+
+def prep_sleeve_l(symbol: str):
+    d1 = load_forex(symbol, "d1")
+    d1["atr_rank"] = d1["atr14"].rolling(252, min_periods=60).rank(pct=True) * 100
+    return d1
+
+
+def sig_sleeve_l(d1: pd.DataFrame, params: dict):
+    n = params["don_n"]
+    hh = d1["high"].rolling(n).max().shift(1)
+    ll = d1["low"].rolling(n).min().shift(1)
+    long_cond = (d1["close"] > hh) & (d1["atr_rank"] >= params["atr_rank_min"])
+    short_cond = (d1["close"] < ll) & (d1["atr_rank"] >= params["atr_rank_min"])
+    entries = (long_cond | short_cond).fillna(False)
+    sides = pd.Series(np.where(long_cond, 1, np.where(short_cond, -1, 0)), index=d1.index)
+    return entries, sides, d1["atr14"]
+
+
+# ---------------------------------------------------------------------------
+# Sleeve M: METALS, dedicated asset class (precious + base). A classic
+# cointegration test was run FIRST on the obvious a priori candidate pairs
+# (gold/silver ratio XAUUSD~XAGUSD, platinum/palladium, copper/aluminium,
+# zinc/lead) using statsmodels.coint over the full available history
+# (2020-2026) -- none passed (p=0.40-0.91 across the board). That's an
+# honest, important negative result: the textbook metals-ratio pairs trade
+# does NOT hold statistically in this specific sample (plausibly because
+# 2023-2025 saw gold de-couple from silver/platinum amid central-bank
+# buying/de-dollarization flows unique to gold). Pivoted to the same
+# trend/breakout design as Sleeve L instead, tested on its own dedicated
+# metals universe, since this period's gold/silver/copper moves were
+# large, persistent, and genuinely trending (not mean-reverting) in
+# absolute price terms.
+# ---------------------------------------------------------------------------
+SLEEVE_M_UNIVERSE = ["XAUUSD", "XAGUSD", "XPTUSD",
+                     "COPPER", "ALUMINIUM", "NICKEL", "ZINC", "LEAD"]
+# XPDUSD excluded: history only starts 2023-01-20, which would cap the
+# common-range intersection to ~11 OOS quarters, short of the >=20 mandate.
+
+SLEEVE_M_PARAM_GRID = SLEEVE_L_PARAM_GRID
+prep_sleeve_m = prep_sleeve_l
+sig_sleeve_m = sig_sleeve_l
+
+
+# ---------------------------------------------------------------------------
+# Sleeve N: ENERGY, dedicated asset class -- WTI/Brent spread. Unlike
+# metals, this pair IS genuinely cointegrated (Engle-Granger p=0.0010,
+# OU half-life 16.9 trading days, beta=0.886, over the full 2016-2026
+# sample) -- the WTI-Brent spread is one of the most famous, long-standing
+# commodity term-structure trades in real energy markets (freight/quality/
+# regional-supply arbitrage keeps the two benchmarks tethered). Only one
+# genuinely cointegrated pair exists among this dataset's 3 energy
+# instruments (GAS has no natural partner here), so this sleeve is
+# necessarily a single-pair book -- built with the same OU-native
+# mean-reversion engine validated in sleeves G/H (profit on reversion,
+# stop on further divergence, time-stop), with the mandated 2-leg 82bps
+# round-trip friction.
+# ---------------------------------------------------------------------------
+SLEEVE_N_PAIRS = ["UKBRENT~USWTI"]
+SLEEVE_N_PARAM_GRID = SLEEVE_G_PARAM_GRID
+sig_sleeve_n = sig_sleeve_g
+
+
+def prep_sleeve_n(pair_id: str):
+    a_sym, b_sym = pair_id.split("~")
+    da = load_forex(a_sym, "d1")["close"]
+    db = load_forex(b_sym, "d1")["close"]
+    idx = da.index.intersection(db.index)
+    la, lb = np.log(da.loc[idx]), np.log(db.loc[idx])
+
+    w = SLEEVE_G_HEDGE_WINDOW
+    cov = la.rolling(w).cov(lb).shift(1)
+    var = lb.rolling(w).var().shift(1)
+    beta = cov / var.replace(0, np.nan)
+    mean_a = la.rolling(w).mean().shift(1)
+    mean_b = lb.rolling(w).mean().shift(1)
+    alpha = mean_a - beta * mean_b
+
+    spread = la - (alpha + beta * lb)
+    ret_a, ret_b = la.diff(), lb.diff()
+    spread_ret = ret_a - beta * ret_b
+    index = 100.0 * np.exp(spread_ret.fillna(0).cumsum())
+
+    df = pd.DataFrame(index=idx)
+    df["open"], df["high"], df["low"], df["close"] = index, index, index, index
+    z_lookback = 20
+    df["spread_mean"] = spread.rolling(z_lookback).mean()
+    df["spread_std"] = spread.rolling(z_lookback).std()
+    df["z"] = (spread - df["spread_mean"]) / df["spread_std"].replace(0, np.nan)
+    return df
+
+
 SLEEVES = {
     "A": dict(universe=SLEEVE_A_UNIVERSE, grid=SLEEVE_A_PARAM_GRID, prep=prep_sleeve_a,
               sig=sig_sleeve_a, name="A_CRYPTO_PULLBACK"),
@@ -640,4 +753,11 @@ SLEEVES = {
               sig=sig_sleeve_j, name="J_CRYPTO_FUNDING_MOMENTUM_LONGONLY"),
     "K": dict(universe=SLEEVE_K_UNIVERSE, grid=SLEEVE_K_PARAM_GRID, prep=prep_sleeve_k,
               sig=sig_sleeve_k, name="K_FX_DOW_SEASONALITY"),
+    "L": dict(universe=SLEEVE_L_UNIVERSE, grid=SLEEVE_L_PARAM_GRID, prep=prep_sleeve_l,
+              sig=sig_sleeve_l, name="L_EQUITY_INDICES_TREND"),
+    "M": dict(universe=SLEEVE_M_UNIVERSE, grid=SLEEVE_M_PARAM_GRID, prep=prep_sleeve_m,
+              sig=sig_sleeve_m, name="M_METALS_TREND"),
+    "N": dict(universe=SLEEVE_N_PAIRS, grid=SLEEVE_N_PARAM_GRID, prep=prep_sleeve_n,
+              sig=sig_sleeve_n, name="N_ENERGY_WTI_BRENT_SPREAD",
+              friction_bps_roundtrip=82.0, trade_fn=generate_statarb_trades),
 }

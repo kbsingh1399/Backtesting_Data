@@ -1,0 +1,236 @@
+[
+  {
+    "quarter": "2021-04-01",
+    "locked_params": {
+      "don_n": 20,
+      "atr_rank_min": 50
+    },
+    "locked_geometry": {},
+    "is_score": 3.105,
+    "is_trades": 30,
+    "oos_trades": 14,
+    "traded": true
+  },
+  {
+    "quarter": "2021-07-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2021-10-01",
+    "locked_params": {
+      "don_n": 80,
+      "atr_rank_min": 50
+    },
+    "locked_geometry": {},
+    "is_score": 1.804,
+    "is_trades": 10,
+    "oos_trades": 6,
+    "traded": true
+  },
+  {
+    "quarter": "2022-01-01",
+    "locked_params": {
+      "don_n": 80,
+      "atr_rank_min": 50
+    },
+    "locked_geometry": {},
+    "is_score": 3.221,
+    "is_trades": 11,
+    "oos_trades": 13,
+    "traded": true
+  },
+  {
+    "quarter": "2022-04-01",
+    "locked_params": {
+      "don_n": 55,
+      "atr_rank_min": 50
+    },
+    "locked_geometry": {},
+    "is_score": 11.465,
+    "is_trades": 22,
+    "oos_trades": 13,
+    "traded": true
+  },
+  {
+    "quarter": "2022-07-01",
+    "locked_params": {
+      "don_n": 40,
+      "atr_rank_min": 30
+    },
+    "locked_geometry": {},
+    "is_score": 18.823,
+    "is_trades": 34,
+    "oos_trades": 12,
+    "traded": true
+  },
+  {
+    "quarter": "2022-10-01",
+    "locked_params": {
+      "don_n": 20,
+      "atr_rank_min": 50
+    },
+    "locked_geometry": {},
+    "is_score": 10.795,
+    "is_trades": 31,
+    "oos_trades": 13,
+    "traded": true
+  },
+  {
+    "quarter": "2023-01-01",
+    "locked_params": {
+      "don_n": 40,
+      "atr_rank_min": 30
+    },
+    "locked_geometry": {},
+    "is_score": 1.957,
+    "is_trades": 21,
+    "oos_trades": 12,
+    "traded": true
+  },
+  {
+    "quarter": "2023-04-01",
+    "locked_params": {
+      "don_n": 20,
+      "atr_rank_min": 50
+    },
+    "locked_geometry": {},
+    "is_score": 2.121,
+    "is_trades": 23,
+    "oos_trades": 6,
+    "traded": true
+  },
+  {
+    "quarter": "2023-07-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2023-10-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2024-01-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2024-04-01",
+    "locked_params": {
+      "don_n": 55,
+      "atr_rank_min": 50
+    },
+    "locked_geometry": {},
+    "is_score": 2.214,
+    "is_trades": 6,
+    "oos_trades": 13,
+    "traded": true
+  },
+  {
+    "quarter": "2024-07-01",
+    "locked_params": {
+      "don_n": 55,
+      "atr_rank_min": 50
+    },
+    "locked_geometry": {},
+    "is_score": 9.763,
+    "is_trades": 14,
+    "oos_trades": 15,
+    "traded": true
+  },
+  {
+    "quarter": "2024-10-01",
+    "locked_params": {
+      "don_n": 40,
+      "atr_rank_min": 30
+    },
+    "locked_geometry": {},
+    "is_score": 3.485,
+    "is_trades": 32,
+    "oos_trades": 11,
+    "traded": true
+  },
+  {
+    "quarter": "2025-01-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2025-04-01",
+    "locked_params": null,
+    "locked_geometry": null,
+    "is_score": null,
+    "is_trades": 0,
+    "oos_trades": 0,
+    "traded": false
+  },
+  {
+    "quarter": "2025-07-01",
+    "locked_params": {
+      "don_n": 80,
+      "atr_rank_min": 50
+    },
+    "locked_geometry": {},
+    "is_score": 5.522,
+    "is_trades": 10,
+    "oos_trades": 6,
+    "traded": true
+  },
+  {
+    "quarter": "2025-10-01",
+    "locked_params": {
+      "don_n": 40,
+      "atr_rank_min": 30
+    },
+    "locked_geometry": {},
+    "is_score": 16.792,
+    "is_trades": 19,
+    "oos_trades": 21,
+    "traded": true
+  },
+  {
+    "quarter": "2026-01-01",
+    "locked_params": {
+      "don_n": 40,
+      "atr_rank_min": 30
+    },
+    "locked_geometry": {},
+    "is_score": 26.382,
+    "is_trades": 27,
+    "oos_trades": 18,
+    "traded": true
+  },
+  {
+    "quarter": "2026-04-01",
+    "locked_params": {
+      "don_n": 20,
+      "atr_rank_min": 50
+    },
+    "locked_geometry": {},
+    "is_score": 19.917,
+    "is_trades": 41,
+    "oos_trades": 14,
+    "traded": true
+  }
+]

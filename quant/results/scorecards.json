@@ -1014,5 +1014,214 @@
     "require_positive_is_edge": true,
     "bh_roi_pct": 11.929,
     "dd_limit_dollars_diagnostic": 500.0
+  },
+  "L_baseline": {
+    "n_trades": 27,
+    "roi_pct": -4.709,
+    "final_equity": 4764.57,
+    "max_dd_dollars": 235.43,
+    "win_rate": 0.1852,
+    "payoff_ratio": 0.613,
+    "sharpe": -4.176,
+    "avg_r": -0.6976,
+    "gross_pnl": -174.94,
+    "total_friction": 60.49,
+    "sleeve": "L_EQUITY_INDICES_TREND",
+    "variant": "baseline",
+    "n_oos_quarters": 21,
+    "windows_traded": 5,
+    "halted": true,
+    "halt_time": "2025-11-18 00:00:00+00:00",
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": null,
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 59.5
+  },
+  "L_geom_search_v2": {
+    "n_trades": 43,
+    "roi_pct": -4.67,
+    "final_equity": 4766.5,
+    "max_dd_dollars": 233.5,
+    "win_rate": 0.3256,
+    "payoff_ratio": 0.836,
+    "sharpe": -2.78,
+    "avg_r": -0.4344,
+    "gross_pnl": -155.98,
+    "total_friction": 77.52,
+    "sleeve": "L_EQUITY_INDICES_TREND",
+    "variant": "geom_search_v2",
+    "n_oos_quarters": 21,
+    "windows_traded": 8,
+    "halted": true,
+    "halt_time": "2023-09-25 00:00:00+00:00",
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": [
+      {},
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5
+      },
+      {
+        "tp_R": 2.0
+      },
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5,
+        "tp_R": 2.0
+      },
+      {
+        "tp_R": 1.5,
+        "ratchet_trigger_R": 0.8,
+        "ratchet_lock_R": 0.3
+      },
+      {
+        "tp_R": 1.5
+      }
+    ],
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 59.5
+  },
+  "M_baseline": {
+    "n_trades": 96,
+    "roi_pct": -0.012,
+    "final_equity": 4999.41,
+    "max_dd_dollars": 225.57,
+    "win_rate": 0.5312,
+    "payoff_ratio": 0.882,
+    "sharpe": -0.003,
+    "avg_r": -0.0005,
+    "gross_pnl": 139.24,
+    "total_friction": 139.83,
+    "sleeve": "M_METALS_TREND",
+    "variant": "baseline",
+    "n_oos_quarters": 21,
+    "windows_traded": 15,
+    "halted": true,
+    "halt_time": "2025-01-07 00:00:00+00:00",
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": null,
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 51.044
+  },
+  "N_baseline": {
+    "n_trades": 8,
+    "roi_pct": -0.753,
+    "final_equity": 4962.36,
+    "max_dd_dollars": 53.41,
+    "win_rate": 0.625,
+    "payoff_ratio": 0.282,
+    "sharpe": -0.886,
+    "avg_r": -0.3764,
+    "gross_pnl": 32.22,
+    "total_friction": 69.86,
+    "sleeve": "N_ENERGY_WTI_BRENT_SPREAD",
+    "variant": "baseline",
+    "n_oos_quarters": 36,
+    "windows_traded": 2,
+    "halted": false,
+    "halt_time": null,
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 82.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": null,
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 48.108
+  },
+  "M_geom_search_v2": {
+    "n_trades": 159,
+    "roi_pct": 4.703,
+    "final_equity": 5235.16,
+    "max_dd_dollars": 183.2,
+    "win_rate": 0.5346,
+    "payoff_ratio": 1.075,
+    "sharpe": 1.058,
+    "avg_r": 0.1183,
+    "gross_pnl": 485.92,
+    "total_friction": 250.77,
+    "sleeve": "M_METALS_TREND",
+    "variant": "geom_search_v2",
+    "n_oos_quarters": 21,
+    "windows_traded": 17,
+    "halted": false,
+    "halt_time": null,
+    "sim_kwargs": {
+      "sl_atr_mult": 1.5,
+      "tp_R": 3.0,
+      "ratchet_trigger_R": 1.2,
+      "ratchet_lock_R": 0.2,
+      "time_decay_bars": 24,
+      "time_decay_R": 0.2,
+      "risk_dollars": 12.5,
+      "friction_bps_roundtrip": 41.0,
+      "max_hold_bars": 500
+    },
+    "geometry_grid_searched_is": [
+      {},
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5
+      },
+      {
+        "tp_R": 2.0
+      },
+      {
+        "ratchet_trigger_R": 1.5,
+        "ratchet_lock_R": 0.5,
+        "tp_R": 2.0
+      },
+      {
+        "tp_R": 1.5,
+        "ratchet_trigger_R": 0.8,
+        "ratchet_lock_R": 0.3
+      },
+      {
+        "tp_R": 1.5
+      }
+    ],
+    "min_is_trades_gate": 6,
+    "require_positive_is_edge": true,
+    "bh_roi_pct": 51.044
   }
 }
