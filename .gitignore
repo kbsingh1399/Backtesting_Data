@@ -1,0 +1,11 @@
+# Large compressed archives exceeding GitHub 100MB limit
+*.zip
+Binance_Data/*.zip
+
+# Agent & temporary scratch directories
+.agents/
+scratch/
+__pycache__/
+*.pyc
+*.log
+catboost_info/
