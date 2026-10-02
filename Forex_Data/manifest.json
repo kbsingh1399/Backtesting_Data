@@ -1,0 +1,4235 @@
+{
+  "export_timestamp": "2026-09-14T19:15:23.764382+00:00",
+  "broker": "Blueberry Markets (SVG) LLC",
+  "server": "BlueberryMarketsSVG-Live",
+  "timeframes": [
+    "15m",
+    "1h",
+    "4h",
+    "D1"
+  ],
+  "history_start": "2010-01-01T00:00:00+00:00",
+  "ict_session_columns": [
+    "day_of_week",
+    "session",
+    "is_kill_zone"
+  ],
+  "assets_count": 98,
+  "symbols": {
+    "AUDCAD": {
+      "raw_symbol": "AUDCAD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Australian Dollar / Canadian Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77625,
+          "new_bars": 77625,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1361.54,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 503.45,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 208.78,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 99.73,
+          "mode": "full"
+        }
+      }
+    },
+    "AUDCHF": {
+      "raw_symbol": "AUDCHF.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Australian Dollar / Swiss Franc",
+      "timeframes": {
+        "15m": {
+          "bars": 77588,
+          "new_bars": 77588,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1336.35,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 498.79,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 211.99,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 101.05,
+          "mode": "full"
+        }
+      }
+    },
+    "AUDJPY": {
+      "raw_symbol": "AUDJPY.pi",
+      "category": "Forex_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100000.0,
+      "description": "Australian Dollar / Japanese Yen",
+      "timeframes": {
+        "15m": {
+          "bars": 77586,
+          "new_bars": 77586,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1372.07,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 489.13,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 164.32,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 74.36,
+          "mode": "full"
+        }
+      }
+    },
+    "AUDUSD": {
+      "raw_symbol": "AUDUSD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Australian Dollar / US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77590,
+          "new_bars": 77590,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1348.98,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 497.42,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 210.07,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 100.73,
+          "mode": "full"
+        }
+      }
+    },
+    "CADCHF": {
+      "raw_symbol": "CADCHF.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Canadian Dollar / Swiss Franc",
+      "timeframes": {
+        "15m": {
+          "bars": 77590,
+          "new_bars": 77590,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1321.93,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 493.86,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 209.48,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 99.1,
+          "mode": "full"
+        }
+      }
+    },
+    "CADJPY": {
+      "raw_symbol": "CADJPY.pi",
+      "category": "Forex_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100000.0,
+      "description": "Canadian Dollar / Japanese Yen",
+      "timeframes": {
+        "15m": {
+          "bars": 77582,
+          "new_bars": 77582,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1353.71,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 486.61,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 163.44,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 73.86,
+          "mode": "full"
+        }
+      }
+    },
+    "CHFJPY": {
+      "raw_symbol": "CHFJPY.pi",
+      "category": "Forex_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100000.0,
+      "description": "Swiss Franc / Japanese Yen",
+      "timeframes": {
+        "15m": {
+          "bars": 77575,
+          "new_bars": 77575,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1407.31,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23764,
+          "new_bars": 23764,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 489.98,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 163.99,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 74.51,
+          "mode": "full"
+        }
+      }
+    },
+    "EURAUD": {
+      "raw_symbol": "EURAUD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Euro / Australian Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77588,
+          "new_bars": 77588,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1524.92,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 554.72,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 224.66,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 105.9,
+          "mode": "full"
+        }
+      }
+    },
+    "EURCAD": {
+      "raw_symbol": "EURCAD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Euro / Canadian Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77584,
+          "new_bars": 77584,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1466.57,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 542.32,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 223.65,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 105.21,
+          "mode": "full"
+        }
+      }
+    },
+    "EURCHF": {
+      "raw_symbol": "EURCHF.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Euro / Swiss Franc",
+      "timeframes": {
+        "15m": {
+          "bars": 77589,
+          "new_bars": 77589,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1320.94,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 497.25,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 214.15,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 103.83,
+          "mode": "full"
+        }
+      }
+    },
+    "EURGBP": {
+      "raw_symbol": "EURGBP.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Euro / Great Britain Pound ",
+      "timeframes": {
+        "15m": {
+          "bars": 77595,
+          "new_bars": 77595,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1249.03,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 474.12,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 201.62,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 99.75,
+          "mode": "full"
+        }
+      }
+    },
+    "EURJPY": {
+      "raw_symbol": "EURJPY.pi",
+      "category": "Forex_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100000.0,
+      "description": "Euro / Japanese Yen",
+      "timeframes": {
+        "15m": {
+          "bars": 77629,
+          "new_bars": 77629,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1389.44,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 491.04,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 162.66,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 74.47,
+          "mode": "full"
+        }
+      }
+    },
+    "EURUSD": {
+      "raw_symbol": "EURUSD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Euro / US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77632,
+          "new_bars": 77632,
+          "start_time": "2015-02-24T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1424.14,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-24T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 526.12,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-24T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 217.47,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-24T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 101.29,
+          "mode": "full"
+        }
+      }
+    },
+    "GBPAUD": {
+      "raw_symbol": "GBPAUD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Great Britain Pound / Australian Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77581,
+          "new_bars": 77581,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1631.14,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 579.9,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 238.72,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 108.38,
+          "mode": "full"
+        }
+      }
+    },
+    "GBPCAD": {
+      "raw_symbol": "GBPCAD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Great Britain Pound / Canadian Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77582,
+          "new_bars": 77582,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1529.66,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 551.64,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 226.18,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 106.35,
+          "mode": "full"
+        }
+      }
+    },
+    "GBPCHF": {
+      "raw_symbol": "GBPCHF.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Great Britain Pound / Swiss Franc",
+      "timeframes": {
+        "15m": {
+          "bars": 77578,
+          "new_bars": 77578,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1432.89,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 534.85,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 224.26,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 105.76,
+          "mode": "full"
+        }
+      }
+    },
+    "GBPJPY": {
+      "raw_symbol": "GBPJPY.pi",
+      "category": "Forex_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100000.0,
+      "description": "Great Britain Pound / Japanese Yen",
+      "timeframes": {
+        "15m": {
+          "bars": 77579,
+          "new_bars": 77579,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1418.17,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23764,
+          "new_bars": 23764,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 495.3,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 163.66,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 74.73,
+          "mode": "full"
+        }
+      }
+    },
+    "GBPUSD": {
+      "raw_symbol": "GBPUSD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Great Britain Pound / US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77593,
+          "new_bars": 77593,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1460.3,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 537.08,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 222.29,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 104.87,
+          "mode": "full"
+        }
+      }
+    },
+    "USDCAD": {
+      "raw_symbol": "USDCAD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "US Dollar / Canadian Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77593,
+          "new_bars": 77593,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1418.06,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 528.77,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 219.76,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 103.61,
+          "mode": "full"
+        }
+      }
+    },
+    "USDCHF": {
+      "raw_symbol": "USDCHF.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "US Dollar / Swiss Franc",
+      "timeframes": {
+        "15m": {
+          "bars": 77594,
+          "new_bars": 77594,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1395.46,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 505.04,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 212.96,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 101.35,
+          "mode": "full"
+        }
+      }
+    },
+    "USDJPY": {
+      "raw_symbol": "USDJPY.pi",
+      "category": "Forex_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100000.0,
+      "description": "US Dollar / Japanese Yen",
+      "timeframes": {
+        "15m": {
+          "bars": 77592,
+          "new_bars": 77592,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1370.47,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 484.51,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 161.83,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 73.7,
+          "mode": "full"
+        }
+      }
+    },
+    "AUDCNH": {
+      "raw_symbol": "AUDCNH.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Australian Dollar / Chinese Yuan",
+      "timeframes": {
+        "15m": {
+          "bars": 71974,
+          "new_bars": 71974,
+          "start_time": "2020-08-18T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1500.35,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 19236,
+          "new_bars": 19236,
+          "start_time": "2020-08-18T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 474.5,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5409,
+          "new_bars": 5409,
+          "start_time": "2020-08-18T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 164.56,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1565,
+          "new_bars": 1565,
+          "start_time": "2020-08-18T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 55.32,
+          "mode": "full"
+        }
+      }
+    },
+    "AUDNZD": {
+      "raw_symbol": "AUDNZD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Australian Dollar / New Zealand Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77579,
+          "new_bars": 77579,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1412.5,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 518.48,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 215.47,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 102.58,
+          "mode": "full"
+        }
+      }
+    },
+    "AUDSGD": {
+      "raw_symbol": "AUDSGD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Australian Dollar / Singaporean Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 53240,
+          "new_bars": 53240,
+          "start_time": "2024-07-23T09:30:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 930.25,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 13318,
+          "new_bars": 13318,
+          "start_time": "2024-07-23T09:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 319.88,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 3331,
+          "new_bars": 3331,
+          "start_time": "2024-07-23T08:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 100.59,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 556,
+          "new_bars": 556,
+          "start_time": "2024-07-23T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 23.29,
+          "mode": "full"
+        }
+      }
+    },
+    "CHFSGD": {
+      "raw_symbol": "CHFSGD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Swiss Franc / Singaporean Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 56230,
+          "new_bars": 56230,
+          "start_time": "2016-10-27T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1105.67,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 16317,
+          "new_bars": 16317,
+          "start_time": "2016-10-27T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 427.81,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5552,
+          "new_bars": 5552,
+          "start_time": "2016-10-27T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 170.74,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2560,
+          "new_bars": 2560,
+          "start_time": "2016-10-27T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 89.55,
+          "mode": "full"
+        }
+      }
+    },
+    "CNHJPY": {
+      "raw_symbol": "CNHJPY.pi",
+      "category": "Forex_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100000.0,
+      "description": "Chinese Yuan / Japanese Yen",
+      "timeframes": {
+        "15m": {
+          "bars": 55271,
+          "new_bars": 55271,
+          "start_time": "2020-07-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 796.04,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 15352,
+          "new_bars": 15352,
+          "start_time": "2020-07-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 279.37,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4588,
+          "new_bars": 4588,
+          "start_time": "2020-07-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 97.74,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1596,
+          "new_bars": 1596,
+          "start_time": "2020-07-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 39.7,
+          "mode": "full"
+        }
+      }
+    },
+    "EURCNH": {
+      "raw_symbol": "EURCNH.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Euro / Chinese Yuan ",
+      "timeframes": {
+        "15m": {
+          "bars": 55880,
+          "new_bars": 55880,
+          "start_time": "2018-02-19T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1320.94,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 15978,
+          "new_bars": 15978,
+          "start_time": "2018-02-19T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 467.6,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5214,
+          "new_bars": 5214,
+          "start_time": "2018-02-19T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 169.54,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2222,
+          "new_bars": 2222,
+          "start_time": "2018-02-19T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 81.77,
+          "mode": "full"
+        }
+      }
+    },
+    "EURHKD": {
+      "raw_symbol": "EURHKD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Euro / Hong Kong Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 56241,
+          "new_bars": 56241,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1343.03,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 16317,
+          "new_bars": 16317,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 476.25,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5552,
+          "new_bars": 5552,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 178.6,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2560,
+          "new_bars": 2560,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 92.35,
+          "mode": "full"
+        }
+      }
+    },
+    "EURHUF": {
+      "raw_symbol": "EURHUF.pi",
+      "category": "Forex_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100000.0,
+      "description": "Euro / Hungarian Forint",
+      "timeframes": {
+        "15m": {
+          "bars": 73290,
+          "new_bars": 73290,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1340.49,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 19557,
+          "new_bars": 19557,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 401.79,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5488,
+          "new_bars": 5488,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 118.26,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1576,
+          "new_bars": 1576,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 39.37,
+          "mode": "full"
+        }
+      }
+    },
+    "EURMXN": {
+      "raw_symbol": "EURMXN.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "US Dollar / Mexican Peso",
+      "timeframes": {
+        "15m": {
+          "bars": 55878,
+          "new_bars": 55878,
+          "start_time": "2018-03-26T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1354.61,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 15954,
+          "new_bars": 15954,
+          "start_time": "2018-03-26T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 469.43,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5189,
+          "new_bars": 5189,
+          "start_time": "2018-03-26T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 162.77,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2197,
+          "new_bars": 2197,
+          "start_time": "2018-03-26T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 71.49,
+          "mode": "full"
+        }
+      }
+    },
+    "EURNOK": {
+      "raw_symbol": "EURNOK.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Euro / Norwegian Kroner",
+      "timeframes": {
+        "15m": {
+          "bars": 77628,
+          "new_bars": 77628,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1804.86,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 616.88,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 229.92,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 104.86,
+          "mode": "full"
+        }
+      }
+    },
+    "EURNZD": {
+      "raw_symbol": "EURNZD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Euro / New Zealand Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77589,
+          "new_bars": 77589,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1611.88,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 568.43,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 233.2,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 105.81,
+          "mode": "full"
+        }
+      }
+    },
+    "EURSEK": {
+      "raw_symbol": "EURSEK.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Euro / Swedish Krona",
+      "timeframes": {
+        "15m": {
+          "bars": 73329,
+          "new_bars": 73329,
+          "start_time": "2020-08-18T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1721.14,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 19567,
+          "new_bars": 19567,
+          "start_time": "2020-08-18T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 517.49,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5488,
+          "new_bars": 5488,
+          "start_time": "2020-08-18T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 174.66,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1576,
+          "new_bars": 1576,
+          "start_time": "2020-08-18T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 57.26,
+          "mode": "full"
+        }
+      }
+    },
+    "EURSGD": {
+      "raw_symbol": "EURSGD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Euro / Singaporean Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 55176,
+          "new_bars": 55176,
+          "start_time": "2020-08-18T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1040.4,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 15252,
+          "new_bars": 15252,
+          "start_time": "2020-08-18T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 397.63,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4550,
+          "new_bars": 4550,
+          "start_time": "2020-08-18T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 143.45,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1576,
+          "new_bars": 1576,
+          "start_time": "2020-08-18T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 55.79,
+          "mode": "full"
+        }
+      }
+    },
+    "EURZAR": {
+      "raw_symbol": "EURZAR.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Euro / South African Rand",
+      "timeframes": {
+        "15m": {
+          "bars": 56235,
+          "new_bars": 56235,
+          "start_time": "2016-10-27T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1284.14,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 16317,
+          "new_bars": 16317,
+          "start_time": "2016-10-27T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 452.67,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5552,
+          "new_bars": 5552,
+          "start_time": "2016-10-27T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 167.96,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2560,
+          "new_bars": 2560,
+          "start_time": "2016-10-27T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 87.73,
+          "mode": "full"
+        }
+      }
+    },
+    "GBPCNH": {
+      "raw_symbol": "GBPCNH.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Great Britain Pound / Chinese Yuan ",
+      "timeframes": {
+        "15m": {
+          "bars": 55274,
+          "new_bars": 55274,
+          "start_time": "2020-07-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1307.82,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 15353,
+          "new_bars": 15353,
+          "start_time": "2020-07-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 441.98,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4589,
+          "new_bars": 4589,
+          "start_time": "2020-07-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 148.17,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1596,
+          "new_bars": 1596,
+          "start_time": "2020-07-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 57.53,
+          "mode": "full"
+        }
+      }
+    },
+    "GBPHKD": {
+      "raw_symbol": "GBPHKD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Great Britain Pound / Hong Kong Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 56241,
+          "new_bars": 56241,
+          "start_time": "2016-11-07T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1329.07,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 16317,
+          "new_bars": 16317,
+          "start_time": "2016-11-07T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 468.61,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5552,
+          "new_bars": 5552,
+          "start_time": "2016-11-07T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 177.66,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2560,
+          "new_bars": 2560,
+          "start_time": "2016-11-07T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 93.15,
+          "mode": "full"
+        }
+      }
+    },
+    "GBPNOK": {
+      "raw_symbol": "GBPNOK.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Great Britain Pound / Norwegian Krone",
+      "timeframes": {
+        "15m": {
+          "bars": 56236,
+          "new_bars": 56236,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1323.33,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 16317,
+          "new_bars": 16317,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 463.81,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5552,
+          "new_bars": 5552,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 170.82,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2560,
+          "new_bars": 2560,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 85.7,
+          "mode": "full"
+        }
+      }
+    },
+    "GBPNZD": {
+      "raw_symbol": "GBPNZD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Great Britain Pound / New Zealand Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77578,
+          "new_bars": 77578,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1624.98,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23764,
+          "new_bars": 23764,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 580.34,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 239.8,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 110.02,
+          "mode": "full"
+        }
+      }
+    },
+    "GBPSEK": {
+      "raw_symbol": "GBPSEK.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Great Britain Pound / Swedish Krona",
+      "timeframes": {
+        "15m": {
+          "bars": 56237,
+          "new_bars": 56237,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1342.49,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 16317,
+          "new_bars": 16317,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 477.88,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5552,
+          "new_bars": 5552,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 177.32,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2560,
+          "new_bars": 2560,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 87.88,
+          "mode": "full"
+        }
+      }
+    },
+    "GBPSGD": {
+      "raw_symbol": "GBPSGD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Great Britain Pound / Singaporean Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 56241,
+          "new_bars": 56241,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1042.82,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 16317,
+          "new_bars": 16317,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 409.31,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5552,
+          "new_bars": 5552,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 167.56,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2560,
+          "new_bars": 2560,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 90.0,
+          "mode": "full"
+        }
+      }
+    },
+    "NOKJPY": {
+      "raw_symbol": "NOKJPY.pi",
+      "category": "Forex_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100000.0,
+      "description": "Norwegian Krone / Japanese Yen",
+      "timeframes": {
+        "15m": {
+          "bars": 56227,
+          "new_bars": 56227,
+          "start_time": "2016-10-27T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 837.11,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 16316,
+          "new_bars": 16316,
+          "start_time": "2016-10-27T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 304.82,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5552,
+          "new_bars": 5552,
+          "start_time": "2016-10-27T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 119.03,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2560,
+          "new_bars": 2560,
+          "start_time": "2016-10-27T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 61.94,
+          "mode": "full"
+        }
+      }
+    },
+    "NOKSEK": {
+      "raw_symbol": "NOKSEK.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "Norwegian Krone / Swedish Krona",
+      "timeframes": {
+        "15m": {
+          "bars": 56232,
+          "new_bars": 56232,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1069.58,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 16317,
+          "new_bars": 16317,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 408.67,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5552,
+          "new_bars": 5552,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 165.22,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2560,
+          "new_bars": 2560,
+          "start_time": "2016-10-28T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 86.41,
+          "mode": "full"
+        }
+      }
+    },
+    "NZDCAD": {
+      "raw_symbol": "NZDCAD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "New Zealand Dollar / Canadian Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77581,
+          "new_bars": 77581,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1310.18,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 490.38,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 205.8,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 99.16,
+          "mode": "full"
+        }
+      }
+    },
+    "NZDCHF": {
+      "raw_symbol": "NZDCHF.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "New Zealand Dollar / Swiss Franc",
+      "timeframes": {
+        "15m": {
+          "bars": 77585,
+          "new_bars": 77585,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1327.16,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 490.5,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 210.48,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 99.95,
+          "mode": "full"
+        }
+      }
+    },
+    "NZDCNH": {
+      "raw_symbol": "NZDCNH.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "New Zealand Dollar / Chinese Yuan",
+      "timeframes": {
+        "15m": {
+          "bars": 55203,
+          "new_bars": 55203,
+          "start_time": "2020-07-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1272.9,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 15300,
+          "new_bars": 15300,
+          "start_time": "2020-07-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 431.56,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4540,
+          "new_bars": 4540,
+          "start_time": "2020-07-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 146.05,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1548,
+          "new_bars": 1548,
+          "start_time": "2020-07-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 55.88,
+          "mode": "full"
+        }
+      }
+    },
+    "NZDJPY": {
+      "raw_symbol": "NZDJPY.pi",
+      "category": "Forex_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100000.0,
+      "description": "New Zealand Dollar / Japanese Yen",
+      "timeframes": {
+        "15m": {
+          "bars": 77584,
+          "new_bars": 77584,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1334.92,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 481.55,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 161.88,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 73.32,
+          "mode": "full"
+        }
+      }
+    },
+    "NZDSGD": {
+      "raw_symbol": "NZDSGD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "New Zealand Dollar / Singaporean Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 76451,
+          "new_bars": 76451,
+          "start_time": "2014-11-11T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1291.51,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 22715,
+          "new_bars": 22715,
+          "start_time": "2014-11-11T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 457.61,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 6471,
+          "new_bars": 6471,
+          "start_time": "2014-11-11T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 179.07,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1956,
+          "new_bars": 1956,
+          "start_time": "2014-11-11T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 63.1,
+          "mode": "full"
+        }
+      }
+    },
+    "NZDUSD": {
+      "raw_symbol": "NZDUSD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "New Zealand Dollar / US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77594,
+          "new_bars": 77594,
+          "start_time": "2015-02-23T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1323.55,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-23T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 489.76,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-23T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 209.88,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-23T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 100.55,
+          "mode": "full"
+        }
+      }
+    },
+    "SGDJPY": {
+      "raw_symbol": "SGDJPY.pi",
+      "category": "Forex_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100000.0,
+      "description": "Singaporean Dollar / Japanese Yen",
+      "timeframes": {
+        "15m": {
+          "bars": 77590,
+          "new_bars": 77590,
+          "start_time": "2015-02-23T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1353.32,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23767,
+          "new_bars": 23767,
+          "start_time": "2015-02-23T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 485.52,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7515,
+          "new_bars": 7515,
+          "start_time": "2015-02-23T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 163.12,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-23T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 73.72,
+          "mode": "full"
+        }
+      }
+    },
+    "USDCNH": {
+      "raw_symbol": "USDCNH.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "US Dollar / Chinese Yuan",
+      "timeframes": {
+        "15m": {
+          "bars": 75064,
+          "new_bars": 75064,
+          "start_time": "2023-04-17T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1676.8,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 21233,
+          "new_bars": 21233,
+          "start_time": "2023-04-17T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 539.55,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5310,
+          "new_bars": 5310,
+          "start_time": "2023-04-17T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 166.88,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 885,
+          "new_bars": 885,
+          "start_time": "2023-04-17T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 36.11,
+          "mode": "full"
+        }
+      }
+    },
+    "USDHKD": {
+      "raw_symbol": "USDHKD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "US Dollar / Hong Kong Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 73396,
+          "new_bars": 73396,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1263.55,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 19566,
+          "new_bars": 19566,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 416.69,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5488,
+          "new_bars": 5488,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 160.38,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1576,
+          "new_bars": 1576,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 53.26,
+          "mode": "full"
+        }
+      }
+    },
+    "USDHUF": {
+      "raw_symbol": "USDHUF.pi",
+      "category": "Forex_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100000.0,
+      "description": "US Dollar / Hungarian Florint",
+      "timeframes": {
+        "15m": {
+          "bars": 73324,
+          "new_bars": 73324,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1370.88,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 19567,
+          "new_bars": 19567,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 410.58,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5488,
+          "new_bars": 5488,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 120.21,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1576,
+          "new_bars": 1576,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 39.64,
+          "mode": "full"
+        }
+      }
+    },
+    "USDMXN": {
+      "raw_symbol": "USDMXN.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "US Dollar / Mexican Peso",
+      "timeframes": {
+        "15m": {
+          "bars": 77620,
+          "new_bars": 77620,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:15:00+00:00",
+          "file_size_kb": 1851.9,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 627.92,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 227.72,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 96.88,
+          "mode": "full"
+        }
+      }
+    },
+    "USDNOK": {
+      "raw_symbol": "USDNOK.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "US Dollar / Norwegian Krone",
+      "timeframes": {
+        "15m": {
+          "bars": 77598,
+          "new_bars": 77598,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1871.34,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 630.41,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 233.64,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 105.28,
+          "mode": "full"
+        }
+      }
+    },
+    "USDSEK": {
+      "raw_symbol": "USDSEK.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "US Dollar / Swedish Krona",
+      "timeframes": {
+        "15m": {
+          "bars": 73324,
+          "new_bars": 73324,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1747.54,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 19567,
+          "new_bars": 19567,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 524.5,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5488,
+          "new_bars": 5488,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 173.68,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1576,
+          "new_bars": 1576,
+          "start_time": "2020-08-17T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 56.67,
+          "mode": "full"
+        }
+      }
+    },
+    "USDSGD": {
+      "raw_symbol": "USDSGD.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "US Dollar / Singapore Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 77610,
+          "new_bars": 77610,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1391.66,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 514.51,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 215.04,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 101.89,
+          "mode": "full"
+        }
+      }
+    },
+    "USDTHB": {
+      "raw_symbol": "USDTHB.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "US Dollar / Thai Baht",
+      "timeframes": {
+        "15m": {
+          "bars": 56238,
+          "new_bars": 56238,
+          "start_time": "2016-05-24T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 895.34,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 16317,
+          "new_bars": 16317,
+          "start_time": "2016-05-24T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 320.01,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5552,
+          "new_bars": 5552,
+          "start_time": "2016-05-24T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 127.97,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2560,
+          "new_bars": 2560,
+          "start_time": "2016-05-24T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 66.88,
+          "mode": "full"
+        }
+      }
+    },
+    "USDZAR": {
+      "raw_symbol": "USDZAR.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "US Dollar / South African Rand",
+      "timeframes": {
+        "15m": {
+          "bars": 77659,
+          "new_bars": 77659,
+          "start_time": "2015-02-19T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1843.27,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23765,
+          "new_bars": 23765,
+          "start_time": "2015-02-19T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 624.73,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7513,
+          "new_bars": 7513,
+          "start_time": "2015-02-19T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 231.75,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2998,
+          "new_bars": 2998,
+          "start_time": "2015-02-19T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 105.94,
+          "mode": "full"
+        }
+      }
+    },
+    "ZARJPY": {
+      "raw_symbol": "ZARJPY.pi",
+      "category": "Forex_Raw",
+      "digits": 5,
+      "point": 1e-05,
+      "trade_tick_size": 1e-05,
+      "contract_size": 100000.0,
+      "description": "South African Rand / Japanese Yen",
+      "timeframes": {
+        "15m": {
+          "bars": 56235,
+          "new_bars": 56235,
+          "start_time": "2016-11-09T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1140.79,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 16316,
+          "new_bars": 16316,
+          "start_time": "2016-11-09T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 413.99,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 5552,
+          "new_bars": 5552,
+          "start_time": "2016-11-09T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 147.17,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2560,
+          "new_bars": 2560,
+          "start_time": "2016-11-09T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 66.01,
+          "mode": "full"
+        }
+      }
+    },
+    "AU200": {
+      "raw_symbol": "AU200.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "Australia 200 Cash",
+      "timeframes": {
+        "15m": {
+          "bars": 71802,
+          "new_bars": 71802,
+          "start_time": "2019-02-25T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1094.14,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 21535,
+          "new_bars": 21535,
+          "start_time": "2019-02-25T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 382.35,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 6480,
+          "new_bars": 6480,
+          "start_time": "2019-02-25T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 138.19,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1933,
+          "new_bars": 1933,
+          "start_time": "2019-02-25T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 46.45,
+          "mode": "full"
+        }
+      }
+    },
+    "DJ30": {
+      "raw_symbol": "DJ30.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "Wall Street 30 Cash ",
+      "timeframes": {
+        "15m": {
+          "bars": 76637,
+          "new_bars": 76637,
+          "start_time": "2015-02-06T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1348.36,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23178,
+          "new_bars": 23178,
+          "start_time": "2015-02-06T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 477.18,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7518,
+          "new_bars": 7518,
+          "start_time": "2015-02-06T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 164.55,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2996,
+          "new_bars": 2996,
+          "start_time": "2015-02-06T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 72.32,
+          "mode": "full"
+        }
+      }
+    },
+    "FR40": {
+      "raw_symbol": "FR40.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "France 40 Cash ",
+      "timeframes": {
+        "15m": {
+          "bars": 68125,
+          "new_bars": 68125,
+          "start_time": "2015-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1137.33,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 21319,
+          "new_bars": 21319,
+          "start_time": "2015-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 413.98,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7463,
+          "new_bars": 7463,
+          "start_time": "2015-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 158.77,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2983,
+          "new_bars": 2983,
+          "start_time": "2015-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 71.39,
+          "mode": "full"
+        }
+      }
+    },
+    "GER30": {
+      "raw_symbol": "GER30.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "DAX 40 Cash CFD",
+      "timeframes": {
+        "15m": {
+          "bars": 32051,
+          "new_bars": 32051,
+          "start_time": "2015-01-07T00:00:00+00:00",
+          "end_time": "2024-11-22T23:45:00+00:00",
+          "file_size_kb": 545.72,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 12082,
+          "new_bars": 12082,
+          "start_time": "2015-01-07T00:00:00+00:00",
+          "end_time": "2024-11-22T23:00:00+00:00",
+          "file_size_kb": 242.51,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4805,
+          "new_bars": 4805,
+          "start_time": "2015-01-07T00:00:00+00:00",
+          "end_time": "2024-11-22T20:00:00+00:00",
+          "file_size_kb": 106.95,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2524,
+          "new_bars": 2524,
+          "start_time": "2015-01-07T00:00:00+00:00",
+          "end_time": "2024-11-22T00:00:00+00:00",
+          "file_size_kb": 61.75,
+          "mode": "full"
+        }
+      }
+    },
+    "JP225": {
+      "raw_symbol": "JP225.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "Nikkei 225 Cash ",
+      "timeframes": {
+        "15m": {
+          "bars": 76753,
+          "new_bars": 76753,
+          "start_time": "2015-02-06T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1234.96,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23192,
+          "new_bars": 23192,
+          "start_time": "2015-02-06T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 432.48,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7519,
+          "new_bars": 7519,
+          "start_time": "2015-02-06T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 153.26,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2996,
+          "new_bars": 2996,
+          "start_time": "2015-02-06T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 69.53,
+          "mode": "full"
+        }
+      }
+    },
+    "NAS100": {
+      "raw_symbol": "NAS100.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "Nasdaq Cash",
+      "timeframes": {
+        "15m": {
+          "bars": 76672,
+          "new_bars": 76672,
+          "start_time": "2015-02-06T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1460.13,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23186,
+          "new_bars": 23186,
+          "start_time": "2015-02-06T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 508.89,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7522,
+          "new_bars": 7522,
+          "start_time": "2015-02-06T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 171.7,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2996,
+          "new_bars": 2996,
+          "start_time": "2015-02-06T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 74.61,
+          "mode": "full"
+        }
+      }
+    },
+    "SP500": {
+      "raw_symbol": "SP500.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "US SPX 500 Cash ",
+      "timeframes": {
+        "15m": {
+          "bars": 76690,
+          "new_bars": 76690,
+          "start_time": "2015-02-18T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1322.05,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 23185,
+          "new_bars": 23185,
+          "start_time": "2015-02-18T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 461.61,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7523,
+          "new_bars": 7523,
+          "start_time": "2015-02-18T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 161.71,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2996,
+          "new_bars": 2996,
+          "start_time": "2015-02-18T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 70.06,
+          "mode": "full"
+        }
+      }
+    },
+    "STOXX50": {
+      "raw_symbol": "STOXX50.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "Europe 50 Cash ",
+      "timeframes": {
+        "15m": {
+          "bars": 73887,
+          "new_bars": 73887,
+          "start_time": "2014-12-04T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1091.12,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 22522,
+          "new_bars": 22522,
+          "start_time": "2014-12-04T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 390.22,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7538,
+          "new_bars": 7538,
+          "start_time": "2014-12-04T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 156.09,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2980,
+          "new_bars": 2980,
+          "start_time": "2014-12-04T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 66.6,
+          "mode": "full"
+        }
+      }
+    },
+    "UK100": {
+      "raw_symbol": "UK100.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "UK 100 Cash ",
+      "timeframes": {
+        "15m": {
+          "bars": 72765,
+          "new_bars": 72765,
+          "start_time": "2014-12-29T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 1249.53,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 22283,
+          "new_bars": 22283,
+          "start_time": "2014-12-29T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 439.02,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7514,
+          "new_bars": 7514,
+          "start_time": "2014-12-29T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 158.92,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2974,
+          "new_bars": 2974,
+          "start_time": "2014-12-29T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 70.47,
+          "mode": "full"
+        }
+      }
+    },
+    "CHINA50": {
+      "raw_symbol": "CHINA50.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "FTSE China A50 Index",
+      "timeframes": {
+        "15m": {
+          "bars": 52826,
+          "new_bars": 52826,
+          "start_time": "2020-08-14T00:00:00+00:00",
+          "end_time": "2026-09-14T22:30:00+00:00",
+          "file_size_kb": 820.38,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14693,
+          "new_bars": 14693,
+          "start_time": "2020-08-14T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 265.96,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4551,
+          "new_bars": 4551,
+          "start_time": "2020-08-14T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 91.48,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1575,
+          "new_bars": 1575,
+          "start_time": "2020-08-14T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 38.12,
+          "mode": "full"
+        }
+      }
+    },
+    "CHINAH": {
+      "raw_symbol": "CHINAH.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "China H-SHARES Index",
+      "timeframes": {
+        "15m": {
+          "bars": 59740,
+          "new_bars": 59740,
+          "start_time": "2017-03-13T00:00:00+00:00",
+          "end_time": "2026-09-14T21:45:00+00:00",
+          "file_size_kb": 926.81,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 19133,
+          "new_bars": 19133,
+          "start_time": "2017-03-13T00:00:00+00:00",
+          "end_time": "2026-09-14T21:00:00+00:00",
+          "file_size_kb": 344.8,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 6699,
+          "new_bars": 6699,
+          "start_time": "2017-03-13T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 137.12,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2354,
+          "new_bars": 2354,
+          "start_time": "2017-03-13T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 57.82,
+          "mode": "full"
+        }
+      }
+    },
+    "HK50": {
+      "raw_symbol": "HK50.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "Hang Seng Cash ",
+      "timeframes": {
+        "15m": {
+          "bars": 64697,
+          "new_bars": 64697,
+          "start_time": "2014-10-23T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 1148.15,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 20535,
+          "new_bars": 20535,
+          "start_time": "2014-10-23T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 420.96,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7400,
+          "new_bars": 7400,
+          "start_time": "2014-10-23T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 161.11,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2950,
+          "new_bars": 2950,
+          "start_time": "2014-10-23T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 72.15,
+          "mode": "full"
+        }
+      }
+    },
+    "NETH25": {
+      "raw_symbol": "NETH25.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "Netherlands 25 Index",
+      "timeframes": {
+        "15m": {
+          "bars": 72728,
+          "new_bars": 72728,
+          "start_time": "2012-04-03T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 1147.51,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 22857,
+          "new_bars": 22857,
+          "start_time": "2012-04-03T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 408.97,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 8406,
+          "new_bars": 8406,
+          "start_time": "2012-04-03T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 162.18,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 3835,
+          "new_bars": 3835,
+          "start_time": "2012-04-03T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 80.51,
+          "mode": "full"
+        }
+      }
+    },
+    "SWISS20": {
+      "raw_symbol": "SWISS20.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "Swiss 20 index",
+      "timeframes": {
+        "15m": {
+          "bars": 50659,
+          "new_bars": 50659,
+          "start_time": "2020-07-10T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 768.72,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14149,
+          "new_bars": 14149,
+          "start_time": "2020-07-10T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 248.81,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4411,
+          "new_bars": 4411,
+          "start_time": "2020-07-10T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 90.13,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1556,
+          "new_bars": 1556,
+          "start_time": "2020-07-10T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 38.8,
+          "mode": "full"
+        }
+      }
+    },
+    "US2000": {
+      "raw_symbol": "US2000.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "Russel 2000 Cash",
+      "timeframes": {
+        "15m": {
+          "bars": 52533,
+          "new_bars": 52533,
+          "start_time": "2020-08-11T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 980.5,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14627,
+          "new_bars": 14627,
+          "start_time": "2020-08-11T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 312.18,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4542,
+          "new_bars": 4542,
+          "start_time": "2020-08-11T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 100.8,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1575,
+          "new_bars": 1575,
+          "start_time": "2020-08-11T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 39.11,
+          "mode": "full"
+        }
+      }
+    },
+    "GER40": {
+      "raw_symbol": "GER40.p",
+      "category": "Indices",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 10.0,
+      "description": "DAX 40 Cash CFD",
+      "timeframes": {
+        "15m": {
+          "bars": 73557,
+          "new_bars": 73557,
+          "start_time": "2015-01-07T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 1283.24,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 22469,
+          "new_bars": 22469,
+          "start_time": "2015-01-07T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 452.8,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 7535,
+          "new_bars": 7535,
+          "start_time": "2015-01-07T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 163.91,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2979,
+          "new_bars": 2979,
+          "start_time": "2015-01-07T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 72.44,
+          "mode": "full"
+        }
+      }
+    },
+    "XAGAUD": {
+      "raw_symbol": "XAGAUD.pi",
+      "category": "Commodities_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 5000.0,
+      "description": "Silver - Australian Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 51789,
+          "new_bars": 51789,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 987.34,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14015,
+          "new_bars": 14015,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 314.12,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 3917,
+          "new_bars": 3917,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 92.03,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 942,
+          "new_bars": 942,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 27.78,
+          "mode": "full"
+        }
+      }
+    },
+    "XAGEUR": {
+      "raw_symbol": "XAGEUR.pi",
+      "category": "Commodities_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 5000.0,
+      "description": "Silver - Euro",
+      "timeframes": {
+        "15m": {
+          "bars": 51798,
+          "new_bars": 51798,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 964.81,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14016,
+          "new_bars": 14016,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 311.29,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 3916,
+          "new_bars": 3916,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 91.67,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 942,
+          "new_bars": 942,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 27.6,
+          "mode": "full"
+        }
+      }
+    },
+    "XAGSGD": {
+      "raw_symbol": "XAGSGD.pi",
+      "category": "Commodities_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 5000.0,
+      "description": "Silver vs Singapore Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 51775,
+          "new_bars": 51775,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 999.33,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14011,
+          "new_bars": 14011,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 300.38,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 3914,
+          "new_bars": 3914,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 92.46,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 942,
+          "new_bars": 942,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 27.63,
+          "mode": "full"
+        }
+      }
+    },
+    "XAGUSD": {
+      "raw_symbol": "XAGUSD.pi",
+      "category": "Commodities_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 5000.0,
+      "description": "Silver - US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 52457,
+          "new_bars": 52457,
+          "start_time": "2020-08-10T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 991.17,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14652,
+          "new_bars": 14652,
+          "start_time": "2020-08-10T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 330.06,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4549,
+          "new_bars": 4549,
+          "start_time": "2020-08-10T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 107.62,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1574,
+          "new_bars": 1574,
+          "start_time": "2020-08-10T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 41.8,
+          "mode": "full"
+        }
+      }
+    },
+    "XAUAUD": {
+      "raw_symbol": "XAUAUD.pi",
+      "category": "Commodities_Raw",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 100.0,
+      "description": "Gold - Australian Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 51844,
+          "new_bars": 51844,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 1064.92,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14024,
+          "new_bars": 14024,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 323.79,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 3917,
+          "new_bars": 3917,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 93.39,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 942,
+          "new_bars": 942,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 27.42,
+          "mode": "full"
+        }
+      }
+    },
+    "XAUCNH": {
+      "raw_symbol": "XAUCNH.pi",
+      "category": "Commodities_Raw",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 100.0,
+      "description": "Gold vs Chinese Offshore Yuan",
+      "timeframes": {
+        "15m": {
+          "bars": 51822,
+          "new_bars": 51822,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 1150.5,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14021,
+          "new_bars": 14021,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 323.95,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 3917,
+          "new_bars": 3917,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 99.06,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 942,
+          "new_bars": 942,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 28.61,
+          "mode": "full"
+        }
+      }
+    },
+    "XAUEUR": {
+      "raw_symbol": "XAUEUR.pi",
+      "category": "Commodities_Raw",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 100.0,
+      "description": "Gold - Euro",
+      "timeframes": {
+        "15m": {
+          "bars": 51832,
+          "new_bars": 51832,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 1025.2,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14022,
+          "new_bars": 14022,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 310.71,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 3917,
+          "new_bars": 3917,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 88.87,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 942,
+          "new_bars": 942,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 26.04,
+          "mode": "full"
+        }
+      }
+    },
+    "XAUGBP": {
+      "raw_symbol": "XAUGBP.pi",
+      "category": "Commodities_Raw",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 100.0,
+      "description": "Gold - Great Britain Pound",
+      "timeframes": {
+        "15m": {
+          "bars": 51814,
+          "new_bars": 51814,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 1023.38,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14019,
+          "new_bars": 14019,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 290.02,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 3916,
+          "new_bars": 3916,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 88.38,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 942,
+          "new_bars": 942,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 25.82,
+          "mode": "full"
+        }
+      }
+    },
+    "XAUSGD": {
+      "raw_symbol": "XAUSGD.pi",
+      "category": "Commodities_Raw",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 100.0,
+      "description": "Gold vs Singapore Dolla",
+      "timeframes": {
+        "15m": {
+          "bars": 51783,
+          "new_bars": 51783,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 1086.06,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14015,
+          "new_bars": 14015,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 303.52,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 3915,
+          "new_bars": 3915,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 92.9,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 942,
+          "new_bars": 942,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 27.03,
+          "mode": "full"
+        }
+      }
+    },
+    "XAUUSD": {
+      "raw_symbol": "XAUUSD.pi",
+      "category": "Commodities_Raw",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 100.0,
+      "description": "Gold - US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 52469,
+          "new_bars": 52469,
+          "start_time": "2020-08-11T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 1049.11,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14653,
+          "new_bars": 14653,
+          "start_time": "2020-08-11T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 310.48,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4549,
+          "new_bars": 4549,
+          "start_time": "2020-08-11T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 104.88,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1574,
+          "new_bars": 1574,
+          "start_time": "2020-08-11T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 39.61,
+          "mode": "full"
+        }
+      }
+    },
+    "XPDUSD": {
+      "raw_symbol": "XPDUSD.pi",
+      "category": "Commodities_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100.0,
+      "description": "Palladium vs US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 51686,
+          "new_bars": 51686,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 954.61,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14076,
+          "new_bars": 14076,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 285.52,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 3904,
+          "new_bars": 3904,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 87.15,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 940,
+          "new_bars": 940,
+          "start_time": "2023-01-20T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 25.9,
+          "mode": "full"
+        }
+      }
+    },
+    "XPTUSD": {
+      "raw_symbol": "XPTUSD.pi",
+      "category": "Commodities_Raw",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 100.0,
+      "description": "Platinum - US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 52293,
+          "new_bars": 52293,
+          "start_time": "2020-03-16T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 977.63,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14624,
+          "new_bars": 14624,
+          "start_time": "2020-03-16T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 307.76,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4542,
+          "new_bars": 4542,
+          "start_time": "2020-03-16T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 99.4,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1575,
+          "new_bars": 1575,
+          "start_time": "2020-03-16T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 38.41,
+          "mode": "full"
+        }
+      }
+    },
+    "GAUCNH": {
+      "raw_symbol": "GAUCNH.pi",
+      "category": "Commodities_Raw",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100.0,
+      "description": "Gold in Grams vs Chinese Offshore Yuan",
+      "timeframes": {
+        "15m": {
+          "bars": 38812,
+          "new_bars": 38812,
+          "start_time": "2025-01-23T01:30:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 734.22,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 9718,
+          "new_bars": 9718,
+          "start_time": "2025-01-23T01:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 210.05,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 2544,
+          "new_bars": 2544,
+          "start_time": "2025-01-23T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 63.66,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 424,
+          "new_bars": 424,
+          "start_time": "2025-01-23T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 16.16,
+          "mode": "full"
+        }
+      }
+    },
+    "GAUUSD": {
+      "raw_symbol": "GAUUSD.pi",
+      "category": "Commodities_Raw",
+      "digits": 4,
+      "point": 0.0001,
+      "trade_tick_size": 0.0001,
+      "contract_size": 100.0,
+      "description": "Gold in Grams - US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 38807,
+          "new_bars": 38807,
+          "start_time": "2025-01-23T01:30:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 785.29,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 9713,
+          "new_bars": 9713,
+          "start_time": "2025-01-23T01:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 231.28,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 2543,
+          "new_bars": 2543,
+          "start_time": "2025-01-23T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 72.7,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 424,
+          "new_bars": 424,
+          "start_time": "2025-01-23T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 18.88,
+          "mode": "full"
+        }
+      }
+    },
+    "ALUMINIUM": {
+      "raw_symbol": "ALUMINIUM.p",
+      "category": "Commodities",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100.0,
+      "description": "Aluminium vs US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 40909,
+          "new_bars": 40909,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T20:45:00+00:00",
+          "file_size_kb": 734.09,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 11731,
+          "new_bars": 11731,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 229.56,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4500,
+          "new_bars": 4500,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 95.74,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1563,
+          "new_bars": 1563,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 36.6,
+          "mode": "full"
+        }
+      }
+    },
+    "COPPER": {
+      "raw_symbol": "COPPER.p",
+      "category": "Commodities",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100.0,
+      "description": "Copper vs US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 40870,
+          "new_bars": 40870,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T20:45:00+00:00",
+          "file_size_kb": 807.0,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 11693,
+          "new_bars": 11693,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 258.29,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4505,
+          "new_bars": 4505,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 100.57,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1563,
+          "new_bars": 1563,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 38.15,
+          "mode": "full"
+        }
+      }
+    },
+    "GAS": {
+      "raw_symbol": "GAS.p",
+      "category": "Commodities",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 10000.0,
+      "description": "Natural Gas vs US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 52580,
+          "new_bars": 52580,
+          "start_time": "2020-09-10T00:00:00+00:00",
+          "end_time": "2026-09-14T22:45:00+00:00",
+          "file_size_kb": 728.23,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 14637,
+          "new_bars": 14637,
+          "start_time": "2020-09-10T00:00:00+00:00",
+          "end_time": "2026-09-14T22:00:00+00:00",
+          "file_size_kb": 245.84,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4545,
+          "new_bars": 4545,
+          "start_time": "2020-09-10T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 90.46,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1574,
+          "new_bars": 1574,
+          "start_time": "2020-09-10T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 35.72,
+          "mode": "full"
+        }
+      }
+    },
+    "LEAD": {
+      "raw_symbol": "LEAD.p",
+      "category": "Commodities",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100.0,
+      "description": "Lead vs US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 40906,
+          "new_bars": 40906,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T20:45:00+00:00",
+          "file_size_kb": 653.47,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 11739,
+          "new_bars": 11739,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 212.96,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4500,
+          "new_bars": 4500,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 91.07,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1563,
+          "new_bars": 1563,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 35.4,
+          "mode": "full"
+        }
+      }
+    },
+    "NICKEL": {
+      "raw_symbol": "NICKEL.p",
+      "category": "Commodities",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100.0,
+      "description": "Nickel vs US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 34770,
+          "new_bars": 34770,
+          "start_time": "2020-06-24T00:00:00+00:00",
+          "end_time": "2026-09-14T20:45:00+00:00",
+          "file_size_kb": 581.58,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 10545,
+          "new_bars": 10545,
+          "start_time": "2020-06-24T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 195.36,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4220,
+          "new_bars": 4220,
+          "start_time": "2020-06-24T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 87.36,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1563,
+          "new_bars": 1563,
+          "start_time": "2020-06-24T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 35.93,
+          "mode": "full"
+        }
+      }
+    },
+    "ZINC": {
+      "raw_symbol": "ZINC.p",
+      "category": "Commodities",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100.0,
+      "description": "Zinc vs US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 40873,
+          "new_bars": 40873,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T20:45:00+00:00",
+          "file_size_kb": 746.92,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 11693,
+          "new_bars": 11693,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 236.72,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 4505,
+          "new_bars": 4505,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 97.95,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 1563,
+          "new_bars": 1563,
+          "start_time": "2020-07-08T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 38.03,
+          "mode": "full"
+        }
+      }
+    },
+    "UKBRENT": {
+      "raw_symbol": "UKBRENT.p",
+      "category": "Commodities",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100.0,
+      "description": "Spot Brent Crude Oil ",
+      "timeframes": {
+        "15m": {
+          "bars": 58980,
+          "new_bars": 58980,
+          "start_time": "2016-10-19T00:00:00+00:00",
+          "end_time": "2026-09-14T23:00:00+00:00",
+          "file_size_kb": 1122.79,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 17126,
+          "new_bars": 17126,
+          "start_time": "2016-10-19T00:00:00+00:00",
+          "end_time": "2026-09-14T23:00:00+00:00",
+          "file_size_kb": 376.41,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 6164,
+          "new_bars": 6164,
+          "start_time": "2016-10-19T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 142.97,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2559,
+          "new_bars": 2559,
+          "start_time": "2016-10-19T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 65.88,
+          "mode": "full"
+        }
+      }
+    },
+    "USWTI": {
+      "raw_symbol": "USWTI.p",
+      "category": "Commodities",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100.0,
+      "description": "Spot WTI Crude Oil ",
+      "timeframes": {
+        "15m": {
+          "bars": 63989,
+          "new_bars": 63989,
+          "start_time": "2016-10-18T00:00:00+00:00",
+          "end_time": "2026-09-14T23:00:00+00:00",
+          "file_size_kb": 1200.2,
+          "mode": "full"
+        },
+        "1h": {
+          "bars": 18322,
+          "new_bars": 18322,
+          "start_time": "2016-10-18T00:00:00+00:00",
+          "end_time": "2026-09-14T23:00:00+00:00",
+          "file_size_kb": 401.54,
+          "mode": "full"
+        },
+        "4h": {
+          "bars": 6117,
+          "new_bars": 6117,
+          "start_time": "2016-10-18T00:00:00+00:00",
+          "end_time": "2026-09-14T20:00:00+00:00",
+          "file_size_kb": 142.22,
+          "mode": "full"
+        },
+        "D1": {
+          "bars": 2558,
+          "new_bars": 2558,
+          "start_time": "2016-10-18T00:00:00+00:00",
+          "end_time": "2026-09-14T00:00:00+00:00",
+          "file_size_kb": 65.97,
+          "mode": "full"
+        }
+      }
+    }
+  },
+  "total_export_time_seconds": 2797.21
+}

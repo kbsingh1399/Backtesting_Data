@@ -1,0 +1,444 @@
+{
+  "export_timestamp": "2026-09-19T13:55:00.907205+00:00",
+  "broker": "Blueberry Markets (SVG) LLC",
+  "server": "BlueberryMarketsSVG-Live",
+  "timeframes": [
+    "15m",
+    "1h",
+    "4h",
+    "D1"
+  ],
+  "history_start": "2015-01-01T00:00:00+00:00",
+  "ict_session_columns": [
+    "day_of_week",
+    "session",
+    "is_kill_zone"
+  ],
+  "assets_count": 9,
+  "symbols": {
+    "BTCUSD": {
+      "raw_symbol": "BTCUSD.pi",
+      "category": "Crypto",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 1.0,
+      "description": "Bitcoin / US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 99999,
+          "new_bars": 99999,
+          "start_time": "2023-08-18T04:00:00+00:00",
+          "end_time": "2026-09-19T16:45:00+00:00",
+          "file_size_kb": 1915.72,
+          "mode": "full",
+          "file_path": "Forex_Backtesting_Data\\BTCUSD_15m_real.parquet"
+        },
+        "1h": {
+          "bars": 61070,
+          "new_bars": 61070,
+          "start_time": "2013-11-15T00:00:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 1176.33,
+          "mode": "full",
+          "file_path": "Forex_Backtesting_Data\\BTCUSD_1h_real.parquet"
+        },
+        "4h": {
+          "bars": 16525,
+          "new_bars": 0,
+          "start_time": "2013-11-15T00:00:00+00:00",
+          "end_time": "2026-09-19T16:00:00+00:00",
+          "file_size_kb": 333.8,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\BTCUSD_4h_real.parquet"
+        },
+        "D1": {
+          "bars": 4150,
+          "new_bars": 0,
+          "start_time": "2013-11-15T00:00:00+00:00",
+          "end_time": "2026-09-19T00:00:00+00:00",
+          "file_size_kb": 94.09,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\BTCUSD_d1_real.parquet"
+        }
+      }
+    },
+    "ETHUSD": {
+      "raw_symbol": "ETHUSD.pi",
+      "category": "Crypto",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 1.0,
+      "description": "Ethereum / US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 99999,
+          "new_bars": 0,
+          "start_time": "2023-08-17T13:45:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 1865.52,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\ETHUSD_15m_real.parquet"
+        },
+        "1h": {
+          "bars": 59279,
+          "new_bars": 0,
+          "start_time": "2018-06-18T17:00:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 1123.42,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\ETHUSD_1h_real.parquet"
+        },
+        "4h": {
+          "bars": 14829,
+          "new_bars": 0,
+          "start_time": "2018-06-18T16:00:00+00:00",
+          "end_time": "2026-09-19T16:00:00+00:00",
+          "file_size_kb": 297.44,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\ETHUSD_4h_real.parquet"
+        },
+        "D1": {
+          "bars": 2478,
+          "new_bars": 0,
+          "start_time": "2018-06-18T00:00:00+00:00",
+          "end_time": "2026-09-19T00:00:00+00:00",
+          "file_size_kb": 61.27,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\ETHUSD_d1_real.parquet"
+        }
+      }
+    },
+    "SOLUSD": {
+      "raw_symbol": "SOLUSD.p",
+      "category": "Crypto",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 100.0,
+      "description": "Solana / US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 75345,
+          "new_bars": 0,
+          "start_time": "2024-04-12T00:00:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 1270.02,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\SOLUSD_15m_real.parquet"
+        },
+        "1h": {
+          "bars": 19471,
+          "new_bars": 0,
+          "start_time": "2024-04-12T00:00:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 381.45,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\SOLUSD_1h_real.parquet"
+        },
+        "4h": {
+          "bars": 4934,
+          "new_bars": 0,
+          "start_time": "2024-04-12T00:00:00+00:00",
+          "end_time": "2026-09-19T16:00:00+00:00",
+          "file_size_kb": 102.68,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\SOLUSD_4h_real.parquet"
+        },
+        "D1": {
+          "bars": 880,
+          "new_bars": 0,
+          "start_time": "2024-04-12T00:00:00+00:00",
+          "end_time": "2026-09-19T00:00:00+00:00",
+          "file_size_kb": 23.82,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\SOLUSD_d1_real.parquet"
+        }
+      }
+    },
+    "XRPUSD": {
+      "raw_symbol": "XRPUSD.pi",
+      "category": "Crypto",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 1000.0,
+      "description": "Ripple / US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 99999,
+          "new_bars": 0,
+          "start_time": "2023-08-16T20:00:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 1183.46,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\XRPUSD_15m_real.parquet"
+        },
+        "1h": {
+          "bars": 58964,
+          "new_bars": 0,
+          "start_time": "2018-06-19T02:00:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 773.26,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\XRPUSD_1h_real.parquet"
+        },
+        "4h": {
+          "bars": 14759,
+          "new_bars": 0,
+          "start_time": "2018-06-19T00:00:00+00:00",
+          "end_time": "2026-09-19T16:00:00+00:00",
+          "file_size_kb": 234.96,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\XRPUSD_4h_real.parquet"
+        },
+        "D1": {
+          "bars": 2466,
+          "new_bars": 0,
+          "start_time": "2018-06-19T00:00:00+00:00",
+          "end_time": "2026-09-19T00:00:00+00:00",
+          "file_size_kb": 53.54,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\XRPUSD_d1_real.parquet"
+        }
+      }
+    },
+    "BNBUSD": {
+      "raw_symbol": "BNBUSD.p",
+      "category": "Crypto",
+      "digits": 2,
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "contract_size": 1.0,
+      "description": "Binance coin vs US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 75336,
+          "new_bars": 0,
+          "start_time": "2024-05-02T00:00:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 1245.67,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\BNBUSD_15m_real.parquet"
+        },
+        "1h": {
+          "bars": 19457,
+          "new_bars": 0,
+          "start_time": "2024-05-02T00:00:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 360.28,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\BNBUSD_1h_real.parquet"
+        },
+        "4h": {
+          "bars": 4920,
+          "new_bars": 0,
+          "start_time": "2024-05-02T00:00:00+00:00",
+          "end_time": "2026-09-19T16:00:00+00:00",
+          "file_size_kb": 97.99,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\BNBUSD_4h_real.parquet"
+        },
+        "D1": {
+          "bars": 866,
+          "new_bars": 0,
+          "start_time": "2024-05-02T00:00:00+00:00",
+          "end_time": "2026-09-19T00:00:00+00:00",
+          "file_size_kb": 22.48,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\BNBUSD_d1_real.parquet"
+        }
+      }
+    },
+    "LTCUSD": {
+      "raw_symbol": "LTCUSD.pi",
+      "category": "Crypto",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 100.0,
+      "description": "Litecoin / US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 99999,
+          "new_bars": 0,
+          "start_time": "2023-08-17T17:00:00+00:00",
+          "end_time": "2026-09-19T17:15:00+00:00",
+          "file_size_kb": 1737.44,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\LTCUSD_15m_real.parquet"
+        },
+        "1h": {
+          "bars": 47133,
+          "new_bars": 0,
+          "start_time": "2020-01-08T23:00:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 905.3,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\LTCUSD_1h_real.parquet"
+        },
+        "4h": {
+          "bars": 11862,
+          "new_bars": 0,
+          "start_time": "2020-01-08T20:00:00+00:00",
+          "end_time": "2026-09-19T16:00:00+00:00",
+          "file_size_kb": 245.91,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\LTCUSD_4h_real.parquet"
+        },
+        "D1": {
+          "bars": 2061,
+          "new_bars": 0,
+          "start_time": "2020-01-08T00:00:00+00:00",
+          "end_time": "2026-09-19T00:00:00+00:00",
+          "file_size_kb": 53.83,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\LTCUSD_d1_real.parquet"
+        }
+      }
+    },
+    "ADAUSD": {
+      "raw_symbol": "ADAUSD.p",
+      "category": "Crypto",
+      "digits": 4,
+      "point": 0.0001,
+      "trade_tick_size": 0.0001,
+      "contract_size": 5000.0,
+      "description": "Cardano / USD",
+      "timeframes": {
+        "15m": {
+          "bars": 99999,
+          "new_bars": 0,
+          "start_time": "2023-10-27T08:00:00+00:00",
+          "end_time": "2026-09-19T17:15:00+00:00",
+          "file_size_kb": 1448.39,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\ADAUSD_15m_real.parquet"
+        },
+        "1h": {
+          "bars": 29102,
+          "new_bars": 0,
+          "start_time": "2022-01-20T00:00:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 521.4,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\ADAUSD_1h_real.parquet"
+        },
+        "4h": {
+          "bars": 7594,
+          "new_bars": 0,
+          "start_time": "2022-01-20T00:00:00+00:00",
+          "end_time": "2026-09-19T16:00:00+00:00",
+          "file_size_kb": 165.93,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\ADAUSD_4h_real.parquet"
+        },
+        "D1": {
+          "bars": 1602,
+          "new_bars": 0,
+          "start_time": "2022-01-20T00:00:00+00:00",
+          "end_time": "2026-09-19T00:00:00+00:00",
+          "file_size_kb": 44.06,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\ADAUSD_d1_real.parquet"
+        }
+      }
+    },
+    "DOTUSD": {
+      "raw_symbol": "DOTUSD.pi",
+      "category": "Crypto",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 1000.0,
+      "description": "Polkadot / USD",
+      "timeframes": {
+        "15m": {
+          "bars": 99999,
+          "new_bars": 0,
+          "start_time": "2023-08-18T01:45:00+00:00",
+          "end_time": "2026-09-19T17:15:00+00:00",
+          "file_size_kb": 1394.67,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\DOTUSD_15m_real.parquet"
+        },
+        "1h": {
+          "bars": 39086,
+          "new_bars": 0,
+          "start_time": "2021-09-14T20:00:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 681.57,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\DOTUSD_1h_real.parquet"
+        },
+        "4h": {
+          "bars": 9777,
+          "new_bars": 0,
+          "start_time": "2021-09-14T20:00:00+00:00",
+          "end_time": "2026-09-19T16:00:00+00:00",
+          "file_size_kb": 203.77,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\DOTUSD_4h_real.parquet"
+        },
+        "D1": {
+          "bars": 1636,
+          "new_bars": 0,
+          "start_time": "2021-09-14T00:00:00+00:00",
+          "end_time": "2026-09-19T00:00:00+00:00",
+          "file_size_kb": 41.99,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\DOTUSD_d1_real.parquet"
+        }
+      }
+    },
+    "BCHUSD": {
+      "raw_symbol": "BCHUSD.p",
+      "category": "Crypto",
+      "digits": 3,
+      "point": 0.001,
+      "trade_tick_size": 0.001,
+      "contract_size": 10.0,
+      "description": "Bitcoin Cash / US Dollar",
+      "timeframes": {
+        "15m": {
+          "bars": 99999,
+          "new_bars": 0,
+          "start_time": "2023-10-27T07:00:00+00:00",
+          "end_time": "2026-09-19T17:15:00+00:00",
+          "file_size_kb": 1728.45,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\BCHUSD_15m_real.parquet"
+        },
+        "1h": {
+          "bars": 29791,
+          "new_bars": 0,
+          "start_time": "2018-05-18T00:00:00+00:00",
+          "end_time": "2026-09-19T17:00:00+00:00",
+          "file_size_kb": 580.5,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\BCHUSD_1h_real.parquet"
+        },
+        "4h": {
+          "bars": 8281,
+          "new_bars": 0,
+          "start_time": "2018-05-18T00:00:00+00:00",
+          "end_time": "2026-09-19T16:00:00+00:00",
+          "file_size_kb": 173.98,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\BCHUSD_4h_real.parquet"
+        },
+        "D1": {
+          "bars": 2289,
+          "new_bars": 0,
+          "start_time": "2018-05-18T00:00:00+00:00",
+          "end_time": "2026-09-19T00:00:00+00:00",
+          "file_size_kb": 56.32,
+          "mode": "incremental",
+          "file_path": "Forex_Backtesting_Data\\BCHUSD_d1_real.parquet"
+        }
+      }
+    }
+  },
+  "total_export_time_seconds": 1800.35
+}
